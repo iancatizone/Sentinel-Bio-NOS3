@@ -30,7 +30,7 @@ Installation instructions followed:
 
 ## 3. First-time VM setup
 
-Skip this section if the tested NOS3 VM is already installed and working.
+Skip this section if the NOS3 VM is already installed and working.
 
 ### 3.1 Install Oracle VirtualBox
 
