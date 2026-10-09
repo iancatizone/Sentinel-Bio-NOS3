@@ -26,7 +26,7 @@ Full version record:
 [Versions](../evidence/baseline-versions.txt)
 
 Installation instructions followed:
-[[Link to the actual NOS3 instructions you used](https://github.com/nasa/nos3)]
+[https://github.com/nasa/nos3](https://github.com/nasa/nos3)
 
 ## 3. First-time VM setup
 
