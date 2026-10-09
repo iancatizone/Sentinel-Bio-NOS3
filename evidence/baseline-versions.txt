@@ -118,17 +118,13 @@ Command run inside the NOS3 checkout:
 git status --short
 
 Output:
-[Paste the output here.
- If it prints nothing, write "No changes reported".]
+No Changes reported
 
 Description of changes:
-[Describe any source/configuration files you changed.
- If none, enter "None".]
+None
 
 Where the changes are saved:
-[Link or repository-relative path to saved configuration files,
- a patch, or the commit containing your changes.
- If there are no changes, enter "Not applicable".]
+N/A
 
 
 7. ASSOCIATED TEST EVIDENCE
@@ -141,7 +137,7 @@ Baseline test record:
 evidence/baseline-test-record.md
 
 Build log:
-[Enter the actual relative path, or "Not yet recorded"]
+evidence/logs/build.log
 
 Run log:
-[Enter the actual relative path, or "Not yet recorded"]
+evidence/logs/baseline-run.log
