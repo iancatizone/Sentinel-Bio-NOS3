@@ -23,7 +23,7 @@ It does not cover custom Sentinel-Bio+ simulation implementation.
 - NOS3 commit: [Commit ID]
 
 Full version record:
-evidence/baseline-versions.md
+[Link Text]evidence/baseline-versions.md
 
 Installation instructions followed:
 [Link to the actual NOS3 instructions you used]
