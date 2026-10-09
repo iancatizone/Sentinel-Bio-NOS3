@@ -49,9 +49,7 @@ Open a command prompt
 
 Clone the repository using git clone https://github.com/nasa/nos3.git
 
-Change directory to the repository using ```diff
-- cd nos3
-```
+Change directory to the repository using $$\color{red}\text{cd nos3}$$
 
 VM filename or release:
 [Record if applicable]
