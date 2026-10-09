@@ -34,7 +34,7 @@ Skip this section if the NOS3 VM is already installed and working.
 
 ### 3.1 Setup Oracle VirtualBox
 
-1. Download VirtualBox from: [https://www.virtualbox.org/]
+1. Download VirtualBox from: (https://www.virtualbox.org/)
 2. Install: Version 7.16+
    
 3. Download Vagrant from: [https://developer.hashicorp.com/vagrant]
