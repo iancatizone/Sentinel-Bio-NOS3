@@ -1,6 +1,6 @@
 NOS3 Baseline Setup, Build, and Run Guide
 =========================================
-# 1. Purpose and scope
+## 1. Purpose and scope
 
 This guide describes how to set up and run the stock NOS3 baseline
 used for Sentinel-Bio+ simulation development.
@@ -32,19 +32,26 @@ Installation instructions followed:
 
 Skip this section if the NOS3 VM is already installed and working.
 
-### 3.1 Install Oracle VirtualBox
+### 3.1 Setup Oracle VirtualBox
 
-1. Download VirtualBox from: [Actual source]
-2. Install: [Version used]
-3. [Record any nondefault steps or settings you needed]
+1. Download VirtualBox from: [https://www.virtualbox.org/]
+2. Install: Version 7.16+
+   
+3. Download Vagrant from: [https://developer.hashicorp.com/vagrant]
+4. Install: AMD64 Version 2.4.3+
 
-Expected result:
-[How to confirm VirtualBox is installed and opens successfully]
+5. Download git from: [https://git-scm.com/]
+6. Install: Version 2.47+
 
-### 3.2 Obtain the NOS3 virtual machine
+### 3.2 Install the NOS3 repository
 
-Source:
-[Actual download link or procedure used to obtain/create the VM]
+Open a command prompt
+
+Clone the repository using git clone https://github.com/nasa/nos3.git
+
+Change directory to the repository using ```diff
+- cd nos3
+```
 
 VM filename or release:
 [Record if applicable]
