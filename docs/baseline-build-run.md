@@ -47,9 +47,11 @@ Skip this section if the NOS3 VM is already installed and working.
 
 Open a command prompt
 
-Clone the repository using git clone https://github.com/nasa/nos3.git
+Clone the repository: $$\color{red}\text{git clone https://github.com/nasa/nos3.git}$$
 
-Change directory to the repository using $$\color{red}\text{cd nos3}$$
+Change directory to the repository: $$\color{red}\text{cd nos3}$$
+
+Clone the submodules: $$\color{red}\text{git submodule update --init --recursive}$$
 
 VM filename or release:
 [Record if applicable]
@@ -61,24 +63,17 @@ Steps:
 
 ### 3.3 Add or create the VM in VirtualBox
 
-1. [Describe the actual process you followed]
-2. [Record any settings you changed]
-3. [Explain how to start the VM]
+1. In the nos3 directory in a command prompt, use: $$\color{red}\text{vagrant up}$$
+This may take several minutes. When you get a return prompt, run: $$\color{red}\text{vagrant halt}$$
 
-VM settings used:
-- Memory: [Amount]
-- CPUs: [Number]
-- Network configuration: [Setting, if relevant]
-- Other changes: [Changes or "None"]
+Close the command prompt
 
-### 3.4 Start the VM and open a terminal
+### 3.4 Start the VM
 
-1. Start the NOS3 VM.
-2. [Describe login using the documented VM account, if applicable]
-3. Open a terminal inside the VM.
-
-Expected result:
-[Describe the desktop/terminal state you reached]
+1. Open VirtualBox and start the NOS3 virtual machine.
+2. Sign in to jstar user with passwords: jstar123!
+3. In the VirtualBox toolbar under "Devices", click "Upgrade Guest Additions..."
+4. Reboot the VM
 
 ## 4. Locate and identify the NOS3 checkout
 
