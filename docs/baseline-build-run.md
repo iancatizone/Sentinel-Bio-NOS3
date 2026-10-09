@@ -1,6 +1,6 @@
 NOS3 Baseline Setup, Build, and Run Guide
 =========================================
-1. Purpose and scope
+# 1. Purpose and scope
 
 This guide describes how to set up and run the stock NOS3 baseline
 used for Sentinel-Bio+ simulation development.
