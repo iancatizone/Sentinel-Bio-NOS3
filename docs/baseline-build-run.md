@@ -106,7 +106,7 @@ git status --short
 ```
 
 Save the results in:
-`evidence/baseline-versions.txt`
+[evidence/baseline-versions.txt](/evidence/baseline-versions.txt)
 
 ## 5. Prepare and build NOS3
 
