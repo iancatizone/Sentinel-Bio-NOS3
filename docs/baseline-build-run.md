@@ -81,7 +81,7 @@ Close the command prompt
 ### 3.4 Start the VM
 
    1. Open VirtualBox and start the NOS3 virtual machine; the name should along the lines of "nos3_20250217_1790120441224_84756"  
-   2. Sign in to jstar user with passwords: jstar123!
+   2. Sign in to jstar user with the password: jstar123!
 
    3. In the VirtualBox toolbar click $$\color{red}\text{Devices -> Upgrade Guest Additions...}$$
 
