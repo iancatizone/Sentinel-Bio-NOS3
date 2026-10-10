@@ -1,11 +1,11 @@
-Their name and test date.
+Name and test date.
 
-Their starting environment.
+Starting environment(OS)
 
-The baseline commit they used.
+The baseline commit used(found via )
 
-Whether they followed the guide successfully.
+Whether guide was followed successfully
 
-Any missing steps, deviations, or assistance required.
+Any missing steps, deviations, or outside help required.
 
-Their checkout results and associated evidence.
+Checkout results and associated evidence
