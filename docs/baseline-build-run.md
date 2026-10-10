@@ -47,20 +47,20 @@ Skip this section if the NOS3 VM is already installed and working.
 2. Clone the repository: 
 
 ```bash
-[git clone https://github.com/nasa/nos3.git]
+git clone https://github.com/nasa/nos3.git
 ```
 
 3. Change directory to the repository: 
 
 ```bash
-[cd nos3]
+cd nos3
 ```
 
 
 4. Clone the submodules: 
 
 ```bash
-[git submodule update --init --recursive]
+git submodule update --init --recursive
 ```
 
 
