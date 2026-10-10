@@ -1,2 +1,13 @@
-[Actual terminal output from make, preserved as printed]
-make exit status: 0
+NOS3 BUILD LOG
+Tester: Ian Catizone
+Date/time: 10/9/2026
+NOS3 commit: [Actual commit ID]
+Command: make
+Build type: Repeat build
+
+----- BEGIN TERMINAL OUTPUT -----
+
+[Paste the actual output here without editing it]
+
+----- END TERMINAL OUTPUT -----
+make exit status: [Actual recorded status]
