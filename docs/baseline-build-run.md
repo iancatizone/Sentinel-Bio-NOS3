@@ -117,13 +117,13 @@ Run preparation command, the NOS3 Igniter should open after:
 ```bash
 make prep
 ``` 
-
+This command only needs to be ran once unless you are doing a clean rebuild.
 When finished, run build command:
 
 ```bash
 make
 ```
-
+This command only needs to be used after updates to the software.
 ## 6. Launch the baseline
 
 Launch command:
@@ -133,10 +133,7 @@ make launch
 ```
 
 Expected result:
-- COSMOS Legal agreement should open
-- Several terminals should open rapidly
-- 42 map, cam, and unit sphere should open
-- NOS3 Launcher should open
+COSMOS Legal agreement should open, several terminals should open rapidly, 42 map, cam, and unit sphere should open, NOS3 Launcher should open
 
 ## 7. Baseline checkout
 
