@@ -110,8 +110,7 @@ Compare the results with:
 
 ## 5. Prepare and build NOS3
 
-Starting location:
-[NOS3 source folder inside the VM]
+Starting inside a terminal in the directory ```~/Desktop/github-nos3```
 
 Run preparation command:
 
@@ -128,21 +127,15 @@ make
 Expected result:
 
 
-Build evidence:
+Compare build output with the build log:
 [evidence/logs/build.log](/evidence/logs/build.log)
-
-Notes:
-[First-run downloads, prompts, workarounds, or "None"]
 
 ## 6. Launch the baseline
 
-Starting location:
-[NOS3 source folder inside the VM]
-
-Launch command or GUI procedure:
+Launch command:
 
 ```bash
-[Actual launch command, if using the terminal]
+make launch
 ```
 
 Expected result:
