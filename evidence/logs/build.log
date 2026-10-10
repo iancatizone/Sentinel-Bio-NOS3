@@ -7,7 +7,2021 @@ Build type: Repeat build
 
 ----- BEGIN TERMINAL OUTPUT -----
 
-[Paste the actual output here without editing it]
+Running make config (initial)...
+make[1]: Entering directory '/home/jstar/Desktop/github-nos3'
+  start-time: 814254200.0
+  start-time-utc: 2025-10-20 17:43:20
+  mission-file:  /home/jstar/Desktop/github-nos3/cfg/nos3-mission.xml
+  fsw : cfs
+  gsw : cosmos
+  scenario: STF1
+  number-spacecraft: 1
+[REMOVE] arducam disabled — removing TARGET lines.
+[REMOVE] onair disabled — removing TARGET lines.
+[REMOVE] syn disabled — removing TARGET lines.
+[REMOVE] arducam_test disabled — removing REQUIRE_UTILITY lines.
+make[1]: Leaving directory '/home/jstar/Desktop/github-nos3'
+make fsw
+make[1]: Entering directory '/home/jstar/Desktop/github-nos3'
+./cfg/build/fsw_build.sh
+mkdir -p /home/jstar/Desktop/github-nos3/fsw/build
+cd /home/jstar/Desktop/github-nos3/fsw/build && cmake -DCMAKE_INSTALL_PREFIX=exe -DCMAKE_BUILD_TYPE=debug ../cfe
+-- OMIT_DEPRECATED=false: Deprecated elements included in build
+-- Search path for modules: baseline_apps;apps/sbn/modules/protocol;../components;apps;libs;psp/fsw/modules;cfe/modules
+-- Module 'core_api' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/core_api
+-- Module 'core_private' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/core_private
+-- Module 'cfe_assert' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/cfe_assert
+-- Module 'cryptolib' found at /home/jstar/Desktop/github-nos3/components/cryptolib
+-- Module 'hwlib' found at /home/jstar/Desktop/github-nos3/fsw/apps/hwlib
+-- Module 'io_lib' found at /home/jstar/Desktop/github-nos3/fsw/apps/io_lib
+-- Module 'cf' found at /home/jstar/Desktop/github-nos3/fsw/apps/cf
+-- Module 'ci' found at /home/jstar/Desktop/github-nos3/fsw/apps/ci
+-- Module 'ci_lab' found at /home/jstar/Desktop/github-nos3/fsw/apps/ci_lab
+-- Module 'ds' found at /home/jstar/Desktop/github-nos3/fsw/apps/ds
+-- Module 'fm' found at /home/jstar/Desktop/github-nos3/fsw/apps/fm
+-- Module 'lc' found at /home/jstar/Desktop/github-nos3/fsw/apps/lc
+-- Module 'sbn' found at /home/jstar/Desktop/github-nos3/fsw/apps/sbn
+-- Module 'sbn_tcp' found at /home/jstar/Desktop/github-nos3/fsw/apps/sbn/modules/protocol/sbn_tcp
+-- Module 'sbn_client' found at /home/jstar/Desktop/github-nos3/fsw/apps/sbn_client
+-- Module 'sc' found at /home/jstar/Desktop/github-nos3/fsw/apps/sc
+-- Module 'sch' found at /home/jstar/Desktop/github-nos3/fsw/apps/sch
+-- Module 'to' found at /home/jstar/Desktop/github-nos3/fsw/apps/to
+-- Module 'to_lab' found at /home/jstar/Desktop/github-nos3/fsw/apps/to_lab
+-- Module 'arducam/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/arducam/fsw/cfs
+-- Module 'generic_adcs/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_adcs/fsw/cfs
+-- Module 'generic_css/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_css/fsw/cfs
+-- Module 'generic_eps/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_eps/fsw/cfs
+-- Module 'generic_fss/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_fss/fsw/cfs
+-- Module 'generic_imu/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_imu/fsw/cfs
+-- Module 'generic_mag/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_mag/fsw/cfs
+-- Module 'generic_reaction_wheel/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_reaction_wheel/fsw/cfs
+-- Module 'generic_radio/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_radio/fsw/cfs
+-- Module 'generic_star_tracker/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_star_tracker/fsw/cfs
+-- Module 'generic_thruster/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_thruster/fsw/cfs
+-- Module 'generic_torquer/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/generic_torquer/fsw/cfs
+-- Module 'mgr/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/mgr/fsw/cfs
+-- Module 'novatel_oem615/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/novatel_oem615/fsw/cfs
+-- Module 'onair' found at /home/jstar/Desktop/github-nos3/components/onair
+-- Module 'sample/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/sample/fsw/cfs
+-- Module 'syn/fsw/cfs' found at /home/jstar/Desktop/github-nos3/components/syn/fsw/cfs
+-- Module 'es' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es
+-- Module 'evs' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs
+-- Module 'fs' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/fs
+-- Module 'sb' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb
+-- Module 'tbl' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl
+-- Module 'time' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time
+-- Module 'osal' found at /home/jstar/Desktop/github-nos3/fsw/osal
+-- Module 'psp' found at /home/jstar/Desktop/github-nos3/fsw/psp
+-- Module 'msg' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/msg
+-- Module 'sbr' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sbr
+-- Module 'resourceid' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/resourceid
+-- Module 'config' found at /home/jstar/Desktop/github-nos3/fsw/cfe/modules/config
+-- OSAL_SYSTEM_BSPTYPE not defined, no OSAL implementation will be compiled
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/cfe_mission_cfg.h for mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/cfe_perfids.h for perfids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/core_api/config/default_cfe_core_api_interface_cfg.h for cfe_core_api_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_mission_cfg.h for cfe_es_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_interface_cfg.h for cfe_es_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_extern_typedefs.h for cfe_es_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_fcncodes.h for cfe_es_fcncodes.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_msgdefs.h for cfe_es_msgdefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_msg.h for cfe_es_msg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_msgstruct.h for cfe_es_msgstruct.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_topicids.h for cfe_es_topicids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_mission_cfg.h for cfe_evs_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_interface_cfg.h for cfe_evs_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_extern_typedefs.h for cfe_evs_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_fcncodes.h for cfe_evs_fcncodes.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_msgdefs.h for cfe_evs_msgdefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_msg.h for cfe_evs_msg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_msgstruct.h for cfe_evs_msgstruct.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_topicids.h for cfe_evs_topicids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/fs/config/default_cfe_fs_mission_cfg.h for cfe_fs_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/fs/config/default_cfe_fs_interface_cfg.h for cfe_fs_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/fs/config/default_cfe_fs_filedef.h for cfe_fs_filedef.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/fs/config/default_cfe_fs_extern_typedefs.h for cfe_fs_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_mission_cfg.h for cfe_sb_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_interface_cfg.h for cfe_sb_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_extern_typedefs.h for cfe_sb_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_fcncodes.h for cfe_sb_fcncodes.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_msgdefs.h for cfe_sb_msgdefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_msg.h for cfe_sb_msg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_msgstruct.h for cfe_sb_msgstruct.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_topicids.h for cfe_sb_topicids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_mission_cfg.h for cfe_tbl_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_interface_cfg.h for cfe_tbl_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_extern_typedefs.h for cfe_tbl_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_fcncodes.h for cfe_tbl_fcncodes.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_msgdefs.h for cfe_tbl_msgdefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_msg.h for cfe_tbl_msg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_msgstruct.h for cfe_tbl_msgstruct.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_topicids.h for cfe_tbl_topicids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_mission_cfg.h for cfe_time_mission_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_interface_cfg.h for cfe_time_interface_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_extern_typedefs.h for cfe_time_extern_typedefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_fcncodes.h for cfe_time_fcncodes.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_msgdefs.h for cfe_time_msgdefs.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_msg.h for cfe_time_msg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_msgstruct.h for cfe_time_msgstruct.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_topicids.h for cfe_time_topicids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/msg/option_inc/default_cfe_msg_hdr_pri.h for cfe_msg_hdr.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/msg/option_inc/default_cfe_msg_sechdr.h for cfe_msg_sechdr.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/resourceid/option_inc/cfe_resourceid_simple.h for cfe_resourceid_typedef.h
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/tools/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Configuring for system arch: amd64-nos3/default_cpu1
+-- OMIT_DEPRECATED=false: Deprecated elements included in build
+-- Found the following NOSENGINE Libraries:
+--  client
+--  uart
+--  i2c
+--  spi
+--  can
+-- Found NOSENGINE 
+-- Set NOS Engine Libraries
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/cpu1_msgids.h for msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/core_api/config/default_cfe_core_api_base_msgids.h for cfe_core_api_base_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/cpu1_platform_cfg.h for platform_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/core_private/config/default_cfe_core_private_internal_cfg.h for cfe_core_private_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/cpu1_device_cfg.h for device_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_internal_cfg.h for cfe_es_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_msgids.h for cfe_es_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/es/config/default_cfe_es_platform_cfg.h for cfe_es_platform_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_internal_cfg.h for cfe_evs_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_msgids.h for cfe_evs_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/evs/config/default_cfe_evs_platform_cfg.h for cfe_evs_platform_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_internal_cfg.h for cfe_sb_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_msgids.h for cfe_sb_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/sb/config/default_cfe_sb_platform_cfg.h for cfe_sb_platform_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_internal_cfg.h for cfe_tbl_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_msgids.h for cfe_tbl_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/tbl/config/default_cfe_tbl_platform_cfg.h for cfe_tbl_platform_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_internal_cfg.h for cfe_time_internal_cfg.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_msgids.h for cfe_time_msgids.h
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/cfe/modules/time/config/default_cfe_time_platform_cfg.h for cfe_time_platform_cfg.h
+-- BSP Selection: nos-linux at /home/jstar/Desktop/github-nos3/fsw/osal/src/bsp/nos-linux
+-- OSAL Selection: nos at /home/jstar/Desktop/github-nos3/fsw/osal/src/os/nos
+-- OSAL Compile Definitions: _XOPEN_SOURCE=600;_NOS_OS_;_GNU_SOURCE
+-- PSP Selection: nos-linux
+-- Building Core Module: core_api
+-- Building Core Module: core_private
+-- Building Core Module: es
+-- Building Core Module: evs
+-- Building Core Module: fs
+-- Building Core Module: sb
+-- Building Core Module: tbl
+-- Building Core Module: time
+-- Building Core Module: psp
+-- Building Core Module: msg
+-- CCSDS primary header included in message header (not including CCSDS extended header)
+-- Message Id version 1 in use (MsgId V1)
+-- Building Core Module: sbr
+-- Using direct map software bus routing implementation
+-- Building Core Module: resourceid
+-- Building Core Module: config
+-- Building Dynamic App: cfe_assert targets=cpu1
+-- Building Dynamic App: cryptolib targets=cpu1
+-- Building Dynamic App: hwlib targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/hwlib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- hwlib: NON-FLIGHT configuration
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/hwlib/sim/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: io_lib targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/io_lib/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: cf targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/cf_def_config.c for cf_def_config.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/cf_def_config.c as table definition for cf_def_config on cpu1
+-- Building Dynamic App: ci targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/ci/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: ci_lab targets=cpu1
+-- Building Dynamic App: ds targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/ds_filter_tbl.c for ds_filter_tbl.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/ds_filter_tbl.c as table definition for ds_filter_tbl on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/ds_file_tbl.c for ds_file_tbl.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/ds_file_tbl.c as table definition for ds_file_tbl on cpu1
+-- Building Dynamic App: fm targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/fm/fsw/tables/fm_monitor.c for fm_monitor.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/fm/fsw/tables/fm_monitor.c as table definition for fm_monitor on cpu1
+-- Building Dynamic App: lc targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/lc_def_wdt.c for lc_def_wdt.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/lc_def_wdt.c as table definition for lc_def_wdt on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/lc_def_adt.c for lc_def_adt.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/lc_def_adt.c as table definition for lc_def_adt on cpu1
+-- Building Dynamic App: sbn targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/sbn/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sbn/fsw/tables/sbn_conf_tbl.c for sbn_conf_tbl.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sbn/fsw/tables/sbn_conf_tbl.c as table definition for sbn_conf_tbl on cpu1
+-- Building Dynamic App: sbn_tcp targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/sbn/modules/protocol/sbn_tcp/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: sbn_client targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/sbn_client/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: sc targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_ats1.c for sc_ats1.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_ats1.c as table definition for sc_ats1 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts001.c for sc_rts001.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts001.c as table definition for sc_rts001 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts002.c for sc_rts002.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts002.c as table definition for sc_rts002 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts003.c for sc_rts003.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts003.c as table definition for sc_rts003 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts004.c for sc_rts004.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts004.c as table definition for sc_rts004 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts005.c for sc_rts005.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts005.c as table definition for sc_rts005 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts006.c for sc_rts006.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts006.c as table definition for sc_rts006 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts007.c for sc_rts007.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts007.c as table definition for sc_rts007 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts008.c for sc_rts008.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts008.c as table definition for sc_rts008 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts009.c for sc_rts009.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts009.c as table definition for sc_rts009 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts010.c for sc_rts010.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts010.c as table definition for sc_rts010 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts011.c for sc_rts011.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts011.c as table definition for sc_rts011 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts012.c for sc_rts012.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts012.c as table definition for sc_rts012 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts013.c for sc_rts013.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts013.c as table definition for sc_rts013 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts014.c for sc_rts014.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts014.c as table definition for sc_rts014 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts015.c for sc_rts015.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts015.c as table definition for sc_rts015 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts016.c for sc_rts016.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts016.c as table definition for sc_rts016 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts017.c for sc_rts017.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts017.c as table definition for sc_rts017 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts018.c for sc_rts018.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts018.c as table definition for sc_rts018 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts019.c for sc_rts019.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts019.c as table definition for sc_rts019 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts020.c for sc_rts020.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts020.c as table definition for sc_rts020 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts021.c for sc_rts021.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts021.c as table definition for sc_rts021 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts022.c for sc_rts022.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts022.c as table definition for sc_rts022 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts023.c for sc_rts023.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts023.c as table definition for sc_rts023 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts024.c for sc_rts024.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts024.c as table definition for sc_rts024 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts025.c for sc_rts025.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts025.c as table definition for sc_rts025 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts026.c for sc_rts026.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts026.c as table definition for sc_rts026 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts027.c for sc_rts027.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts027.c as table definition for sc_rts027 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts028.c for sc_rts028.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts028.c as table definition for sc_rts028 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts029.c for sc_rts029.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts029.c as table definition for sc_rts029 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts030.c for sc_rts030.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts030.c as table definition for sc_rts030 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts031.c for sc_rts031.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts031.c as table definition for sc_rts031 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts032.c for sc_rts032.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts032.c as table definition for sc_rts032 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts033.c for sc_rts033.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts033.c as table definition for sc_rts033 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts034.c for sc_rts034.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts034.c as table definition for sc_rts034 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts035.c for sc_rts035.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts035.c as table definition for sc_rts035 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts036.c for sc_rts036.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts036.c as table definition for sc_rts036 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts037.c for sc_rts037.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sc_rts037.c as table definition for sc_rts037 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts038.c for sc_rts038.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts038.c as table definition for sc_rts038 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts039.c for sc_rts039.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts039.c as table definition for sc_rts039 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts040.c for sc_rts040.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts040.c as table definition for sc_rts040 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts041.c for sc_rts041.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts041.c as table definition for sc_rts041 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts042.c for sc_rts042.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts042.c as table definition for sc_rts042 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts043.c for sc_rts043.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts043.c as table definition for sc_rts043 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts044.c for sc_rts044.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts044.c as table definition for sc_rts044 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts045.c for sc_rts045.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts045.c as table definition for sc_rts045 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts046.c for sc_rts046.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts046.c as table definition for sc_rts046 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts047.c for sc_rts047.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts047.c as table definition for sc_rts047 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts048.c for sc_rts048.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts048.c as table definition for sc_rts048 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts049.c for sc_rts049.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts049.c as table definition for sc_rts049 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts050.c for sc_rts050.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts050.c as table definition for sc_rts050 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts051.c for sc_rts051.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts051.c as table definition for sc_rts051 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts052.c for sc_rts052.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts052.c as table definition for sc_rts052 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts053.c for sc_rts053.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts053.c as table definition for sc_rts053 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts054.c for sc_rts054.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts054.c as table definition for sc_rts054 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts055.c for sc_rts055.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts055.c as table definition for sc_rts055 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts056.c for sc_rts056.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts056.c as table definition for sc_rts056 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts057.c for sc_rts057.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts057.c as table definition for sc_rts057 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts058.c for sc_rts058.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts058.c as table definition for sc_rts058 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts059.c for sc_rts059.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts059.c as table definition for sc_rts059 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts060.c for sc_rts060.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts060.c as table definition for sc_rts060 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts061.c for sc_rts061.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts061.c as table definition for sc_rts061 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts062.c for sc_rts062.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts062.c as table definition for sc_rts062 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts063.c for sc_rts063.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts063.c as table definition for sc_rts063 on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts064.c for sc_rts064.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/apps/sc/fsw/tables/sc_rts064.c as table definition for sc_rts064 on cpu1
+-- Building Dynamic App: sch targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/sch/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sch_def_msgtbl.c for sch_def_msgtbl.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sch_def_msgtbl.c as table definition for sch_def_msgtbl on cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sch_def_schtbl.c for sch_def_schtbl.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/sch_def_schtbl.c as table definition for sch_def_schtbl on cpu1
+-- Building Dynamic App: to targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/fsw/apps/to/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/to_config.c for to_config.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/to_config.c as table definition for to_config on cpu1
+-- Building Dynamic App: to_lab targets=cpu1
+-- Using file: /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/to_lab_sub.c for to_lab_sub.c
+-- Using /home/jstar/Desktop/github-nos3/fsw/../cfg/build/nos3_defs/tables/to_lab_sub.c as table definition for to_lab_sub on cpu1
+-- Building Dynamic App: arducam/fsw/cfs targets=cpu1
+-- Ignoring HWIL libraries
+-- Building Dynamic App: generic_adcs/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_adcs/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_css/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_css/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_eps/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_eps/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_fss/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_fss/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_imu/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_imu/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_mag/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_mag/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_reaction_wheel/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_reaction_wheel/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_radio/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_radio/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_star_tracker/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_star_tracker/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_thruster/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_thruster/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: generic_torquer/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/generic_torquer/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: mgr/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/mgr/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: novatel_oem615/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/novatel_oem615/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: onair targets=cpu1
+-- Building Dynamic App: sample/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/sample/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Building Dynamic App: syn/fsw/cfs targets=cpu1
+[0mCMake Deprecation Warning at /home/jstar/Desktop/github-nos3/components/syn/fsw/cfs/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Using the single-header code from /home/jstar/Desktop/github-nos3/components/syn/synopsis/json/single_include/
+[0mNOTE: Selected /home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/cpu1_cfe_es_startup.scr as source for cfe_es_startup.scr on cpu1[0m
+-- Configuring done (1.4s)
+-- Generating done (3.2s)
+-- Build files have been written to: /home/jstar/Desktop/github-nos3/fsw/build/amd64-nos3/default_cpu1
+-- Configuring done (5.8s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/jstar/Desktop/github-nos3/fsw/build
+make --no-print-directory -C /home/jstar/Desktop/github-nos3/fsw/build mission-install
+make[1]: Warning: File 'Makefile' has modification time 2.7 s in the future
+make[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 3 s in the future
+make[3]: Warning: File 'CMakeFiles/Makefile2' has modification time 2.9 s in the future
+make[4]: Warning: File 'CMakeFiles/cfe-build-env.dir/progress.make' has modification time 2.9 s in the future
+make[4]: Warning: File 'tools/elf2cfetbl/CMakeFiles/elf2cfetbl.dir/progress.make' has modification time 2.9 s in the future
+make[4]: Warning: File 'CMakeFiles/cfe-module-version.dir/progress.make' has modification time 2.9 s in the future
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: Warning: File 'CMakeFiles/cfe-build-env.dir/progress.make' has modification time 2.9 s in the future
+make[4]: Warning: File 'CMakeFiles/cfe-module-version.dir/progress.make' has modification time 2.9 s in the future
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+[0minside get_version for MISSION[0m
+make[4]: Warning: File 'tools/elf2cfetbl/CMakeFiles/elf2cfetbl.dir/progress.make' has modification time 2.9 s in the future
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 50%] Built target cfe-build-env
+[ 50%] [32mBuilding C object tools/elf2cfetbl/CMakeFiles/elf2cfetbl.dir/elf2cfetbl.c.o[0m
+[100%] [32m[1mLinking C executable elf2cfetbl[0m
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target elf2cfetbl
+[0minside get_version for core_api[0m
+[0minside get_version for core_private[0m
+[0minside get_version for cfe_assert[0m
+[0minside get_version for cryptolib[0m
+[0minside get_version for hwlib[0m
+[0minside get_version for io_lib[0m
+[0minside get_version for cf[0m
+[0minside get_version for ci[0m
+[0minside get_version for ci_lab[0m
+[0minside get_version for ds[0m
+[0minside get_version for fm[0m
+[0minside get_version for lc[0m
+[0minside get_version for sbn[0m
+[0minside get_version for sbn_tcp[0m
+[0minside get_version for sbn_client[0m
+[0minside get_version for sc[0m
+[0minside get_version for sch[0m
+[0minside get_version for to[0m
+[0minside get_version for to_lab[0m
+[0minside get_version for arducam/fsw/cfs[0m
+[0minside get_version for generic_adcs/fsw/cfs[0m
+[0minside get_version for generic_css/fsw/cfs[0m
+[0minside get_version for generic_eps/fsw/cfs[0m
+[0minside get_version for generic_fss/fsw/cfs[0m
+[0minside get_version for generic_imu/fsw/cfs[0m
+[0minside get_version for generic_mag/fsw/cfs[0m
+[0minside get_version for generic_reaction_wheel/fsw/cfs[0m
+[0minside get_version for generic_radio/fsw/cfs[0m
+[0minside get_version for generic_star_tracker/fsw/cfs[0m
+[0minside get_version for generic_thruster/fsw/cfs[0m
+[0minside get_version for generic_torquer/fsw/cfs[0m
+[0minside get_version for mgr/fsw/cfs[0m
+[0minside get_version for novatel_oem615/fsw/cfs[0m
+[0minside get_version for onair[0m
+[0minside get_version for sample/fsw/cfs[0m
+[0minside get_version for syn/fsw/cfs[0m
+[0minside get_version for es[0m
+[0minside get_version for evs[0m
+[0minside get_version for fs[0m
+[0minside get_version for sb[0m
+[0minside get_version for tbl[0m
+[0minside get_version for time[0m
+[0minside get_version for osal[0m
+[0minside get_version for psp[0m
+[0minside get_version for msg[0m
+[0minside get_version for sbr[0m
+[0minside get_version for resourceid[0m
+[0minside get_version for config[0m
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target cfe-module-version
+[100%] Built target mission-version
+[100%] Built target mission-prebuild
+make[8]: Warning: File 'apps/to_lab/CMakeFiles/tblobj_cpu1_to_lab.tbl2a4da07629578471508f17566d876acc1e5d6280.dir/compiler_depend.make' has modification time 2.9 s in the future
+make[7]: Warning: File 'osal/nos-linux_impl/CMakeFiles/osal_nos-linux_impl.dir/compiler_depend.make' has modification time 2.8 s in the future
+[  0%] [32mBuilding C object apps/to_lab/CMakeFiles/tblobj_cpu1_to_lab.tbl2a4da07629578471508f17566d876acc1e5d6280.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/to_lab_sub.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[  3%] Built target osal_nos-linux_impl
+make[7]: Warning: File 'evs/CMakeFiles/evs.dir/compiler_depend.make' has modification time 2.7 s in the future
+make[7]: Warning: File 'es/CMakeFiles/es.dir/compiler_depend.make' has modification time 2.4 s in the future
+[  7%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_api.c.o[0m
+[  7%] [32mBuilding C object evs/CMakeFiles/evs.dir/fsw/src/cfe_evs.c.o[0m
+[  7%] [32mBuilding C object evs/CMakeFiles/evs.dir/fsw/src/cfe_evs_log.c.o[0m
+make[7]: Warning: File 'osal/nos_impl/CMakeFiles/osal_nos_impl.dir/compiler_depend.make' has modification time 2.1 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 22%] Built target osal_nos_impl
+[ 22%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_apps.c.o[0m
+make[7]: Warning: File 'fs/CMakeFiles/fs.dir/compiler_depend.make' has modification time 3 s in the future
+[ 22%] [32mBuilding C object fs/CMakeFiles/fs.dir/fsw/src/cfe_fs_api.c.o[0m
+[ 22%] [32mBuilding C object evs/CMakeFiles/evs.dir/fsw/src/cfe_evs_task.c.o[0m
+[ 22%] [32mBuilding C object fs/CMakeFiles/fs.dir/fsw/src/cfe_fs_priv.c.o[0m
+[ 22%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_backgroundtask.c.o[0m
+[ 22%] [32m[1mLinking C static library libfs.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 22%] Built target fs
+[ 22%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_cds.c.o[0m
+[ 22%] [32mBuilding C object evs/CMakeFiles/evs.dir/fsw/src/cfe_evs_utils.c.o[0m
+[ 22%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_cds_mempool.c.o[0m
+[ 22%] [32mBuilding C object evs/CMakeFiles/evs.dir/fsw/src/cfe_evs_dispatch.c.o[0m
+[ 22%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_dispatch.c.o[0m
+[ 25%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_erlog.c.o[0m
+[ 29%] [32m[1mLinking C static library libevs.a[0m
+[ 29%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_generic_pool.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 29%] Built target evs
+[ 29%] [32m[1mLinking C static library libtblobj_cpu1_to_lab.tbl2a4da07629578471508f17566d876acc1e5d6280.a[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 29%] Built target tblobj_cpu1_to_lab.tbl2a4da07629578471508f17566d876acc1e5d6280
+make[8]: Warning: File 'apps/cf/CMakeFiles/tblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.dir/compiler_depend.make' has modification time 3 s in the future
+[ 29%] [32mBuilding C object apps/cf/CMakeFiles/tblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/cf_def_config.c.o[0m
+[ 29%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_mempool.c.o[0m
+make[7]: Warning: File 'sb/CMakeFiles/sb.dir/compiler_depend.make' has modification time 2.8 s in the future
+[ 29%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_api.c.o[0m
+[ 33%] [32m[1mLinking C static library libtblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.a[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 33%] Built target tblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f
+[ 33%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_objtab.c.o[0m
+[ 33%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_buf.c.o[0m
+make[8]: Warning: File 'apps/ds/CMakeFiles/tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.dir/compiler_depend.make' has modification time 3 s in the future
+[ 33%] [32mBuilding C object apps/ds/CMakeFiles/tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/ds_filter_tbl.c.o[0m
+[ 33%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_init.c.o[0m
+[ 33%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_perf.c.o[0m
+[ 33%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_resource.c.o[0m
+[ 37%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_start.c.o[0m
+[ 37%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_syslog.c.o[0m
+[ 40%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_msg_id_util.c.o[0m
+[ 40%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_priv.c.o[0m
+[ 40%] [32mBuilding C object es/CMakeFiles/es.dir/fsw/src/cfe_es_task.c.o[0m
+[ 40%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_dispatch.c.o[0m
+[ 40%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_task.c.o[0m
+[ 40%] [32mBuilding C object sb/CMakeFiles/sb.dir/fsw/src/cfe_sb_util.c.o[0m
+[ 40%] [32m[1mLinking C static library libes.a[0m
+[ 40%] [32mBuilding C object apps/ds/CMakeFiles/tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/ds_file_tbl.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 40%] Built target es
+[ 40%] [32m[1mLinking C static library libsb.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 40%] Built target sb
+make[7]: Warning: File 'tbl/CMakeFiles/tbl.dir/compiler_depend.make' has modification time 2.9 s in the future
+[ 40%] [32mBuilding C object tbl/CMakeFiles/tbl.dir/fsw/src/cfe_tbl_api.c.o[0m
+make[7]: Warning: File 'time/CMakeFiles/time.dir/compiler_depend.make' has modification time 2.9 s in the future
+[ 40%] [32mBuilding C object time/CMakeFiles/time.dir/fsw/src/cfe_time_api.c.o[0m
+[ 40%] [32mBuilding C object tbl/CMakeFiles/tbl.dir/fsw/src/cfe_tbl_internal.c.o[0m
+[ 40%] [32mBuilding C object time/CMakeFiles/time.dir/fsw/src/cfe_time_tone.c.o[0m
+[ 40%] [32mBuilding C object time/CMakeFiles/time.dir/fsw/src/cfe_time_task.c.o[0m
+[ 40%] [32mBuilding C object tbl/CMakeFiles/tbl.dir/fsw/src/cfe_tbl_task.c.o[0m
+[ 44%] [32mBuilding C object tbl/CMakeFiles/tbl.dir/fsw/src/cfe_tbl_task_cmds.c.o[0m
+[ 44%] [32mBuilding C object time/CMakeFiles/time.dir/fsw/src/cfe_time_utils.c.o[0m
+[ 48%] [32mBuilding C object tbl/CMakeFiles/tbl.dir/fsw/src/cfe_tbl_dispatch.c.o[0m
+[ 48%] [32mBuilding C object time/CMakeFiles/time.dir/fsw/src/cfe_time_dispatch.c.o[0m
+[ 48%] [32m[1mLinking C static library libtime.a[0m
+[ 48%] [32m[1mLinking C static library libtbl.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 48%] Built target time
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: Warning: File 'psp/ram_notimpl-nos-linux-impl/CMakeFiles/ram_notimpl.dir/compiler_depend.make' has modification time 3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+make[8]: Warning: File 'apps/fm/CMakeFiles/tblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.dir/compiler_depend.make' has modification time 3 s in the future
+[ 48%] Built target ram_notimpl
+[ 48%] Built target tbl
+[ 48%] [32mBuilding C object apps/fm/CMakeFiles/tblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.dir/fsw/tables/fm_monitor.c.o[0m
+make[8]: Warning: File 'apps/lc/CMakeFiles/tblobj_cpu1_lc.tblbe3a1ecf64230bd8f7f9d9afc3a9b3a406538b4c.dir/compiler_depend.make' has modification time 2.9 s in the future
+[ 48%] [32m[1mLinking C static library libtblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.a[0m
+make[7]: Warning: File 'psp/nos-linux-impl/CMakeFiles/psp-nos-linux-impl.dir/compiler_depend.make' has modification time 2.8 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 48%] [32mBuilding C object apps/lc/CMakeFiles/tblobj_cpu1_lc.tblbe3a1ecf64230bd8f7f9d9afc3a9b3a406538b4c.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/lc_def_wdt.c.o[0m
+[ 51%] Built target psp-nos-linux-impl
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 51%] Built target tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16
+[ 51%] [32m[1mLinking C static library libtblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.a[0m
+make[8]: Warning: File 'apps/sbn/CMakeFiles/tblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.dir/compiler_depend.make' has modification time 3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: Warning: File 'psp/nos-linux-shared/CMakeFiles/psp-nos-linux-shared.dir/compiler_depend.make' has modification time 2.9 s in the future
+[ 51%] [32mBuilding C object apps/sbn/CMakeFiles/tblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.dir/fsw/tables/sbn_conf_tbl.c.o[0m
+[ 51%] Built target tblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 55%] Built target psp-nos-linux-shared
+make[7]: Warning: File 'psp/eeprom_notimpl-nos-linux-impl/CMakeFiles/eeprom_notimpl.dir/compiler_depend.make' has modification time 3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 55%] Built target eeprom_notimpl
+make[7]: Warning: File 'psp/port_notimpl-nos-linux-impl/CMakeFiles/port_notimpl.dir/compiler_depend.make' has modification time 3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 55%] Built target port_notimpl
+[ 55%] [32m[1mLinking C static library libtblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.a[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 55%] Built target tblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8
+make[7]: Warning: File 'msg/CMakeFiles/msg.dir/compiler_depend.make' has modification time 2.5 s in the future
+[ 55%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_ccsdspri.c.o[0m
+make[8]: Warning: File 'apps/sch/CMakeFiles/tblobj_cpu1_sch.tbla3422bddc3b7962c333037be983f7563d3c495c3.dir/compiler_depend.make' has modification time 3 s in the future
+[ 55%] [32mBuilding C object apps/sch/CMakeFiles/tblobj_cpu1_sch.tbla3422bddc3b7962c333037be983f7563d3c495c3.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sch_def_msgtbl.c.o[0m
+[ 55%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_init.c.o[0m
+[ 55%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_verify.c.o[0m
+[ 59%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_msgid_shared.c.o[0m
+make[8]: Warning: File 'apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/compiler_depend.make' has modification time 1.4 s in the future
+[ 59%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_ats1.c.o[0m
+[ 59%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_sechdr_checksum.c.o[0m
+[ 59%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_sechdr_fc.c.o[0m
+[ 62%] [32mBuilding C object apps/lc/CMakeFiles/tblobj_cpu1_lc.tblbe3a1ecf64230bd8f7f9d9ake 2>&1 | tee ~/nos3-build.log
+build_status=${PIPESTATUS[0]}
+echo "make exit status: $build_status" | tee -a ~/nos3-build.l
+afc3a9b3a406538b4c.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/lc_def_adt.c.o[0m
+[ 62%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_sechdr_time.c.o[0m
+[ 62%] [32mBuilding C object apps/sch/CMakeFiles/tblobj_cpu1_sch.tbla3422bddc3b7962c333037be983f7563d3c495c3.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sch_def_schtbl.c.o[0m
+[ 62%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_initdefaulthdr_pri.c.o[0m
+[ 62%] [32mBuilding C object msg/CMakeFiles/msg.dir/fsw/src/cfe_msg_msgid_v1.c.o[0m
+[ 62%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts001.c.o[0m
+[ 62%] [32m[1mLinking C static library libmsg.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target msg
+make[7]: Warning: File 'sbr/CMakeFiles/sbr.dir/compiler_depend.make' has modification time 3 s in the future
+[ 62%] [32mBuilding C object sbr/CMakeFiles/sbr.dir/fsw/src/cfe_sbr_map_direct.c.o[0m
+[ 62%] [32mBuilding C object sbr/CMakeFiles/sbr.dir/fsw/src/cfe_sbr_route_unsorted.c.o[0m
+[ 62%] [32m[1mLinking C static library libsbr.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target sbr
+[ 62%] [32m[1mLinking C static library libtblobj_cpu1_sch.tbla3422bddc3b7962c333037be983f7563d3c495c3.a[0m
+make[7]: Warning: File 'resourceid/CMakeFiles/resourceid.dir/compiler_depend.make' has modification time 3 s in the future
+[ 62%] [32mBuilding C object resourceid/CMakeFiles/resourceid.dir/fsw/src/cfe_resourceid_api.c.o[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target tblobj_cpu1_sch.tbla3422bddc3b7962c333037be983f7563d3c495c3
+[ 62%] [32m[1mLinking C static library libtblobj_cpu1_lc.tblbe3a1ecf64230bd8f7f9d9afc3a9b3a406538b4c.a[0m
+make[7]: Warning: File 'config/CMakeFiles/config.dir/compiler_depend.make' has modification time 3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target tblobj_cpu1_lc.tblbe3a1ecf64230bd8f7f9d9afc3a9b3a406538b4c
+[ 66%] Built target config
+[ 66%] [32m[1mLinking C static library libresourceid.a[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 66%] Built target resourceid
+make[7]: Warning: File 'osal/ut_assert/CMakeFiles/ut_assert_pic.dir/compiler_depend.make' has modification time 2.9 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 66%] Built target ut_assert_pic
+make[8]: Warning: File 'apps/to/CMakeFiles/tblobj_cpu1_to.tbleac82570f087d67bb30ff30c503eedbe1523d28a.dir/compiler_depend.make' has modification time 2.9 s in the future
+[ 66%] [32mBuilding C object apps/to/CMakeFiles/tblobj_cpu1_to.tbleac82570f087d67bb30ff30c503eedbe1523d28a.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/to_config.c.o[0m
+make[7]: Warning: File 'apps/cryptolib/src/CMakeFiles/crypto.dir/compiler_depend.make' has modification time 2.6 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 81%] Built target crypto
+make[7]: Warning: File 'apps/hwlib/sim/CMakeFiles/noslink.dir/compiler_depend.make' has modification time 2.3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 88%] Built target noslink
+make[7]: Warning: File 'apps/io_lib/CMakeFiles/io_lib.dir/compiler_depend.make' has modification time 2.7 s in the future
+[ 92%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/io_lib_init.c.o[0m
+make[7]: Warning: File 'apps/cf/CMakeFiles/cf.dir/compiler_depend.make' has modification time 2.6 s in the future
+[ 92%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_app.c.o[0m
+[ 92%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/io_lib_utils.c.o[0m
+[ 96%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cfdp.c.o[0m
+[ 96%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cfdp_r.c.o[0m
+[ 96%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/formats/tctf.c.o[0m
+[ 96%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cfdp_s.c.o[0m
+[ 96%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/formats/tmtf.c.o[0m
+[ 96%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cfdp_sbintf.c.o[0m
+[ 96%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/cop1.c.o[0m
+[ 96%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cfdp_dispatch.c.o[0m
+[100%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts002.c.o[0m
+[100%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/tc_sync.c.o[0m
+[100%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_chunk.c.o[0m
+[103%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/tm_sdlp.c.o[0m
+[107%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_clist.c.o[0m
+[107%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_codec.c.o[0m
+[107%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/tm_sync.c.o[0m
+[107%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/trans_rs422.c.o[0m
+[111%] [32m[1mLinking C static library libtblobj_cpu1_to.tbleac82570f087d67bb30ff30c503eedbe1523d28a.a[0m
+[111%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_cmd.c.o[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[111%] Built target tblobj_cpu1_to.tbleac82570f087d67bb30ff30c503eedbe1523d28a
+[114%] Built target generate_table_cpu1_to_lab_to_lab_sub
+[114%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/trans_select.c.o[0m
+[114%] [32mBuilding C object apps/io_lib/CMakeFiles/io_lib.dir/fsw/src/services/trans_udp.c.o[0m
+[114%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts003.c.o[0m
+[114%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_crc.c.o[0m
+[114%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts004.c.o[0m
+[114%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_timer.c.o[0m
+[114%] [32m[1mLinking C shared module io_lib.so[0m
+[114%] [32mBuilding C object apps/cf/CMakeFiles/cf.dir/fsw/src/cf_utils.c.o[0m
+[118%] [32m[1mLinking C shared module cf.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[118%] Built target cf
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[118%] Built target io_lib
+[122%] Built target generate_table_cpu1_cf_cf_def_config
+[122%] Built target generate_table_cpu1_ds_ds_filter_tbl
+[122%] Built target generate_table_cpu1_ds_ds_file_tbl
+[122%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts005.c.o[0m
+make[7]: Warning: File 'apps/ci/CMakeFiles/ci.dir/compiler_depend.make' has modification time 2.9 s in the future
+[122%] [32mBuilding C object apps/ci/CMakeFiles/ci.dir/fsw/src/ci_app.c.o[0m
+[125%] [32mBuilding C object apps/ci/CMakeFiles/ci.dir/fsw/src/ci_utils.c.o[0m
+[125%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts006.c.o[0m
+[125%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts007.c.o[0m
+[125%] [32mBuilding C object apps/ci/CMakeFiles/ci.dir/fsw/examples/udp_tf/ci_custom.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts008.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts009.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts010.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts011.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts012.c.o[0m
+[129%] [32m[1mLinking C shared module ci.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[129%] Built target ci
+make[7]: Warning: File 'apps/ci_lab/CMakeFiles/ci_lab.dir/compiler_depend.make' has modification time 3 s in the future
+[129%] [32mBuilding C object apps/ci_lab/CMakeFiles/ci_lab.dir/fsw/src/ci_lab_app.c.o[0m
+[129%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts013.c.o[0m
+[129%] [32m[1mLinking C shared module ci_lab.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[129%] Built target ci_lab
+make[7]: Warning: File 'apps/ds/CMakeFiles/ds.dir/compiler_depend.make' has modification time 2.9 s in the future
+[129%] [32mBuilding C object apps/ds/CMakeFiles/ds.dir/fsw/src/ds_table.c.o[0m
+[133%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts014.c.o[0m
+[133%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts015.c.o[0m
+[133%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts016.c.o[0m
+[137%] [32mBuilding C object apps/ds/CMakeFiles/ds.dir/fsw/src/ds_cmds.c.o[0m
+[137%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts017.c.o[0m
+[137%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts018.c.o[0m
+[137%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts019.c.o[0m
+[137%] [32mBuilding C object apps/ds/CMakeFiles/ds.dir/fsw/src/ds_app.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts020.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts021.c.o[0m
+[140%] [32mBuilding C object apps/ds/CMakeFiles/ds.dir/fsw/src/ds_file.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts023.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts022.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts024.c.o[0m
+[140%] [32mBuilding C object apps/ds/CMakeFiles/ds.dir/fsw/src/ds_dispatch.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts025.c.o[0m
+[140%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts026.c.o[0m
+[144%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts027.c.o[0m
+[144%] [32m[1mLinking C shared module ds.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[144%] Built target ds
+make[7]: Warning: File 'apps/fm/CMakeFiles/fm.dir/compiler_depend.make' has modification time 2.9 s in the future
+[144%] [32mBuilding C object apps/fm/CMakeFiles/fm.dir/fsw/src/fm_cmd_utils.c.o[0m
+[144%] [32mBuilding C object apps/fm/CMakeFiles/fm.dir/fsw/src/fm_app.c.o[0m
+[144%] [32mBuilding C object apps/fm/CMakeFiles/fm.dir/fsw/src/fm_cmds.c.o[0m
+[148%] [32mBuilding C object apps/fm/CMakeFiles/fm.dir/fsw/src/fm_child.c.o[0m
+[148%] [32mBuilding C object apps/fm/CMakeFiles/fm.dir/fsw/src/fm_tbl.c.o[0m
+[148%] [32m[1mLinking C shared module fm.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[148%] Built target fm
+make[7]: Warning: File 'apps/lc/CMakeFiles/lc.dir/compiler_depend.make' has modification time 2.9 s in the future
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_custom.c.o[0m
+[151%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts028.c.o[0m
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_app.c.o[0m
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_cmds.c.o[0m
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_watch.c.o[0m
+[151%] Built target generate_table_cpu1_fm_fm_monitor
+[151%] Built target generate_table_cpu1_lc_lc_def_wdt
+[151%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts029.c.o[0m
+[151%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts030.c.o[0m
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_action.c.o[0m
+[151%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts031.c.o[0m
+[151%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts032.c.o[0m
+[151%] [32mBuilding C object apps/lc/CMakeFiles/lc.dir/fsw/src/lc_utils.c.o[0m
+[151%] Built target generate_table_cpu1_lc_lc_def_adt
+[155%] Built target generate_table_cpu1_sbn_sbn_conf_tbl
+[159%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts033.c.o[0m
+[162%] [32m[1mLinking C shared module lc.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[162%] Built target lc
+[162%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts034.c.o[0m
+make[7]: Warning: File 'apps/sbn/CMakeFiles/sbn.dir/compiler_depend.make' has modification time 2.8 s in the future
+[162%] [32mBuilding C object apps/sbn/CMakeFiles/sbn.dir/fsw/src/sbn_app.c.o[0m
+[162%] [32mBuilding C object apps/sbn/CMakeFiles/sbn.dir/fsw/src/sbn_cmds.c.o[0m
+[162%] [32mBuilding C object apps/sbn/CMakeFiles/sbn.dir/fsw/src/sbn_pack.c.o[0m
+[166%] [32mBuilding C object apps/sbn/CMakeFiles/sbn.dir/fsw/src/sbn_subs.c.o[0m
+[166%] [32m[1mLinking C shared module sbn.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[166%] Built target sbn
+[166%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts035.c.o[0m
+make[7]: Warning: File 'apps/sbn_tcp/CMakeFiles/sbn_tcp.dir/compiler_depend.make' has modification time 3 s in the future
+[170%] [32mBuilding C object apps/sbn_tcp/CMakeFiles/sbn_tcp.dir/fsw/src/sbn_tcp_if.c.o[0m
+[170%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts036.c.o[0m
+[170%] [32m[1mLinking C shared module sbn_tcp.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[170%] Built target sbn_tcp
+make[7]: Warning: File 'apps/sbn_client/CMakeFiles/sbn_client.dir/compiler_depend.make' has modification time 2.8 s in the future
+[170%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client.c.o[0m
+[170%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client_ingest.c.o[0m
+[170%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client_init.c.o[0m
+[170%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client_minders.c.o[0m
+[170%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/sc_rts037.c.o[0m
+[174%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client_utils.c.o[0m
+[174%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/fsw/src/sbn_client_wrappers.c.o[0m
+[174%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/home/jstar/Desktop/github-nos3/fsw/apps/sbn/fsw/src/sbn_pack.c.o[0m
+[174%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/home/jstar/Desktop/github-nos3/fsw/cfe/modules/msg/fsw/src/cfe_msg_ccsdspri.c.o[0m
+[174%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts038.c.o[0m
+[174%] [32mBuilding C object apps/sbn_client/CMakeFiles/sbn_client.dir/home/jstar/Desktop/github-nos3/fsw/cfe/modules/msg/fsw/src/cfe_msg_msgid_v1.c.o[0m
+[174%] [32m[1mLinking C shared library sbn_client.so[0m
+[177%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts039.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[177%] Built target sbn_client
+make[7]: Warning: File 'apps/sc/CMakeFiles/sc.dir/compiler_depend.make' has modification time 2.8 s in the future
+[177%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_rtsrq.c.o[0m
+[177%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts040.c.o[0m
+[177%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts041.c.o[0m
+[177%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts042.c.o[0m
+[181%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_utils.c.o[0m
+[181%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts043.c.o[0m
+[181%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts044.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts045.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_app.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts046.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts047.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_atsrq.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts048.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts049.c.o[0m
+[185%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts050.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts051.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts052.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts053.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts054.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts055.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts056.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_state.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_loads.c.o[0m
+[188%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts057.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts058.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/sc.dir/fsw/src/sc_cmds.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts059.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts060.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts061.c.o[0m
+[192%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts062.c.o[0m
+[196%] [32m[1mLinking C shared module sc.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[196%] Built target sc
+make[7]: Warning: File 'apps/sch/CMakeFiles/sch.dir/compiler_depend.make' has modification time 2.8 s in the future
+[196%] [32mBuilding C object apps/sch/CMakeFiles/sch.dir/fsw/src/sch_api.c.o[0m
+[196%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts063.c.o[0m
+[200%] [32mBuilding C object apps/sc/CMakeFiles/tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.dir/fsw/tables/sc_rts064.c.o[0m
+[200%] [32mBuilding C object apps/sch/CMakeFiles/sch.dir/fsw/src/sch_app.c.o[0m
+[200%] [32mBuilding C object apps/sch/CMakeFiles/sch.dir/fsw/src/sch_cmds.c.o[0m
+[200%] [32mBuilding C object apps/sch/CMakeFiles/sch.dir/fsw/src/sch_custom.c.o[0m
+[200%] [32m[1mLinking C static library libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a[0m
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[200%] Built target tblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288
+[200%] Built target generate_table_cpu1_sch_sch_def_msgtbl
+[200%] [32m[1mLinking C shared module sch.so[0m
+[200%] Built target generate_table_cpu1_sch_sch_def_schtbl
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: Warning: File 'apps/to/CMakeFiles/to.dir/compiler_depend.make' has modification time 2.8 s in the future
+[200%] Built target generate_table_cpu1_to_to_config
+[200%] Built target generate_table_cpu1_sc_sc_ats1
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[203%] Built target generate_table_cpu1_sc_sc_rts001
+[203%] [32mBuilding C object apps/to/CMakeFiles/to.dir/fsw/src/to_app.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[203%] Built target sch
+[203%] Built target generate_table_cpu1_sc_sc_rts002
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[203%] Built target generate_table_cpu1_sc_sc_rts003
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[203%] Built target generate_table_cpu1_sc_sc_rts004
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[207%] Built target generate_table_cpu1_sc_sc_rts005
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[207%] Built target generate_table_cpu1_sc_sc_rts007
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: Warning: File 'apps/to_lab/CMakeFiles/to_lab.dir/compiler_depend.make' has modification time 3 s in the future
+[207%] [32mBuilding C object apps/to_lab/CMakeFiles/to_lab.dir/fsw/src/to_lab_app.c.o[0m
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[207%] Built target generate_table_cpu1_sc_sc_rts006
+[207%] Built target generate_table_cpu1_sc_sc_rts008
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[207%] Built target generate_table_cpu1_sc_sc_rts010
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[207%] Built target generate_table_cpu1_sc_sc_rts009
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts011
+[211%] Built target generate_table_cpu1_sc_sc_rts012
+[211%] [32mBuilding C object apps/to/CMakeFiles/to.dir/fsw/src/to_cmds.c.o[0m
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts013
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.5 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts014
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.5 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts015
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.4 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts016
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.4 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[211%] Built target generate_table_cpu1_sc_sc_rts017
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.4 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts018
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.4 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts019
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts020
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts021
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts022
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.1 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[214%] Built target generate_table_cpu1_sc_sc_rts023
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2.1 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts024
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts025
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts026
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts027
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.9 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts028
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.9 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[218%] Built target generate_table_cpu1_sc_sc_rts029
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.8 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts030
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts031
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts032
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.7 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts033
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts034
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.6 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[222%] Built target generate_table_cpu1_sc_sc_rts035
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.5 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts036
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.5 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts037
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts038
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts039
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.3 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts040
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[225%] Built target generate_table_cpu1_sc_sc_rts041
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts042
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts043
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1.1 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts044
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 1 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts045
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.97 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts046
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.92 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts047
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.87 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[229%] Built target generate_table_cpu1_sc_sc_rts048
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.76 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts049
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.63 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts050
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.59 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts051
+[233%] [32m[1mLinking C shared module to_lab.so[0m
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.52 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts052
+[233%] Built target to_lab
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.48 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts053
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.41 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[233%] Built target generate_table_cpu1_sc_sc_rts054
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.35 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[237%] Built target generate_table_cpu1_sc_sc_rts055
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.25 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[237%] Built target generate_table_cpu1_sc_sc_rts056
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.23 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: Warning: File 'apps/arducam/fsw/cfs/CMakeFiles/arducam.dir/compiler_depend.make' has modification time 2.8 s in the future
+[237%] Built target generate_table_cpu1_sc_sc_rts057
+[237%] [32mBuilding C object apps/arducam/fsw/cfs/CMakeFiles/arducam.dir/src/cam_app.c.o[0m
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.2 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[237%] Built target generate_table_cpu1_sc_sc_rts058
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.13 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[237%] Built target generate_table_cpu1_sc_sc_rts059
+make[8]: Warning: File 'apps/sc/libtblobj_cpu1_sc.tbl1654e6c155e4307d510bc59554ec3c609c9ec288.a' has modification time 0.052 s in the future
+make[8]: warning:  Clock skew detected.  Your build may be incomplete.
+[237%] Built target generate_table_cpu1_sc_sc_rts060
+[240%] Built target generate_table_cpu1_sc_sc_rts061
+[240%] Built target generate_table_cpu1_sc_sc_rts062
+[240%] Built target generate_table_cpu1_sc_sc_rts063
+[240%] Built target generate_table_cpu1_sc_sc_rts064
+[240%] [32mBuilding C object apps/arducam/fsw/cfs/CMakeFiles/arducam.dir/src/cam_child.c.o[0m
+[240%] [32mBuilding C object apps/to/CMakeFiles/to.dir/fsw/src/to_utils.c.o[0m
+[240%] Built target cfetables
+[100%] Built target amd64_nos3_default_cpu1-cfetables
+[32mBuilding C object apps/to/CMakeFiles/to.dir/fsw/examples/udp_tf/to_custom.c.o[0m
+[32mBuilding C object apps/arducam/fsw/cfs/CMakeFiles/arducam.dir/home/jstar/Desktop/github-nos3/components/arducam/fsw/shared/cam_device.c.o[0m
+[32mBuilding C object apps/arducam/fsw/cfs/CMakeFiles/arducam.dir/home/jstar/Desktop/github-nos3/components/arducam/fsw/shared/cam_registers.c.o[0m
+[100%] Built target mission-cfetables
+make[7]: Warning: File 'apps/generic_adcs/fsw/cfs/CMakeFiles/generic_adcs.dir/compiler_depend.make' has modification time 2.8 s in the future
+[32mBuilding C object apps/generic_adcs/fsw/cfs/CMakeFiles/generic_adcs.dir/src/generic_adcs_app.c.o[0m
+[32m[1mLinking C shared module arducam.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target arducam
+[32mBuilding C object apps/generic_adcs/fsw/cfs/CMakeFiles/generic_adcs.dir/src/generic_adcs_ingest.c.o[0m
+[32mBuilding C object apps/generic_adcs/fsw/cfs/CMakeFiles/generic_adcs.dir/src/generic_adcs_output.c.o[0m
+[32m[1mLinking C shared module to.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target to
+make[7]: Warning: File 'apps/generic_css/fsw/cfs/CMakeFiles/generic_css.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_css/fsw/cfs/CMakeFiles/generic_css.dir/src/generic_css_app.c.o[0m
+[32mBuilding C object apps/generic_css/fsw/cfs/CMakeFiles/generic_css.dir/home/jstar/Desktop/github-nos3/components/generic_css/fsw/shared/generic_css_device.c.o[0m
+[32mBuilding C object apps/generic_adcs/fsw/cfs/CMakeFiles/generic_adcs.dir/home/jstar/Desktop/github-nos3/components/generic_adcs/fsw/shared/generic_adcs_adac.c.o[0m
+[32m[1mLinking C shared module generic_css.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_css
+make[7]: Warning: File 'apps/generic_eps/fsw/cfs/CMakeFiles/generic_eps.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_eps/fsw/cfs/CMakeFiles/generic_eps.dir/src/generic_eps_app.c.o[0m
+make[7]: Warning: File 'apps/generic_fss/fsw/cfs/CMakeFiles/generic_fss.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_fss/fsw/cfs/CMakeFiles/generic_fss.dir/src/generic_fss_app.c.o[0m
+Table build completed
+[100%] Built target tabletool-execute
+[32mBuilding C object apps/generic_fss/fsw/cfs/CMakeFiles/generic_fss.dir/home/jstar/Desktop/github-nos3/components/generic_fss/fsw/shared/generic_fss_device.c.o[0m
+[32m[1mLinking C shared module generic_adcs.so[0m
+[32mBuilding C object apps/generic_eps/fsw/cfs/CMakeFiles/generic_eps.dir/home/jstar/Desktop/github-nos3/components/generic_eps/fsw/shared/generic_eps_device.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_adcs
+make[7]: Warning: File 'apps/generic_imu/fsw/cfs/CMakeFiles/generic_imu.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_imu/fsw/cfs/CMakeFiles/generic_imu.dir/src/generic_imu_app.c.o[0m
+make[7]: Warning: File 'apps/generic_mag/fsw/cfs/CMakeFiles/generic_mag.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_mag/fsw/cfs/CMakeFiles/generic_mag.dir/src/generic_mag_app.c.o[0m
+[32m[1mLinking C shared module generic_eps.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_eps
+[32m[1mLinking C shared module generic_fss.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_fss
+make[7]: Warning: File 'apps/generic_reaction_wheel/fsw/cfs/CMakeFiles/generic_rw.dir/compiler_depend.make' has modification time 2.7 s in the future
+make[7]: Warning: File 'apps/generic_radio/fsw/cfs/CMakeFiles/generic_radio.dir/compiler_depend.make' has modification time 2.8 s in the future
+[32mBuilding C object apps/generic_radio/fsw/cfs/CMakeFiles/generic_radio.dir/src/generic_radio_app.c.o[0m
+[32mBuilding C object apps/generic_reaction_wheel/fsw/cfs/CMakeFiles/generic_rw.dir/src/generic_reaction_wheel_app.c.o[0m
+[32mBuilding C object apps/generic_mag/fsw/cfs/CMakeFiles/generic_mag.dir/home/jstar/Desktop/github-nos3/components/generic_mag/fsw/shared/generic_mag_device.c.o[0m
+[32mBuilding C object apps/generic_imu/fsw/cfs/CMakeFiles/generic_imu.dir/home/jstar/Desktop/github-nos3/components/generic_imu/fsw/shared/generic_imu_device.c.o[0m
+[32mBuilding C object apps/generic_radio/fsw/cfs/CMakeFiles/generic_radio.dir/home/jstar/Desktop/github-nos3/components/generic_radio/fsw/shared/generic_radio_device.c.o[0m
+[32mBuilding C object apps/generic_reaction_wheel/fsw/cfs/CMakeFiles/generic_rw.dir/home/jstar/Desktop/github-nos3/components/generic_reaction_wheel/fsw/shared/generic_reaction_wheel_device.c.o[0m
+[32m[1mLinking C shared module generic_mag.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_mag
+make[7]: Warning: File 'apps/generic_star_tracker/fsw/cfs/CMakeFiles/generic_st.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_star_tracker/fsw/cfs/CMakeFiles/generic_st.dir/src/generic_star_tracker_app.c.o[0m
+[32m[1mLinking C shared module generic_radio.so[0m
+[32m[1mLinking C shared module generic_imu.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_radio
+[32m[1mLinking C shared module generic_rw.so[0m
+make[7]: Warning: File 'apps/generic_thruster/fsw/cfs/CMakeFiles/generic_thruster.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_thruster/fsw/cfs/CMakeFiles/generic_thruster.dir/src/generic_thruster_app.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_rw
+Built target generic_imu
+make[7]: Warning: File 'apps/mgr/fsw/cfs/CMakeFiles/mgr.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/mgr/fsw/cfs/CMakeFiles/mgr.dir/src/mgr_app.c.o[0m
+make[7]: Warning: File 'apps/generic_torquer/fsw/cfs/CMakeFiles/generic_torquer.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/generic_torquer/fsw/cfs/CMakeFiles/generic_torquer.dir/src/generic_torquer_app.c.o[0m
+[32m[1mLinking C shared module mgr.so[0m
+[32mBuilding C object apps/generic_thruster/fsw/cfs/CMakeFiles/generic_thruster.dir/home/jstar/Desktop/github-nos3/components/generic_thruster/fsw/shared/generic_thruster_device.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target mgr
+[32mBuilding C object apps/generic_star_tracker/fsw/cfs/CMakeFiles/generic_st.dir/home/jstar/Desktop/github-nos3/components/generic_star_tracker/fsw/shared/generic_star_tracker_device.c.o[0m
+[32mBuilding C object apps/generic_torquer/fsw/cfs/CMakeFiles/generic_torquer.dir/home/jstar/Desktop/github-nos3/components/generic_torquer/fsw/shared/generic_torquer_device.c.o[0m
+make[7]: Warning: File 'apps/novatel_oem615/fsw/cfs/CMakeFiles/novatel_oem615.dir/compiler_depend.make' has modification time 2.8 s in the future
+[32mBuilding C object apps/novatel_oem615/fsw/cfs/CMakeFiles/novatel_oem615.dir/src/novatel_oem615_app.c.o[0m
+[32m[1mLinking C shared module generic_thruster.so[0m
+[32m[1mLinking C shared module generic_st.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_thruster
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_st
+[32mBuilding C object apps/novatel_oem615/fsw/cfs/CMakeFiles/novatel_oem615.dir/src/novatel_oem615_child.c.o[0m
+[32m[1mLinking C shared module generic_torquer.so[0m
+make[7]: Warning: File 'apps/sample/fsw/cfs/CMakeFiles/sample.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/sample/fsw/cfs/CMakeFiles/sample.dir/src/sample_app.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target generic_torquer
+[32mBuilding C object apps/novatel_oem615/fsw/cfs/CMakeFiles/novatel_oem615.dir/home/jstar/Desktop/github-nos3/components/novatel_oem615/fsw/shared/novatel_oem615_device.c.o[0m
+[32mBuilding C object apps/sample/fsw/cfs/CMakeFiles/sample.dir/home/jstar/Desktop/github-nos3/components/sample/fsw/shared/sample_device.c.o[0m
+make[7]: Warning: File 'apps/syn/CMakeFiles/synopsis.dir/compiler_depend.make' has modification time 2.4 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target synopsis
+make[7]: Warning: File 'osal/CMakeFiles/osal_bsp.dir/compiler_depend.make' has modification time 2.9 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target osal_bsp
+make[7]: Warning: File 'psp/CMakeFiles/psp-nos-linux.dir/compiler_depend.make' has modification time 3 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target psp-nos-linux
+make[7]: Warning: File 'apps/cfe_assert/CMakeFiles/cfe_assert.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/cfe_assert/CMakeFiles/cfe_assert.dir/src/cfe_assert_io.c.o[0m
+[32mBuilding C object apps/cfe_assert/CMakeFiles/cfe_assert.dir/src/cfe_assert_init.c.o[0m
+[32m[1mLinking C shared module novatel_oem615.so[0m
+[32mBuilding C object apps/cfe_assert/CMakeFiles/cfe_assert.dir/src/cfe_assert_runner.c.o[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target novatel_oem615
+[32m[1mLinking C shared module cfe_assert.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target cfe_assert
+make[7]: Warning: File 'apps/syn/fsw/cfs/CMakeFiles/syn.dir/compiler_depend.make' has modification time 2.9 s in the future
+[32mBuilding C object apps/syn/fsw/cfs/CMakeFiles/syn.dir/src/syn_app.c.o[0m
+make[7]: Warning: File 'apps/hwlib/CMakeFiles/hwlib.dir/compiler_depend.make' has modification time 2.7 s in the future
+[32mBuilding C object apps/hwlib/CMakeFiles/hwlib.dir/fsw/src/hwlib.c.o[0m
+[32m[1mLinking C shared module syn.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target syn
+[32m[1mLinking C shared module hwlib.so[0m
+make[7]: Warning: File 'apps/syn/CMakeFiles/synopsis_cli.dir/compiler_depend.make' has modification time 2.9 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target synopsis_cli
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target hwlib
+make[7]: Warning: File 'osal/ut_assert/CMakeFiles/ut_assert.dir/compiler_depend.make' has modification time 2.8 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target ut_assert
+make[7]: Warning: File 'osal/CMakeFiles/osal.dir/compiler_depend.make' has modification time 2.7 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target osal
+[34m[1mGenerating cfe_build_env_table.c[0m
+make[7]: Warning: File 'cpu1/CMakeFiles/core-cpu1.dir/compiler_depend.make' has modification time 2.8 s in the future
+[32mBuilding C object cpu1/CMakeFiles/core-cpu1.dir/cfe_build_env_table.c.o[0m
+make[7]: Warning: File 'osal/ut-stubs/CMakeFiles/ut_osapi_stubs.dir/compiler_depend.make' has modification time 2.4 s in the future
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target ut_osapi_stubs
+[32mBuilding C object cpu1/CMakeFiles/core-cpu1.dir/src/target_config.c.o[0m
+[32m[1mLinking C executable core-cpu1[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target core-cpu1
+[32m[1mLinking C shared module sample.so[0m
+make[7]: warning:  Clock skew detected.  Your build may be incomplete.
+Built target sample
+[36mInstall the project...[0m
+-- Install configuration: "debug"
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/cfe_es_startup.scr
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/cfe_assert.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/cryptolib.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/cryptolib.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/include/standalone.h
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/hwlib.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/io_lib.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/cf.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/ci.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/ci_lab.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/ds.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/fm.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/lc.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sbn.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sbn_tcp.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sbn_client.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sc.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sch.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/to.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/to_lab.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/arducam.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_adcs.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/Inp_DI.txt
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/Inp_ADAC.txt
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/Inp_DO.txt
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_css.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_eps.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_fss.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_imu.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_mag.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_rw.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_radio.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_st.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_thruster.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/generic_torquer.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/mgr.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/novatel_oem615.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github/workflows
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/conftest.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/doc
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/driver.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/No_Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/csv_parser.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/on_air_data_source.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/parser_util.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/redis_adapter.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/sbn_adapter.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/tlm_json_parser.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract/ai_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/learners_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/planners_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning/agent.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning/complex_reasoning_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning/diagnosis.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts/execution_engine.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts/sim.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems/status.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems/telemetry_test_suite.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems/vehicle_rep.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/cleanup.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/data_conversion.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/file_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/plugin_import.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/print_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/sim_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output/csv_output_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic/generic_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman/kalman_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter/reporter_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/redis-experiment-publisher.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_csv_parser.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_on_air_data_source.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_parser_util.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_redis_adapter.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_sbn_adapter.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/test_tlm_json_parser.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/ai_plugin_abstract/test_AI_plugin_core.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/test_learners_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/test_planners_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning/test_agent.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning/test_complex_resoning_interface.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning/test_diagnosis.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts/test_execution_engine.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts/test_sim.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems/test_status.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems/test_telemetry_test_suite.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems/test_vehicle_rep.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_cleanup.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_data_conversion.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_file_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_plugin_import.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_print_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util/test_sim_io.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/csv_output/test_csv_output_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/generic/test_generic_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/kalman/test_kalman_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/reporter/test_reporter_plugin.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/test_driver.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/__init__.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github/workflows
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/doc
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/infoData.txt
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/No_Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github/workflows
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/doc
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config/default_config.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config/kalman_csv_output_example.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config/redis_example.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config/reporter_config.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config/sbn_cfs_config.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/No_Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/.github/workflows
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/doc
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/config
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/raw_telemetry_data/data_physics_generation/No_Errors
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs/adapter_TLM_CONFIG.json
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs/data_physics_generation_CONFIG.json
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data/telemetry_configs/redis_example_CONFIG.json
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/data_handling
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/ai_components/ai_plugin_abstract
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/reasoning
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/run_scripts
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/systems
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/onair/src/util
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/csv_output
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/generic
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/kalman
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/test/plugins/reporter
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/message_headers.py
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/cfs_sample_tlm.json
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/cfs_sample.ini
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/onair/sbn_python_client.py
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/sample.so
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/syn.so
+-- Set runtime path of "/home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/syn.so" to "/home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf"
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/lib/libsynopsis.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/include/synopsis.hpp
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/libsynopsis.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf/synopsis.hpp
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/core-cpu1
+[100%] Built target amd64_nos3_default_cpu1-install
+[100%] Built target elf2cfetbl
+[36mInstall the project...[0m
+-- Install configuration: "debug"
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/.
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1
+-- Up-to-date: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/cf_def_config.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/ds_file_tbl.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/ds_filter_tbl.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/fm_monitor.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/lc_def_adt.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/lc_def_wdt.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sbn_conf_tbl.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sch_def_msgtbl.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sch_def_schtbl.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_ats1.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts001.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts002.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts003.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts004.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts005.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts006.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts007.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts008.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts009.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts010.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts011.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts012.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts013.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts014.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts015.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts016.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts017.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts018.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts019.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts020.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts021.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts022.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts023.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts024.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts025.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts026.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts027.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts028.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts029.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts030.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts031.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts032.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts033.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts034.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts035.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts036.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts037.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts038.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts039.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts040.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts041.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts042.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts043.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts044.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts045.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts046.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts047.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts048.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts049.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts050.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts051.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts052.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts053.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts054.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts055.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts056.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts057.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts058.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts059.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts060.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts061.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts062.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts063.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/sc_rts064.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/to_config.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/./cpu1/cf/to_lab_sub.tbl
+-- Installing: /home/jstar/Desktop/github-nos3/fsw/build/exe/host/elf2cfetbl
+Built target mission-install
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: Leaving directory '/home/jstar/Desktop/github-nos3'
+make sim
+make[1]: Entering directory '/home/jstar/Desktop/github-nos3'
+./scripts/build_sim.sh
+mkdir -p /home/jstar/Desktop/github-nos3/sims/build
+cd /home/jstar/Desktop/github-nos3/sims/build && cmake -DCMAKE_INSTALL_PREFIX=/home/jstar/Desktop/github-nos3/sims/build ..
+[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+-- Setting up Mission Settings
+-- Setting compiler options...
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  server
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  server
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found ITC_Common 
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  server
+--  i2c
+--  can
+--  spi
+--  uart
+-- Found NOSENGINE 
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  client
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  i2c
+--  spi
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  i2c
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  i2c
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  spi
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  can
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  spi
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Found the following itc_common libraries:
+--   itc_logger
+-- Found the following NOSENGINE Libraries:
+--  common
+--  transport
+--  client
+--  uart
+-- Configuring done (0.3s)
+-- Generating done (0.6s)
+-- Build files have been written to: /home/jstar/Desktop/github-nos3/sims/build
+make --no-print-directory -C /home/jstar/Desktop/github-nos3/sims/build install
+make[1]: Warning: File 'Makefile' has modification time 2.2 s in the future
+make[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 2.9 s in the future
+make[3]: Warning: File 'sim_common/CMakeFiles/sim_common.dir/progress.make' has modification time 2.9 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'sim_common/CMakeFiles/sim_common.dir/progress.make' has modification time 2.5 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 10%] Built target sim_common
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-single-simulator.dir/progress.make' has modification time 2.3 s in the future
+make[3]: Warning: File 'nos_time_driver/CMakeFiles/nos_time_driver.dir/progress.make' has modification time 2.3 s in the future
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-all-simulators.dir/progress.make' has modification time 2.3 s in the future
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-sim-cmdbus-bridge.dir/progress.make' has modification time 2.3 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-all-simulators.dir/compiler_depend.make' has modification time 2.3 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 12%] Built target nos3-all-simulators
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'nos_time_driver/CMakeFiles/nos_time_driver.dir/compiler_depend.make' has modification time 2.5 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 14%] Built target nos_time_driver
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-single-simulator.dir/compiler_depend.make' has modification time 2.1 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 16%] Built target nos3-single-simulator
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'sim_common/CMakeFiles/nos3-sim-cmdbus-bridge.dir/compiler_depend.make' has modification time 2.6 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 18%] Built target nos3-sim-cmdbus-bridge
+make[3]: Warning: File 'sim_terminal/CMakeFiles/sim_terminal.dir/compiler_depend.make' has modification time 2.1 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 21%] Built target sim_terminal
+make[3]: Warning: File 'truth_42_sim/CMakeFiles/truth_42_sim.dir/compiler_depend.make' has modification time 1.4 s in the future
+make[3]: Warning: File 'blackboard/CMakeFiles/blackboard_sim.dir/compiler_depend.make' has modification time 1.7 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 25%] Built target blackboard_sim
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 29%] Built target truth_42_sim
+make[3]: Warning: File 'arducam/CMakeFiles/cam_sim.dir/compiler_depend.make' has modification time 2.3 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 34%] Built target cam_sim
+make[3]: Warning: File 'generic_css/CMakeFiles/generic_css_sim.dir/compiler_depend.make' has modification time 1.7 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 40%] Built target generic_css_sim
+make[3]: Warning: File 'generic_fss/CMakeFiles/generic_fss_sim.dir/compiler_depend.make' has modification time 1.6 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 45%] Built target generic_fss_sim
+make[3]: Warning: File 'generic_eps/CMakeFiles/generic_eps_sim.dir/compiler_depend.make' has modification time 1 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 51%] Built target generic_eps_sim
+make[3]: Warning: File 'generic_imu/CMakeFiles/generic_imu_sim.dir/compiler_depend.make' has modification time 0.41 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 57%] Built target generic_imu_sim
+make[3]: Warning: File 'generic_radio/CMakeFiles/generic_radio_sim.dir/compiler_depend.make' has modification time 0.59 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 62%] Built target generic_radio_sim
+make[3]: Warning: File 'generic_mag/CMakeFiles/generic_mag_sim.dir/compiler_depend.make' has modification time 0.084 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 69%] Built target generic_mag_sim
+make[3]: Warning: File 'generic_thruster/CMakeFiles/generic_thruster_sim.dir/compiler_depend.make' has modification time 1.9 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 72%] Built target generic_thruster_sim
+make[3]: Warning: File 'generic_reaction_wheel/CMakeFiles/generic_rw_sim.dir/compiler_depend.make' has modification time 0.14 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 78%] Built target generic_rw_sim
+make[3]: Warning: File 'generic_star_tracker/CMakeFiles/generic_star_tracker_sim.dir/compiler_depend.make' has modification time 0.49 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 84%] Built target generic_star_tracker_sim
+make[3]: Warning: File 'generic_torquer/CMakeFiles/generic_torquer_sim.dir/compiler_depend.make' has modification time 1.5 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 87%] Built target generic_torquer_sim
+make[3]: Warning: File 'sample/CMakeFiles/sample_sim.dir/compiler_depend.make' has modification time 2.3 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 93%] Built target sample_sim
+make[3]: Warning: File 'novatel_oem615/CMakeFiles/gps_sim.dir/compiler_depend.make' has modification time 2.4 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target gps_sim
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[36mInstall the project...[0m
+-- Install configuration: "Debug"
+-- Installing: /home/jstar/Desktop/github-nos3/sims/build/bin/nos_engine_server_config.json
+-- Installing: /home/jstar/Desktop/github-nos3/sims/build/bin/nos3-simulator.xml
+-- Installing: /home/jstar/Desktop/github-nos3/sims/build/bin/sim_log_config.xml
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libsim_common.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/bin/nos3-all-simulators
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/bin/nos3-single-simulator
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/bin/nos3-sim-cmdbus-bridge
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libnos_time_driver.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libsim_terminal.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libtruth_42_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libcam_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libcam_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/bin/cam.bin
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libblackboard_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_css_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_eps_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_fss_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_imu_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_mag_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_radio_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_rw_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_star_tracker_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_thruster_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgeneric_torquer_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libgps_sim.so
+-- Up-to-date: /home/jstar/Desktop/github-nos3/sims/build/lib/libsample_sim.so
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: Leaving directory '/home/jstar/Desktop/github-nos3'
+make gsw
+make[1]: Entering directory '/home/jstar/Desktop/github-nos3'
+./scripts/gsw/build_cryptolib.sh
+mkdir -p /home/jstar/Desktop/github-nos3/gsw/build
+cd /home/jstar/Desktop/github-nos3/gsw/build && cmake -DCMAKE_INSTALL_PREFIX=exe -DCMAKE_BUILD_TYPE=debug -DCRYPTO_RX_GROUND_PORT=6010 -DCRYPTO_TX_GROUND_PORT=6011 -DCRYPTO_TX_RADIO_PORT=8010 -DCRYPTO_RX_RADIO_PORT=8011 -DSA_FILE=OFF -DSUPPORT=1 -DCRYPTO_LIBGCRYPT=1 -DSA_INTERNAL=1 -DMC_INTERNAL=1 -DKEY_INTERNAL=1 ../../components/cryptolib
+-- TC_APPLY_PORT set to 6010
+-- TM_PROCESS_FWD_PORT set to 6011
+-- TM_PROCESS_PORT set to 8010
+-- TC_APPLY_FWD_PORT set to 8011
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/jstar/Desktop/github-nos3/gsw/build
+make --no-print-directory -C /home/jstar/Desktop/github-nos3/gsw/build
+make[1]: Warning: File 'Makefile' has modification time 2.9 s in the future
+make[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 2.9 s in the future
+make[3]: Warning: File 'src/CMakeFiles/crypto.dir/progress.make' has modification time 2.9 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'src/CMakeFiles/crypto.dir/progress.make' has modification time 2.8 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 92%] Built target crypto
+make[3]: Warning: File 'support/CMakeFiles/standalone.dir/progress.make' has modification time 2.7 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'support/CMakeFiles/standalone.dir/progress.make' has modification time 2.7 s in the future
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target standalone
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+./cfg/build/gsw_build.sh
+COSMOS build...
+4.5.0: Pulling from ballaerospace/cosmos
+Digest: sha256:f5686089dc1bba946ba50a3dc34286b1a6bb181d59a0e1bb09395c9f7852f482
+Status: Image is up to date for ballaerospace/cosmos:4.5.0
+docker.io/ballaerospace/cosmos:4.5.0
+
+make[1]: Leaving directory '/home/jstar/Desktop/github-nos3'
 
 ----- END TERMINAL OUTPUT -----
-make exit status: [Actual recorded status]
+make exit status: 0
