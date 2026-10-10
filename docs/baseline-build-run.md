@@ -138,46 +138,27 @@ Expected result:
 - 42 map, cam, and unit sphere should open
 - NOS3 Launcher should open
 
-Launch evidence:
-[Link to log and/or screenshot]
+## 7. Baseline checkout
 
-## 7. Basic baseline checkout
-
-### Test 1: [Name of test]
+### Test 1: Successful Startup
 
 Procedure:
-1. [Action]
-2. [Action]
+Launch NOS3 using the procedure in Section 6.
 
 Expected result:
-[What should happen]
+Telemtry and command windows open and the flight software updates time occasionally.
+[evidence/screenshots/baseline-running.png](/evidence/screenshots/baseline-running.png)
 
-Observed result:
-[What happened in your test]
-
-Result:
-[Pass / Fail]
-
-Evidence:
-[Link to log or screenshot]
-
-### Test 2: [Name of test]
+### Test 2: Telemetry Updates
 
 Procedure:
-1. [Action]
-2. [Action]
+1. Click COSMOS on the NOS3 Launcher.
+2. Open the COSMOS Command and Telemetry Server window.
+3. Confirm that the housekeeping packets count increase with time.
 
 Expected result:
-[What should happen]
-
-Observed result:
-[What happened in your test]
-
-Result:
-[Pass / Fail]
-
-Evidence:
-[Link to log or screenshot]
+Three COSMOS windows should open: Packet Viewer, Command and Telemetry Server, and Command Sender. Housekeeping packet count should be increasing.
+[evidence/screenshots/command-telemetry-check.png](/evidence/screenshots/command-telemetry-check.png)
 
 ## 8. Stop NOS3 and shut down the VM
 
