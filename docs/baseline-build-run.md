@@ -50,8 +50,9 @@ Clone the repository: ```bash
 Change directory to the repository: ```bash
 [cd nos3]```
 
+
 Clone the submodules: ```bash
-[git submodule update --init --recursive]```
+[git submodule update --init --recursive]
 
 VM filename or release:
 [Record if applicable]
