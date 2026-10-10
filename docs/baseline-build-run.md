@@ -19,8 +19,8 @@ It does not cover custom Sentinel-Bio+ simulation implementation.
 - Tester: Ian Catizone
 - Host operating system: Windows 11
 - VirtualBox version: 7.2
-- Guest operating system: [OS and version inside the VM]
-- NOS3 commit: [Commit ID]
+- Guest operating system: Ubuntu 22.04.4 LTS
+- NOS3 commit: 5a3bdee6be9a2c67fdf994ae6db56d5c60395302
 
 Full version record:
 [Versions](../evidence/baseline-versions.txt)
@@ -112,23 +112,17 @@ Compare the results with:
 
 Starting inside a terminal in the directory ```~/Desktop/github-nos3```
 
-Run preparation command:
+Run preparation command, the NOS3 Igniter should open after:
 
 ```bash
 make prep
-```
+``` 
 
 When finished, run build command:
 
 ```bash
 make
 ```
-
-Expected result:
-
-
-Compare build output with the build log:
-[evidence/logs/build.log](/evidence/logs/build.log)
 
 ## 6. Launch the baseline
 
@@ -139,9 +133,10 @@ make launch
 ```
 
 Expected result:
-- [Application/window that opens]
-- [Startup message or status]
-- [Telemetry or simulation output that confirms it is running]
+- COSMOS Legal agreement should open
+- Several terminals should open rapidly
+- 42 map, cam, and unit sphere should open
+- NOS3 Launcher should open
 
 Launch evidence:
 [Link to log and/or screenshot]
