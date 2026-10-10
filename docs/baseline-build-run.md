@@ -84,7 +84,9 @@ Close the command prompt
 
 VM name should along the lines of "nos3_20250217_1790120441224_84756"  
 2. Sign in to jstar user with passwords: jstar123!
+
 3. In the VirtualBox toolbar click $$\color{red}\text{Devices -> Upgrade Guest Additions...}$$
+
 4. Reboot the VM
 
 ## 4. Locate and identify the NOS3 checkout
