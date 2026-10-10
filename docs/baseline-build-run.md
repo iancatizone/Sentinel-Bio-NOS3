@@ -105,7 +105,7 @@ git submodule status --recursive
 git status --short
 ```
 
-Save the results in:
+Compare the results with:
 [evidence/baseline-versions.txt](/evidence/baseline-versions.txt)
 
 ## 5. Prepare and build NOS3
@@ -113,23 +113,23 @@ Save the results in:
 Starting location:
 [NOS3 source folder inside the VM]
 
-Preparation command, if required:
+Run preparation command:
 
 ```bash
-[Actual preparation command]
+make prep
 ```
 
-Build command:
+When finished, run build command:
 
 ```bash
-[Actual build command]
+make
 ```
 
 Expected result:
-[Describe the successful output you observed]
+
 
 Build evidence:
-[Link to saved build log]
+[evidence/logs/build.log](/evidence/logs/build.log)
 
 Notes:
 [First-run downloads, prompts, workarounds, or "None"]
