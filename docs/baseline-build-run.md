@@ -67,8 +67,14 @@ git submodule update --init --recursive
 
 ### 3.3 Add or create the VM in VirtualBox
 
-1. In the nos3 directory in a command prompt, use: $$\color{red}\text{vagrant up}$$
-This may take several minutes. When you get a return prompt, run: $$\color{red}\text{vagrant halt}$$
+1. In the nos3 directory in a command prompt, use
+```bash
+vagrant up
+```
+This may take several minutes. When you get a return prompt, run: 
+```bash
+vagrant halt
+```
 
 Close the command prompt
 
@@ -78,7 +84,7 @@ Close the command prompt
 
 VM name should along the lines of "nos3_20250217_1790120441224_84756"  
 2. Sign in to jstar user with passwords: jstar123!
-3. In the VirtualBox toolbar under "Devices", click "Upgrade Guest Additions..."
+3. In the VirtualBox toolbar click $$\color{red}\text{Devices -> Upgrade Guest Additions...}$$
 4. Reboot the VM
 
 ## 4. Locate and identify the NOS3 checkout
@@ -101,10 +107,6 @@ git status --short
 
 Save the results in:
 `evidence/baseline-versions.txt`
-
-Expected result:
-[Confirm that you are in the correct repository and the revision
-matches the tested baseline]
 
 ## 5. Prepare and build NOS3
 
