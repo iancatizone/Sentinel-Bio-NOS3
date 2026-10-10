@@ -160,6 +160,24 @@ Expected result:
 Three COSMOS windows should open: Packet Viewer, Command and Telemetry Server, and Command Sender. Housekeeping packet count should be increasing.
 [evidence/screenshots/command-telemetry-check.png](/evidence/screenshots/command-telemetry-check.png)
 
+### Test 3: Sending a NOOP Command
+
+Procedure:
+1. Open COSMOS as done in test 2.
+2. In Command Sender, set target to ```GENERIC_ADCS```
+3. Set command to ```GENERIC_ADCS_NOOP_CC```
+4. Before sending, in Packet Viewer, set target to the same, and ensure the packet selected is ```GENERIC_ADCS_HK_TLM```
+5. Observe the bottom area of the Command and Telemetry Server.
+6. Send the commmand, check that a new line appears on the Command and Telemetry Server
+
+Expected result:
+The new lines should read the following, with different date and times:
+
+```2026/10/10 04:02:05.022  INFO: cmd("GENERIC_ADCS GENERIC_ADCS_NOOP_CC")```
+
+```2026/10/10 04:02:05.025  INFO: Log File Opened : /home/jstar/Desktop/github-nos3/gsw/cosmos/outputs/logs/2026_10_10_04_02_05_cmd.bin```
+[evidence/screenshots/command-check.png](/evidence/screenshots/command-check.png)\
+
 ## 8. Stop NOS3 and shut down the VM
 
 Stop command or procedure:
