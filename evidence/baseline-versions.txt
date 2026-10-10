@@ -91,8 +91,17 @@ Output:
 4. TOOL VERSIONS
 ------------------------------------------------------------
 
-Git version:
+Git version on host computer:
 git version 2.55.0.windows.5
+
+Git version inside the VM:
+git version 2.34.1
+
+Vagrant on the host computer:
+Vagrant 2.4.9
+
+Oracle VirtualBox:
+Version 7.2
 
 Docker version:
 Not used
