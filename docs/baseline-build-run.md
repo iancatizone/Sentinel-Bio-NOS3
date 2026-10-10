@@ -53,7 +53,7 @@ git clone https://github.com/nasa/nos3.git
 3. Change directory to the repository: 
 
 ```bash
-cd nos3
+cd C:\nos3
 ```
 
 
@@ -158,7 +158,7 @@ Procedure:
 
 Expected result:
 Three COSMOS windows should open: Packet Viewer, Command and Telemetry Server, and Command Sender. Housekeeping packet count should be increasing.
-[evidence/screenshots/command-telemetry-check.png](/evidence/screenshots/command-telemetry-check.png)
+[evidence/screenshots/telemetry-check.png](/evidence/screenshots/telemetry-check.png)
 
 ### Test 3: Sending a NOOP Command
 
@@ -180,43 +180,48 @@ The new lines should read the following, with different date and times:
 
 ## 8. Stop NOS3 and shut down the VM
 
-Stop command or procedure:
+1. Before stopping, close all COSMOS windows; do not run the stop command before this
+2. Open a new terminal window and go into the NOS3 directory again, then run the stop command, do not click until all 42 and NOS3 Launcher windows have closed:
 
 ```bash
-[Actual stop command, if applicable]
+make stop
 ```
-
-Expected result:
-[How you confirmed NOS3 stopped]
+3. Graphics windows and NOS3 Launcher window should close, along with flight software terminals.
 
 VM shutdown procedure:
-[How you shut down the guest OS/VM]
+1. Click the power icon in the upper right of the VM, then select $$\color{red}\text{Power Off/Log Out -> Power Off...}$$
+2. The Oracle VirtualBox Manager should show the VM as "Powered Off"
 
 ## 9. Troubleshooting and known limitations
 
-| Symptom | Cause, if known | Fix or next check |
-|---|---|---|
-| [Problem encountered] | [Cause or "Unknown"] | [What worked] |
+Issue 1: github-nos3 file is empty
+Solution: In host computer's command prompt, inside nos3 directory, run:
+```bash
+vagrant reload --provision
+```
+
+Issue 2: System console freezes when booting or shutting down
+Solution: Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead.
 
 Known limitations:
-- [Any incomplete checks or unresolved issues]
+None.
 
 ## 10. Independent reproduction
 
 Tester:
-[Second student's name]
+Name
 
 Date:
-[Date]
+Date
 
 Starting environment:
-[Their setup]
+Setup
 
 Result:
-[Passed / Failed / Pending]
+Passed / Failed / Pending
 
 Deviations or assistance required:
 [Details]
 
 Full reproduction record:
-[Link to ../evidence/independent-reproduction.md]
+[evidence/independent-reproduction.md](/evidence/independent-reproduction.md)
