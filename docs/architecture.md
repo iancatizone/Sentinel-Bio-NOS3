@@ -1,13 +1,13 @@
-NOS3 and the overall test environment.
+NOS3 and the overall test environment
 
-Flight software.
+Flight software
 
-NOS Engine.
+NOS Engine
 
-Component simulators.
+Component simulators
 
-42.
+42
 
-Ground software.
+Ground software
 
-Command, telemetry, and simulation-data flow between them.
+Command, telemetry, and simulation-data flow between them
