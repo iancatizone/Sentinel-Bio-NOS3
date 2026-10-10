@@ -131,13 +131,13 @@ N/A
 ------------------------------------------------------------
 
 Build/run guide:
-[docs/baseline-build-run.md](/docs/baseline-build-run.md)
+docs/baseline-build-run.md
 
 Baseline test record:
-[evidence/baseline-test-record.md](evidence/baseline-test-record.md)
+evidence/baseline-test-record.md
 
 Build log:
-[evidence/logs/build.log](/evidence/logs/build.log)
+evidence/logs/build.log
 
 Run log:
-[evidence/logs/baseline-run.log](/evidence/logs/baseline-run.log)
+evidence/logs/baseline-run.log
