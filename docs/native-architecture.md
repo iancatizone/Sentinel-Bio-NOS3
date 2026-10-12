@@ -19,6 +19,6 @@ Command, telemetry, and simulation-data flow between them
 | Flight-software framework         | cFS                         | [Startup/configuration evidence] | [If any]    |
 | Commanded application             | [Target/application]        | [NOOP test/configuration]        | [If any]    |
 | Component simulators              | Stock enabled components    | [Configuration/startup logs]     | Confirm whhich components are enabled  |
-| Hardware abstraction / NOS Engine | [How it is used]            | [Relevant configuration/source]  | [If any]    |
+| Hardware abstraction / NOS Engine | HWLIB connects flight-software hardware ops to buses, NOS3 Engine does bus communication and simulated time           | [Relevant configuration/source]  | [If any]    |
 | Dynamics/environment              | 42                          | [Configuration/log]              | None   |
 | Execution environment             | Ubuntu Linux VM, Docker?  | [evidence/baseline-versions.txt](/evidence/baseline-versions.txt) | [If any]    |
