@@ -13,7 +13,7 @@ Ground software
 Command, telemetry, and simulation-data flow between them
 
 
-| Architecture item                 | Actual item in my baseline        | Evidence                         | Uncertainty |
+| Architecture item                 | Item in baseline        | Evidence                         | Uncertainty |
 | --------------------------------- | --------------------------------- | -------------------------------- | ----------- |
 | Ground software                   | COSMOS                      | [Window, configuration, or log]  | Classic COSMOS or C3    |
 | Flight-software framework         | cFS                         | [Startup/configuration evidence] | [If any]    |
