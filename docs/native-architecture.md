@@ -21,4 +21,4 @@ Command, telemetry, and simulation-data flow between them
 | Component simulators              | Stock enabled components    | [Configuration/startup logs]     | Confirm whhich components are enabled  |
 | Hardware abstraction / NOS Engine | [How it is used]            | [Relevant configuration/source]  | [If any]    |
 | Dynamics/environment              | 42                          | [Configuration/log]              | None   |
-| Execution environment             | Ubuntu Linux VM, Docker?  | [/evidence/baseline-versions.txt]        | [If any]    |
+| Execution environment             | Ubuntu Linux VM, Docker?  | [evidence/baseline-versions.txt](/evidence/baseline-versions.txt) | [If any]    |
