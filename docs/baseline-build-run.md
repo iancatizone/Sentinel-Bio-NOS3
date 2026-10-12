@@ -6,10 +6,10 @@ This guide describes how to set up and run the stock NOS3 baseline
 used for Sentinel-Bio+ simulation development.
 
 It covers:
-- Setting up the NOS3 virtual machine in Oracle VirtualBox.
-- Building and launching the stock baseline.
-- Performing a basic checkout.
-- Stopping the simulation.
+- Setting up the NOS3 virtual machine in Oracle VirtualBox
+- Building and launching the stock baseline
+- Performing a basic checkout
+- Stopping the simulation
 
 It does not cover custom Sentinel-Bio+ simulation implementation.
 
