@@ -94,7 +94,7 @@ All steps below are run inside the VM unless stated otherwise.
 Open a terminal
 Run the following:
 ```bash
-[cd ~/Desktop/github-nos3]
+cd ~/Desktop/github-nos3
 ```
 
 Record the baseline revision:
