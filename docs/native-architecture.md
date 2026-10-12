@@ -22,3 +22,9 @@ Command, telemetry, and simulation-data flow between them
 | Hardware abstraction / NOS Engine | HWLIB connects flight-software hardware ops to buses, NOS3 Engine does bus communication and simulation time           | [Relevant configuration/source]  | None  |
 | Dynamics/environment              | 42                          | [Configuration/log]              | None   |
 | Execution environment             | Ubuntu Linux VM, Docker?  | [evidence/baseline-versions.txt](/evidence/baseline-versions.txt) | [If any]    |
+
+### Scope and verification status
+
+This table describes the stock NOS3 baseline used for architecture study.
+It does not claim that Sentinel-Bio+ mission software or custom component
+models have been integrated.
