@@ -205,7 +205,8 @@ VM shutdown procedure:
 
 |  Issue  | Cause | Solution  |
 | --- | --- | --- |
-|  github-nos3 file is empty | |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
+| NOS3 launch does not work properly | | Run ```make stop``` if any NOS3 processes are open, wait until are closed, then run ```make clean```, and repeat install starting from step 5 |
+| github-nos3 file is empty | |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
 | System console freezes when booting or shutting down | | Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead. |
 
 Issue 3: 
