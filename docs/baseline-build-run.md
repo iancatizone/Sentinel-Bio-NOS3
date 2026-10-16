@@ -203,6 +203,13 @@ VM shutdown procedure:
 
 ## 9. Troubleshooting and known limitations
 
+|  Issue  |  Solution  |
+|  github-nos3 file is empty  |  In host computer's command prompt, inside nos3 directory, run:
+```bash
+vagrant reload --provision
+```
+|
+
 Issue 1: github-nos3 file is empty
 Solution: In host computer's command prompt, inside nos3 directory, run:
 ```bash
@@ -212,8 +219,7 @@ vagrant reload --provision
 Issue 2: System console freezes when booting or shutting down
 Solution: Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead.
 
-Known limitations:
-None.
+Issue 3: 
 
 ## 10. Independent reproduction
 
