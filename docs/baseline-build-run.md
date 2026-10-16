@@ -204,11 +204,9 @@ VM shutdown procedure:
 ## 9. Troubleshooting and known limitations
 
 |  Issue  |  Solution  |
-|  github-nos3 file is empty  |  In host computer's command prompt, inside nos3 directory, run:
-```bash
-vagrant reload --provision
-```
-|
+------------------------
+|  github-nos3 file is empty  |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
+
 
 Issue 1: github-nos3 file is empty
 Solution: In host computer's command prompt, inside nos3 directory, run:
