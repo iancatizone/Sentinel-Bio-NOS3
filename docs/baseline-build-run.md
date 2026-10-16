@@ -44,13 +44,19 @@ Skip this section if the NOS3 VM is already installed and working.
 
 1. Open a command prompt
 
-2. Clone the repository: 
+2. Change current director:
+
+```bash
+cd C:\
+```
+
+4. Clone the repository: 
 
 ```bash
 git clone https://github.com/nasa/nos3.git
 ```
 
-3. Change directory to the repository: 
+4. Change directory to the repository: 
 
 ```bash
 cd C:\nos3
