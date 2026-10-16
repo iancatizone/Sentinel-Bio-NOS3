@@ -205,9 +205,9 @@ VM shutdown procedure:
 
 |  Issue  | Cause | Solution  |
 | --- | --- | --- |
-| NOS3 launch does not work properly | | Run ```make stop``` if any NOS3 processes are open, wait until are closed, then run ```make clean```, and repeat install starting from step 5 |
-| github-nos3 file is empty | |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
-| System console freezes when booting or shutting down | | Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead. |
+| NOS3 launch does not work properly | Errors during build | Run ```make stop``` if any NOS3 processes are open, wait until are closed, then run ```make clean```, and repeat install starting from step 5 |
+| github-nos3 file is empty | Errors during vagrant VM build |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
+| System console freezes when booting or shutting down | CPU soft lock due to stress on the system | Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead. |
 
 Issue 3: 
 
