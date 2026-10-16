@@ -44,6 +44,7 @@ Skip this section if the NOS3 VM is already installed and working.
    - Click "Environment Variables..."
    - Under the System Variables section, click on "Path" and click "Edit..."
    - In the "Edit Environment Variable" window click "New..." and paste the path to your git directory, likely "C:\Program Files\Git\cmd"
+   - Press "OK" on each window
 
 ### 3.2 Install the NOS3 repository
 
