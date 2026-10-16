@@ -39,6 +39,11 @@ Skip this section if the NOS3 VM is already installed and working.
 2. Download Vagrant AMD64 version 2.4.3 or newer from: [Vagrant](https://developer.hashicorp.com/vagrant)
 
 3. Download git version 2.47 or newer from: [git](https://git-scm.com/)
+   - Add git to your system's PATH:
+   - In windows start menu, search for "Edit the system environment variables"
+   - Click "Environment Variables..."
+   - Under the System Variables section, click on "Path" and click "Edit..."
+   - In the "Edit Environment Variable" window click "New..." and paste the path to your git directory, likely "C:\Program Files\Git\cmd"
 
 ### 3.2 Install the NOS3 repository
 
@@ -212,19 +217,21 @@ None.
 ## 10. Independent reproduction
 
 Tester:
-Name
+Sarah Boughton
 
 Date:
-Date
+10/15/2026
 
 Starting environment:
-Setup
+Windows 11 version 25H2
 
 Result:
-Passed / Failed / Pending
+Pending
 
 Deviations or assistance required:
-[Details]
+- "make launch" did not open 42 windows
+- nos3 install directory not specified, correction made
+- Git install: git must be added to environment variables
 
 Full reproduction record:
 [evidence/independent-reproduction.md](/evidence/independent-reproduction.md)
