@@ -1,5 +1,7 @@
-NOS3 Baseline Setup, Build, and Run Guide
-=========================================
+# NOS3 Baseline Setup, Build, and Run Guide
+
+Baseline ID: `SBP-NOS3-BL-01`
+
 ## 1. Purpose and scope
 
 This guide describes how to set up and run the stock NOS3 baseline
@@ -20,10 +22,12 @@ It does not cover custom Sentinel-Bio+ simulation implementation.
 - Host operating system: Windows 11
 - VirtualBox version: 7.2
 - Guest operating system: Ubuntu 22.04.4 LTS
-- NOS3 commit: 5a3bdee6be9a2c67fdf994ae6db56d5c60395302
+- NOS3 commit: `5a3bdee6be9a2c67fdf994ae6db56d5c60395302`
+- Mission configuration: `cfg/nos3-mission.xml` unchanged (cFS, COSMOS, scenario `STF1`, `spacecraft/sc-mission-config.xml`)
+- Containers (run inside the VM): `ivvitc/nos3-64:20260619`, `ballaerospace/cosmos:4.5.0`
 
 Full version record:
-[Versions](../evidence/baseline-versions.txt)
+[evidence/baseline-versions.txt](../../evidence/baseline-versions.txt)
 
 Installation instructions followed:
 [https://github.com/nasa/nos3](https://github.com/nasa/nos3)
@@ -34,7 +38,7 @@ Skip this section if the NOS3 VM is already installed and working.
 
 ### 3.1 Setup Oracle VirtualBox
 
-1. Download VirtualBox version 7.16 or newer from: [VirtualBox](https://www.virtualbox.org/)
+1. Download VirtualBox version 7.1.6 or newer (tested with 7.2) from: [VirtualBox](https://www.virtualbox.org/)
    
 2. Download Vagrant AMD64 version 2.4.3 or newer from: [Vagrant](https://developer.hashicorp.com/vagrant)
 
@@ -50,13 +54,13 @@ Skip this section if the NOS3 VM is already installed and working.
 
 1. Open a command prompt
 
-2. Change current director:
+2. Change the current directory:
 
 ```bash
 cd C:\
 ```
 
-4. Clone the repository: 
+3. Clone the repository: 
 
 ```bash
 git clone https://github.com/nasa/nos3.git
@@ -69,7 +73,7 @@ cd C:\nos3
 ```
 
 
-4. Clone the submodules: 
+5. Clone the submodules: 
 
 ```bash
 git submodule update --init --recursive
@@ -92,10 +96,10 @@ Close the command prompt
 
 ### 3.4 Start the VM
 
-   1. Open VirtualBox and start the NOS3 virtual machine; the name should along the lines of "nos3_2025..."  
+   1. Open VirtualBox and start the NOS3 virtual machine; the name should be along the lines of "nos3_2025..."  
    2. Sign in to jstar user with the password: jstar123!
 
-   3. In the VirtualBox toolbar click $$\color{red}\text{Devices -> Upgrade Guest Additions...}$$
+   3. In the VirtualBox toolbar click **Devices → Upgrade Guest Additions...**
 
    4. Reboot the VM
 
@@ -118,7 +122,7 @@ git status --short
 ```
 
 Compare the results with:
-[evidence/baseline-versions.txt](/evidence/baseline-versions.txt)
+[evidence/baseline-versions.txt](../../evidence/baseline-versions.txt)
 
 ## 5. Prepare and build NOS3
 
@@ -129,7 +133,7 @@ Run preparation command, the NOS3 Igniter should open after:
 ```bash
 make prep
 ``` 
-This command only needs to be ran once unless you are doing a clean rebuild.
+This command only needs to be run once unless you are doing a clean rebuild.
 When finished, run build command:
 
 ```bash
@@ -155,8 +159,8 @@ Procedure:
 Launch NOS3 using the procedure in Section 6.
 
 Expected result:
-Telemtry and command windows open and the flight software updates time occasionally.
-[evidence/screenshots/baseline-running.png](/evidence/screenshots/baseline-running.png)
+Telemetry and command windows open and the flight software updates time occasionally.
+[evidence/screenshots/baseline-running.png](../../evidence/screenshots/baseline-running.png)
 
 ### Test 2: Telemetry Updates
 
@@ -167,7 +171,7 @@ Procedure:
 
 Expected result:
 Three COSMOS windows should open: Packet Viewer, Command and Telemetry Server, and Command Sender. Housekeeping packet count should be increasing.
-[evidence/screenshots/telemetry-check.png](/evidence/screenshots/telemetry-check.png)
+[evidence/screenshots/telemetry-check.png](../../evidence/screenshots/telemetry-check.png)
 
 ### Test 3: Sending a NOOP Command
 
@@ -177,7 +181,7 @@ Procedure:
 3. Set command to ```GENERIC_ADCS_NOOP_CC```
 4. Before sending, in Packet Viewer, set target to the same, and ensure the packet selected is ```GENERIC_ADCS_HK_TLM```
 5. Observe the bottom area of the Command and Telemetry Server.
-6. Send the commmand, check that a new line appears on the Command and Telemetry Server
+6. Send the command, check that a new line appears on the Command and Telemetry Server
 
 Expected result:
 The new lines should read the following, with different date and times:
@@ -185,12 +189,12 @@ The new lines should read the following, with different date and times:
 ```2026/10/10 04:02:05.022  INFO: cmd("GENERIC_ADCS GENERIC_ADCS_NOOP_CC")```
 
 ```2026/10/10 04:02:05.025  INFO: Log File Opened : /home/jstar/Desktop/github-nos3/gsw/cosmos/outputs/logs/2026_10_10_04_02_05_cmd.bin```
-[evidence/screenshots/command-check.png](/evidence/screenshots/command-check.png)\
+[evidence/screenshots/command-check.png](../../evidence/screenshots/command-check.png)
 
 ## 8. Stop NOS3 and shut down the VM
 
 1. Before stopping, close all COSMOS windows; do not run the stop command before this
-2. Open a new terminal window and go into the NOS3 directory again, then run the stop command, do not click until all 42 and NOS3 Launcher windows have closed:
+2. Open a new terminal window and go into the NOS3 directory again, then run the stop command, do not click anything until all 42 and NOS3 Launcher windows have closed:
 
 ```bash
 make stop
@@ -198,18 +202,28 @@ make stop
 3. Graphics windows and NOS3 Launcher window should close, along with flight software terminals.
 
 VM shutdown procedure:
-1. Click the power icon in the upper right of the VM, then select $$\color{red}\text{Power Off/Log Out -> Power Off...}$$
+1. Click the power icon in the upper right of the VM, then select **Power Off/Log Out → Power Off...**
 2. The Oracle VirtualBox Manager should show the VM as "Powered Off"
 
 ## 9. Troubleshooting and known limitations
 
 |  Issue  | Cause | Solution  |
 | --- | --- | --- |
-| NOS3 launch does not work properly | Errors during build | Run ```make stop``` if any NOS3 processes are open, wait until are closed, then run ```make clean```, and repeat install starting from step 5 |
+| NOS3 launch does not work properly | Errors during build | Run ```make stop``` if any NOS3 processes are open, wait until they are closed, then run ```make clean```, and repeat install starting from step 5 |
 | github-nos3 file is empty | Errors during vagrant VM build |  In host computer's command prompt, inside nos3 directory, run: ```vagrant reload --provision``` |
-| System console freezes when booting or shutting down | CPU soft lock due to stress on the system | Go to $$\color{red}\text{Machine -> Pause}$$, wait a few seconds, then unpause. If this does not work, press reset instead. |
+| System console freezes when booting or shutting down | CPU soft lock due to stress on the system | Go to **Machine → Pause**, wait a few seconds, then unpause. If this does not work, press reset instead. |
+| Build log shows many `Clock skew detected` / `modification time ... in the future` warnings | VM clock and file timestamps drift by a few seconds | Observed in the 10/9/2026 build; the build still finished with `make exit status: 0`. If the launch misbehaves, run `make clean` and rebuild. |
+| `make launch` does not open the 42 windows (seen during the 10/15/2026 independent reproduction) | Not yet diagnosed | Record the terminal output of the `sc01 - 42` tab and add the cause and fix here once known |
 
-Issue 3: 
+### Capturing run evidence
+
+`make launch` opens many terminal tabs, so its own output is short. To save regression evidence for a run:
+
+```bash
+make launch 2>&1 | tee ~/baseline-run.log
+```
+
+Then copy the visible output of the `sc01 - NOS3 Flight Software` tab (right-click → Select All → Copy) into the same file. Store it as `evidence/logs/<YYYY-MM-DD>-baseline-run.log` and reference it from a test record in `evidence/test-records/`.
 
 ## 10. Independent reproduction
 
@@ -231,4 +245,4 @@ Deviations or assistance required:
 - Git install: git must be added to environment variables
 
 Full reproduction record:
-[evidence/independent-reproduction.md](/evidence/independent-reproduction.md)
+[evidence/test-records/2026-10-15-independent-reproduction.md](../../evidence/test-records/2026-10-15-independent-reproduction.md)
