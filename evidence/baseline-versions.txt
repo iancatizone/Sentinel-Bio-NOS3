@@ -3,7 +3,9 @@ NOS3 BASELINE — SOFTWARE AND ENVIRONMENT RECORD
 
 Recorded by: Ian Catizone
 Date recorded: 10/9/2026
-Baseline test status: Not yet tested
+Baseline ID: SBP-NOS3-BL-01
+Baseline test status: Checkout run 10/9-10/10/2026 (see evidence/test-records/2026-10-09-baseline-checkout.md);
+                      independent reproduction 10/15/2026 pending sign-off
 
 
 1. TESTED ENVIRONMENT
@@ -13,11 +15,15 @@ Host operating system and version:
 Windows 11
 
 VM or guest operating system:
-Ubuntu
+Ubuntu 22.04.4 LTS (stock NOS3 Vagrant VM, VirtualBox VM name nos3_2025...)
 
 Notes about the setup:
 NOS3 runs inside the stock NOS3 virtual machine using Oracle VirtualBox,
 following the installation instructions in the NOS3 GitHub repository.
+Inside the VM, every NOS3 process (flight software, NOS Engine server,
+component simulators, 42, time driver, COSMOS) runs in its own Docker
+container. The launch script is scripts/fsw/fsw_cfs_launch.sh and the
+container image is set by DBOX in scripts/env.sh.
 
 
 2. NOS3 SOURCE CODE
@@ -28,6 +34,16 @@ https://github.com/nasa/nos3
 
 NOS3 commit:
 5a3bdee6be9a2c67fdf994ae6db56d5c60395302
+("Merge branch 'dev'", committed 2026-06-30)
+
+Mission configuration (cfg/nos3-mission.xml, unmodified):
+  start-time: 814254200.0 (2025-10-20 17:43:20 UTC)
+  fsw: cfs
+  gsw: cosmos
+  scenario: STF1
+  number-spacecraft: 1
+  sc-1-cfg: spacecraft/sc-mission-config.xml
+  (values confirmed by the "make config" output at the top of evidence/logs/build.log)
 
 3. SUBMODULE REVISIONS
 ------------------------------------------------------------
@@ -103,11 +119,11 @@ Vagrant 2.4.9
 Oracle VirtualBox:
 Version 7.2
 
-Docker version:
-Not used
+Docker version (inside the VM):
+TO RECORD - run: docker --version
 
-Docker Compose version:
-Not used
+Docker Compose version (inside the VM):
+TO RECORD - run: docker compose version
 
 
 5. CONTAINER IMAGES
@@ -117,7 +133,12 @@ Command:
 docker images --digests
 
 Relevant image records:
-Not used
+  ivvitc/nos3-64:20260619       FSW, simulators, NOS Engine, 42, time driver
+                                (tag from DBOX in scripts/env.sh at this commit)
+                                digest: TO RECORD from docker images --digests
+  ballaerospace/cosmos:4.5.0    COSMOS ground software
+                                digest: sha256:f5686089dc1bba946ba50a3dc34286b1a6bb181d59a0e1bb09395c9f7852f482
+                                (from "make" output in evidence/logs/build.log)
 
 
 6. LOCAL SOURCE AND CONFIGURATION CHANGES
@@ -140,13 +161,13 @@ N/A
 ------------------------------------------------------------
 
 Build/run guide:
-docs/baseline-build-run.md
+docs/baseline/baseline-build-run.md
 
-Baseline test record:
-evidence/baseline-test-record.md
+Baseline test records:
+evidence/test-records/
 
 Build log:
 evidence/logs/build.log
 
 Run log:
-evidence/logs/baseline-run.log
+evidence/logs/baseline-run.log (currently empty - re-capture per guide section 9)

@@ -1,0 +1,18 @@
+sentinel_element,sentinel_hardware,flight_interface,nos3_baseline_representation,nos3_bus,data_source,fidelity,arduino_emulator,flatsat,gap_and_next_step
+Flight computer / FSW,EnduroSat OBC (TBD model),n/a,cFS on Linux container (sc01-nos-fsw),n/a,n/a,Generic,No,Yes,Sentinel-Bio+ plans F'; NOS3 F' configuration needs its own baseline
+Attitude control app,TBD,n/a,GENERIC_ADCS app (components/generic_adcs),n/a,Sensor/actuator apps,Generic,No,Yes,Replace generic control laws with Sentinel-Bio+ detumble/sun-pointing algorithms
+Magnetometer,TBD,TBD,generic_mag sim,spi_2 (CS 2),42 (port 4234),Generic,TBD,TBD,Update noise/scale and protocol to the selected sensor
+Coarse sun sensors,TBD,TBD,generic_css sim,i2c_2,42 (port 4227),Generic,TBD,TBD,Match count/placement to the Sentinel-Bio+ layout in 42 SC file
+Fine sun sensor,TBD,TBD,generic_fss sim,spi_1 (CS 1),42 (port 4284),Generic,TBD,TBD,Confirm whether Sentinel-Bio+ carries an FSS
+IMU / gyro,TBD,TBD,generic_imu sim,can_0,42 (port 4281),Generic,TBD,TBD,Update rate noise and bias to datasheet
+Star tracker,TBD,TBD,generic_star_tracker sim,usart_10,42 (port 4282),Generic,TBD,TBD,Confirm whether Sentinel-Bio+ carries a star tracker
+Magnetorquers,TBD,TBD,generic_torquer sim,command bus,Commands -> 42 (port 4279),Generic,TBD,TBD,Set max dipole/torque from hardware datasheet
+Reaction wheels,TBD,TBD,generic_reaction_wheel sims x3,usart_2..usart_4,42 (ports 4277/4377/4477),Generic,TBD,TBD,Confirm whether Sentinel-Bio+ uses wheels; disable if not
+GPS,TBD,TBD,novatel_oem615 sim,usart_1,42 (port 4245),Generic,TBD,TBD,Confirm GPS receiver selection
+EPS,EnduroSat EPS (TBD model),I2C,generic_eps sim,i2c_1 (0x2B),42 (port 4283),Generic,Possible,Yes,Model EnduroSat EPS register map
+Thermal sensors,TBD,I2C,None,n/a,n/a,Not represented,Possible,Yes,New simulator candidate
+Payload,Sentinel-Bio+ payload,UART,None (sample sim is the pattern),n/a,n/a,Not represented,Possible,Yes,New UART payload simulator: minimal Sentinel-Bio+ extension candidate
+Iridium modem,TBD,UART,None,n/a,n/a,Not represented,Possible,Yes,New modem simulator or emulator
+S-band radio,TBD,TBD,generic_radio sim,TCP to ground (radio-sim),n/a,Generic,No,TBD,Data path only; no RF model
+Orbit / environment,Mission orbit (TBD),n/a,42 STF1 scenario (cfg/InOut),n/a,42,Generic LEO,n/a,n/a,Update Orb and SC files with Sentinel-Bio+ orbit and mass properties
+Ground station,SDSU/SJSU ground segment (TBD),n/a,COSMOS 4.5.0,n/a,n/a,Generic,n/a,n/a,Confirm the team's ground software choice
