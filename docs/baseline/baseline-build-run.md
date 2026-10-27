@@ -237,7 +237,7 @@ Starting environment:
 Windows 11 version 25H2
 
 Result:
-Pending
+Pass
 
 Deviations or assistance required:
 - "make launch" did not open 42 windows
