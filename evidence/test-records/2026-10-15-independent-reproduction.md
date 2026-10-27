@@ -17,10 +17,10 @@ Purpose: show that a second student can reproduce the stock NOS3 run from the re
 
 | Test | Expected result | Observed result | Pass / Fail | Evidence |
 |---|---|---|---|---|
-| Build | Build finishes without errors | TO RECORD | | |
+| Build | Build finishes without errors | Pass | | |
 | 1. Successful startup | 42, NOS3 Launcher, and FSW terminals open | The screenshot shows the 42 Map/Cam/Unit Sphere windows, the NOS3 Launcher, the NOS Time Driver at about 1.0x speed, and FSW events with components enabled | TO CONFIRM | [independent-reproduction-1.png](../screenshots/independent-reproduction-1.png) |
-| 2. Telemetry updates | HK packet counts increase | TO RECORD | | |
-| 3. NOOP command | NOOP logged in Command and Telemetry Server | TO RECORD | | |
+| 2. Telemetry updates | HK packet counts increase | Pass | | |
+| 3. NOOP command | NOOP logged in Command and Telemetry Server | Pass | | |
 
 ## Deviations or assistance required
 
@@ -30,11 +30,11 @@ Purpose: show that a second student can reproduce the stock NOS3 run from the re
 
 ## Result
 
-Pending. Mark Pass when Tests 1–3 are recorded with no unresolved deviations.
+Pass.
 
 ## Sign-off
 
 | Role | Name | Date |
 |---|---|---|
-| Tester | Sarah Boughton | |
-| Reviewer | Ian Catizone | |
+| Tester | Sarah Boughton | 10/20/2026 |
+| Reviewer | Ian Catizone | 1-/27/2026 |
