@@ -1,0 +1,15 @@
+interface_id,element,path_or_endpoint,settings_or_protocol,source_basis,maturity,next_action
+IF-PWR-01,External prototype supply,Converters to 3.3V/5V/12V rails,Power-state graph only,User and prototype diagram,Input reported not measured,Resolve which loads and enables are physically connected
+IF-PWR-02,OBC and RockBLOCK supply,5V rail per manual,Separate availability from commandable switching,Operations manual and user,Reported,Confirm whether power can be independently controlled
+IF-EPS-01,3.3V INA219,/dev/i2c-2,I2C address 0x40,Operations manual,Historical mapping,Recover eps.py and calibration
+IF-EPS-02,5V INA219,/dev/i2c-1,I2C address 0x40; shared internal bus,Operations manual,Historical mapping,Recover driver and confirm board mapping
+IF-EPS-03,12V INA219,/dev/i2c-3,I2C address 0x40,Operations manual,Historical mapping,Recover eps.py and calibration
+IF-EPS-04,EPS to CDH,TCP 9002,JSON telemetry stream per manual,Operations manual,Source missing,Recover exact schema and timing
+IF-EPS-05,OBC to EPS,TBD,TBD: query or sensor configuration or actuator control,User requested behavior,Unresolved,Identify real API and hardware effect
+IF-IR-01,OBC to RockBLOCK,/dev/ttymxc2,UART 19200 8N1 with AT and SBD,Manual and ICD-201,Current integration unresolved,Recover caller and failing transcript; reconcile pin directions
+IF-CDH-01,CDH command input,TCP 9100,Plain text line commands per manual,Operations manual,Source missing,Recover parser and command replies
+IF-CDH-02,CDH aggregate output,TCP 9090,JSON telemetry stream per manual,Operations manual,Source missing,Recover schema and subscriber behavior
+IF-GND-01,Existing dashboard,HTTP 8080,Subscribes to CDH,Operations manual,Source missing,Recover app templates and runtime dependencies
+IF-HLT-01,Host health,TCP 9000,CPU memory disk telemetry,Operations manual,Source missing,Distinguish simulation-host metrics from X8 measurements
+IF-PAY-01,Existing software payload simulator,TCP 9001 telemetry and 9011 command,Existing dependency only; no physical Arduino emulator,Operations manual and user,Source missing,Recover only if needed by CDH
+IF-SBD-01,Simulated remote SBD endpoint,Test fixture not a live account,Deterministic MO status and MT messages,Proposed test boundary,Not implemented,Derive independent expected transcripts
