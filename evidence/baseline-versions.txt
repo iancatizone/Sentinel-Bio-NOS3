@@ -120,10 +120,10 @@ Oracle VirtualBox:
 Version 7.2
 
 Docker version (inside the VM):
-TO RECORD - run: docker --version
+Docker version 28.5.2, build ecc6942
 
 Docker Compose version (inside the VM):
-TO RECORD - run: docker compose version
+Docker Compose version v5.0.0
 
 
 5. CONTAINER IMAGES
