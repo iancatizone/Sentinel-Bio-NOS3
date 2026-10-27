@@ -2,7 +2,7 @@
 
 This repository documents the NOS3 simulation baseline that SJSU uses for Sentinel-Bio+ simulation development. It covers how to reproduce the stock NOS3 reference mission, the exact software configuration of that baseline, evidence that it runs, the simulation architecture, and how NOS3 maps to Sentinel-Bio+ requirements.
 
-Mission-specific Sentinel-Bio+ simulation code is not part of this repository yet. Sprint 3 adds the architecture note and the recommended extension path.
+Mission-specific executable simulation code is not part of this repository yet. Sprint 3 adds the source-level architecture note; Sprint 4 planning now targets the current Portenta X8/custom-EPS FlatSat, not the planned flight bus.
 
 ## Baseline at a glance
 
@@ -10,7 +10,7 @@ Mission-specific Sentinel-Bio+ simulation code is not part of this repository ye
 |---|---|
 | NOS3 repository | [nasa/nos3](https://github.com/nasa/nos3) |
 | NOS3 commit | `5a3bdee6be9a2c67fdf994ae6db56d5c60395302` |
-| Flight software | cFS |
+| Stock reference flight software (not current FlatSat software) | cFS |
 | Ground software | COSMOS (container `ballaerospace/cosmos:4.5.0`) |
 | Scenario / spacecraft config | `STF1` / `spacecraft/sc-mission-config.xml` |
 | Runtime | NOS3 Vagrant VM (Ubuntu 22.04.4) in VirtualBox 7.2; NOS3 processes run in Docker containers inside the VM |
@@ -21,9 +21,9 @@ Mission-specific Sentinel-Bio+ simulation code is not part of this repository ye
 | Deliverable (execution plan §7.2) | Location | Status |
 |---|---|---|
 | Reproducible NOS3 build/run instructions | [docs/baseline/baseline-build-run.md](docs/baseline/baseline-build-run.md) | Draft complete |
-| NOS3 baseline configuration record | [evidence/baseline-versions.txt](evidence/baseline-versions.txt), [docs/baseline/config-control.md](docs/baseline/config-control.md) | Docker image entries need confirming in the VM |
-| Regression evidence | [evidence/test-records/](evidence/test-records/), [evidence/logs/](evidence/logs/), [evidence/screenshots/](evidence/screenshots/) | Run log is empty; startup and telemetry screenshots need re-capture |
-| Independent reproduction | [evidence/test-records/2026-10-15-independent-reproduction.md](evidence/test-records/2026-10-15-independent-reproduction.md) | Pending tester sign-off |
+| NOS3 baseline configuration record | [evidence/baseline-versions.txt](evidence/baseline-versions.txt), [docs/baseline/config-control.md](docs/baseline/config-control.md) | Docker/Compose versions filled; NOS3 image digest remains TO RECORD |
+| Regression evidence | [evidence/test-records/](evidence/test-records/), [evidence/logs/](evidence/logs/), [evidence/screenshots/](evidence/screenshots/) | Checkout marked Pass; empty run log and screenshot-date clarification remain |
+| Independent reproduction | [evidence/test-records/2026-10-15-independent-reproduction.md](evidence/test-records/2026-10-15-independent-reproduction.md) | Overall Pass with signatures; reconcile remaining incomplete fields |
 | Initial digital-twin architecture diagram | [docs/architecture/native-architecture.md](docs/architecture/native-architecture.md) | Draft complete |
 | Requirements-to-representation/verification mapping | [docs/requirements/](docs/requirements/) | Template ready; needs team requirement IDs |
 | Updated representation matrix | [docs/requirements/representation-matrix.csv](docs/requirements/representation-matrix.csv) | NOS3 side filled; Sentinel-Bio+ hardware columns TBD |
@@ -33,6 +33,21 @@ Mission-specific Sentinel-Bio+ simulation code is not part of this repository ye
 | Deliverable (execution plan §7.3, NOS3 tasks) | Location | Status |
 |---|---|---|
 | SJSU NOS3 Architecture Note | [docs/sprint3/architecture-note.md](docs/sprint3/architecture-note.md) | Outline with starting file paths |
+
+See the [Sprint 2/3 review](docs/sprint4/sprint2-3-review.md) for the remaining items. Existing test records have not been rewritten.
+
+## Sprint 4: current FlatSat digital twin
+
+The initial target is software-only replication of the current Portenta X8, breadboard EPS, and RockBLOCK 9603 interface. S-band, physical ADCS/payload emulators, orbital dynamics, and live hardware coupling are outside this initial scope.
+
+| Planning artifact | Location | Status |
+|---|---|---|
+| Scope, priorities, document index | [Sprint 4 README](docs/sprint4/README.md) | Outline; no twin software implemented |
+| As-built hardware and interface inventory | [FlatSat configuration](docs/sprint4/flatsat-as-built.md), [interface inventory](docs/sprint4/interface-inventory.csv) | User/manual inputs recorded; unresolved details labeled |
+| Software provenance and source recovery | [FSW integration](docs/sprint4/fsw-integration.md) | Blocking: linked C scaffold differs from manual's Python/Docker services |
+| Architecture and NOS3 file/VM workflow | [Twin architecture](docs/sprint4/twin-architecture.md), [workflow](docs/sprint4/nos3-workflow.md) | Proposed, not executed |
+| Acceptance scenarios | [Validation plan](docs/sprint4/validation-plan.md), [scenario outline](tests/scenarios/README.md) | Not run |
+| Questions and source/requirements decisions | [Open items](docs/sprint4/open-items.md) | Awaiting clarification |
 
 ## Repository layout
 
@@ -52,6 +67,12 @@ docs/
     nos3-glossary.md              Plain-language NOS3 terminology
   sprint3/
     architecture-note.md          SJSU NOS3 Architecture Note (Sprint 3)
+  sprint4/                        Current-FlatSat twin planning, inventories, and open items
+missions/
+  sentinel-bio-flatsat/            Mission integration manifest outline (not a runnable profile)
+components/                       Future device-model ownership conventions only
+tests/
+  scenarios/                      Acceptance scenario outline, not executable tests
 evidence/
   baseline-versions.txt           Full software/environment record for the baseline
   test-records/                   One Markdown record per test session (TEMPLATE.md to start)
