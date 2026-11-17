@@ -1,0 +1,1 @@
+/usr/bin/g++ -Wno-format -g CMakeFiles/synopsis_cli.dir/bin/synopsis_cli.cpp.o -o synopsis_cli  -Wl,-rpath,/home/jstar/Desktop/github-nos3/fsw/build/amd64-nos3/default_cpu1/apps/syn /usr/lib/x86_64-linux-gnu/libcrypto.so libsynopsis.so -lpthread /usr/lib/x86_64-linux-gnu/libcrypto.so 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtblobj_cpu1_spacecop.tbl08203f6f0cbdf075dd052e25937c3e63bcfb58d7.a "CMakeFiles/tblobj_cpu1_spacecop.tbl08203f6f0cbdf075dd052e25937c3e63bcfb58d7.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/spacecop_call_table.c.o" "CMakeFiles/tblobj_cpu1_spacecop.tbl08203f6f0cbdf075dd052e25937c3e63bcfb58d7.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/spacecop_command_monitor_table.c.o"
+/usr/bin/ranlib libtblobj_cpu1_spacecop.tbl08203f6f0cbdf075dd052e25937c3e63bcfb58d7.a

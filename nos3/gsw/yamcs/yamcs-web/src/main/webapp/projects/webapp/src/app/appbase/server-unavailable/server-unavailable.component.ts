@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { WebappSdkModule } from '@yamcs/webapp-sdk';
+import { OopsComponent } from '../oops/oops.component';
+
+@Component({
+  templateUrl: './server-unavailable.component.html',
+  styleUrl: './server-unavailable.component.css',
+  imports: [OopsComponent, WebappSdkModule],
+})
+export class ServerUnavailableComponent {
+  reload() {
+    window.location.reload();
+  }
+}

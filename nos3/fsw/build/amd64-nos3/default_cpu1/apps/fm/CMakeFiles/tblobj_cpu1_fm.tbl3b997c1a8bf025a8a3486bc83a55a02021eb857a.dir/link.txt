@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.a CMakeFiles/tblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.dir/fsw/tables/fm_monitor.c.o
+/usr/bin/ranlib libtblobj_cpu1_fm.tbl3b997c1a8bf025a8a3486bc83a55a02021eb857a.a

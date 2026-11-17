@@ -1,0 +1,1 @@
+/usr/bin/gcc -fPIC  -std=c99 -Wstrict-prototypes -pedantic -Werror -Wall -Wwrite-strings -Wpointer-arith -Wno-address-of-packed-member -g -shared  -o sbn_tcp.so CMakeFiles/sbn_tcp.dir/fsw/src/sbn_tcp_if.c.o  /usr/lib/x86_64-linux-gnu/libcrypto.so 

@@ -1,0 +1,13 @@
+import { booleanAttribute, Component, input } from '@angular/core';
+
+@Component({
+  selector: 'ya-option',
+  template: '',
+})
+export class YaOption {
+  id = input.required<string>();
+  label = input.required<string>();
+  description = input<string>();
+  icon = input<string>();
+  group = input(false, { transform: booleanAttribute });
+}

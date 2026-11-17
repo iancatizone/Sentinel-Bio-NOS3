@@ -1,0 +1,1 @@
+/usr/bin/gcc -fPIC  -std=c99 -Wstrict-prototypes -pedantic -Werror -Wall -Wwrite-strings -Wpointer-arith -Wno-address-of-packed-member -g -shared  -o cfdp.so CMakeFiles/cfdp.dir/fsw/src/cfdp_app.c.o CMakeFiles/cfdp.dir/fsw/src/cfdp_cfdp.c.o CMakeFiles/cfdp.dir/fsw/src/cfdp_cmd.c.o  /usr/lib/x86_64-linux-gnu/libcrypto.so 

@@ -1,0 +1,29 @@
+import { booleanAttribute, Component, input, output } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
+
+export type YaButtonAppearance = 'basic' | 'text' | 'primary';
+
+@Component({
+  selector: 'ya-button',
+  templateUrl: './button.component.html',
+  styleUrl: './button.component.css',
+  host: {
+    class: 'ya-button',
+  },
+  imports: [MatIcon],
+})
+export class YaButton {
+  icon = input<string>();
+  appearance = input('basic');
+  disabled = input(false, { transform: booleanAttribute });
+  dropdown = input(false, { transform: booleanAttribute });
+  toggled = input(false, { transform: booleanAttribute });
+  rightAlign = input(false, { transform: booleanAttribute });
+
+  click = output<MouseEvent>();
+
+  onClick(event: MouseEvent) {
+    this.click.emit(event);
+    event.stopPropagation();
+  }
+}

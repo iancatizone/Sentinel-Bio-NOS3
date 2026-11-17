@@ -1,0 +1,7 @@
+.connected {
+  color: var(--y-success-color);
+}
+
+.disconnected {
+  color: lightgrey;
+}

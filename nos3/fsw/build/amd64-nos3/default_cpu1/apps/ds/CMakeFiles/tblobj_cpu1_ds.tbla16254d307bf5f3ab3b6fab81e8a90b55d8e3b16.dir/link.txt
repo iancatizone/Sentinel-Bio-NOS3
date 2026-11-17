@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.a "CMakeFiles/tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/ds_filter_tbl.c.o" "CMakeFiles/tblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/ds_file_tbl.c.o"
+/usr/bin/ranlib libtblobj_cpu1_ds.tbla16254d307bf5f3ab3b6fab81e8a90b55d8e3b16.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.a CMakeFiles/tblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.dir/fsw/tables/sbn_conf_tbl.c.o
+/usr/bin/ranlib libtblobj_cpu1_sbn.tbl48adf2b003ff9b69abafef910f0e8010b92a49e8.a

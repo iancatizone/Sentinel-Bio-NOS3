@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.a "CMakeFiles/tblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.dir/home/jstar/Desktop/github-nos3/cfg/build/nos3_defs/tables/cf_def_config.c.o"
+/usr/bin/ranlib libtblobj_cpu1_cf.tbl8eedcce560357bb9e5370a1b0f6b2464997ad77f.a

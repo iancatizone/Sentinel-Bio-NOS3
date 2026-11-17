@@ -1,0 +1,25 @@
+.evaluation {
+  font-family: "Roboto Mono", monospace;
+  background-color: #ffeef0;
+  color: var(--y-error-color);
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.evaluation.valid {
+  background-color: #e6ffed;
+  color: var(--y-success-color);
+}
+
+.evaluation.disabled {
+  background-color: #eee;
+  color: #333;
+}
+
+th {
+  white-space: nowrap;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.654);
+}

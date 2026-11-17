@@ -1,0 +1,13 @@
+import { Component, Input } from '@angular/core';
+import { WebappSdkModule } from '@yamcs/webapp-sdk';
+
+@Component({
+  selector: 'app-create-instance-wizard-step',
+  templateUrl: './create-instance-wizard-step.component.html',
+  styleUrl: './create-instance-wizard-step.component.css',
+  imports: [WebappSdkModule],
+})
+export class CreateInstanceWizardStepComponent {
+  @Input()
+  step: number;
+}

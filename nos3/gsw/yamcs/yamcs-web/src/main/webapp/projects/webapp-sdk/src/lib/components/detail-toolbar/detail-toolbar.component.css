@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  box-sizing: content-box;
+  height: 36px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--y-border-color);
+  background-color: var(--y-detail-pane-background-color);
+  color: var(--y-detail-pane-foreground-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.icon-action {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,54 @@
+# Text Comparison
+
+foo = 123
+
+==>
+
+Filter(Comparison(Comparable,CompareOp,Number))
+
+# String Comparison
+
+foo="123"
+
+==>
+
+Filter(Comparison(Comparable,CompareOp,String))
+
+# Operators
+
+foo != "123"
+foo < "123"
+foo <= "123"
+foo > "123"
+foo >= "123"
+foo =~ "123"
+foo !~ "123"
+foo : "123"
+
+==>
+
+Filter(
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String),
+  Comparison(Comparable,CompareOp,String))
+
+# Qualified name value
+
+name = /YSS/SIMULATOR/FlightData
+
+==>
+
+Filter(Comparison(Comparable,CompareOp,Text))
+
+# Qualified name is not confused with the has-operator
+
+name:/YSS/SIMULATOR/FlightData
+
+==>
+
+Filter(Comparison(Comparable,CompareOp,Text))

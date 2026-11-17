@@ -1,0 +1,19 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { WebappSdkModule } from '@yamcs/webapp-sdk';
+
+@Component({
+  selector: 'app-display-file-page-dirty-dialog',
+  templateUrl: './display-file-dirty-dialog.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [WebappSdkModule],
+})
+export class DisplayFilePageDirtyDialogComponent {
+  constructor(
+    private dialogRef: MatDialogRef<DisplayFilePageDirtyDialogComponent>,
+  ) {}
+
+  confirmDiscard() {
+    this.dialogRef.close(true);
+  }
+}

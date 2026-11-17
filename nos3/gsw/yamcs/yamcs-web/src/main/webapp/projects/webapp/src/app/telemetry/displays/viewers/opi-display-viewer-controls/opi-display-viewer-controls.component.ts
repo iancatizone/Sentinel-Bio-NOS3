@@ -1,0 +1,45 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AutoScaleOverride } from '@yamcs/opi';
+import { WebappSdkModule } from '@yamcs/webapp-sdk';
+import { BehaviorSubject } from 'rxjs';
+import { OpiDisplayViewerComponent } from '../opi-display-viewer/opi-display-viewer.component';
+
+@Component({
+  selector: 'app-opi-display-viewer-controls',
+  templateUrl: './opi-display-viewer-controls.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  imports: [WebappSdkModule],
+})
+export class OpiDisplayViewerControlsComponent {
+  // Exposed so the template can reference AutoScaleOverride.* by name.
+  readonly AutoScaleOverride = AutoScaleOverride;
+
+  initialized$ = new BehaviorSubject<boolean>(false);
+
+  viewer: OpiDisplayViewerComponent;
+
+  public init(viewer: OpiDisplayViewerComponent) {
+    this.viewer = viewer;
+    this.initialized$.next(true);
+  }
+
+  fitZoom() {
+    this.viewer.fitZoom();
+  }
+
+  zoomIn() {
+    this.viewer.zoomIn();
+  }
+
+  zoomOut() {
+    this.viewer.zoomOut();
+  }
+
+  resetZoom() {
+    this.viewer.resetZoom();
+  }
+
+  setAutoScaleOverride(value: AutoScaleOverride) {
+    this.viewer.setAutoScaleOverride(value);
+  }
+}
