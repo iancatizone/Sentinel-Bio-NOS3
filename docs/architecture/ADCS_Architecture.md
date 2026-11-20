@@ -1,35 +1,35 @@
 ```mermaid
+%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 35, "rankSpacing": 45}}}%%
 flowchart TB
-    GROUND["Ground / operator"]
 
-    subgraph OBC["ONBOARD COMPUTER — Portenta X8"]
+    GROUND["Ground operator"]
+
+    subgraph OBC["OBC: Portenta X8"]
         direction TB
 
-        subgraph SERVICES["OBC CONTAINERS"]
-            direction TB
+        subgraph SERVICES["Other OBC containers"]
+            GS["Ground interface"]
+            CDH["CDH mission supervisor"]
+            EPS["EPS service"]
+            HEALTH["OBC health service"]
+            PAYLOAD["Payload service"]
 
-            GS["Ground interface<br/>flatsat-groundstation"]
-            CDH["Mission supervisor<br/>flatsat-cdh"]
-            EPS["Power monitoring<br/>flatsat-eps"]
-            HEALTH["Computer health<br/>flatsat-health"]
-            PAYLOAD["Payload interface / simulator<br/>flatsat-payload-sim"]
-
-            GS <-->|Commands / telemetry| CDH
-            EPS -->|Power status| CDH
-            HEALTH -->|OBC status| CDH
-            PAYLOAD <-->|Commands / data| CDH
+            GS <--> CDH
+            EPS --> CDH
+            HEALTH --> CDH
+            PAYLOAD <--> CDH
         end
 
-        subgraph ADCS["PROPOSED ADCS CONTAINER"]
-            direction TB
-
-            CMD["Command and telemetry<br/>Validate requests<br/>Report status"]
-            MODE["ADCS mode manager<br/>Initialize / detumble<br/>Sun point / nadir / safe"]
-            REF["Reference generation<br/>Sun / nadir targets<br/>Time and orbit inputs"]
-            EST["Sensor processing<br/>Attitude estimation<br/>Angular-rate estimation"]
-            CTRL["Control algorithms<br/>Detumble controller<br/>Pointing controller"]
-            ACT["Actuator management<br/>Command limits<br/>Timing and inhibit"]
-            HAL["Hardware abstraction<br/>Sensor drivers<br/>Actuator drivers"]
+        subgraph ADCS["ADCS container"]
+            CMD["Commands and telemetry"]
+            MODE["Mode manager"]
+            REF["Target generation"]
+            EST["Attitude and rate estimation"]
+            CTRL["Control algorithms"]
+            ACT["Actuator management"]
+            HAL["Hardware abstraction"]
+            SD["Sensor drivers"]
+            AD["Actuator drivers"]
 
             CMD --> MODE
             MODE --> REF
@@ -39,42 +39,53 @@ flowchart TB
             CTRL --> ACT
             ACT --> HAL
             HAL --> EST
+            HAL <--> SD
+            HAL --> AD
             EST --> CMD
             ACT --> CMD
         end
 
-        OS["Host operating system<br/>Device access and permissions<br/>Bus-controller drivers"]
+        subgraph HOST["OBC host interfaces"]
+            OS["Host OS device access"]
+            BUS["Bus controllers"]
+            PORTS["Physical connectors"]
 
-        PORTS["OBC physical interfaces<br/>Headers and connectors<br/>Bus allocation TBD"]
+            OS <--> BUS
+            BUS <--> PORTS
+        end
 
-        CDH -->|Mode / target / limits| CMD
-        CMD -->|State / status / faults| CDH
-        CDH -->|Time / orbit inputs| REF
+        CDH -->|Mode commands| CMD
+        CMD -->|ADCS status| CDH
+        CDH -->|Time and orbit| REF
 
-        HAL <-->|Device access| OS
-        EPS <-->|EPS device access| OS
-        OS <--> PORTS
+        SD <--> OS
+        AD --> OS
+        EPS <--> OS
     end
 
-    subgraph HARDWARE["EXTERNAL HARDWARE"]
-        direction TB
-
-        SENS["Attitude sensors<br/>Magnetometer / gyro<br/>Sun sensors<br/>Selection TBD"]
-
-        NAV["Time / navigation source<br/>GNSS or supplied data<br/>Architecture TBD"]
-
-        DRIVER["Magnetorquer drivers<br/>Current control<br/>Switching / protection"]
-
-        COILS["Three-axis magnetorquers<br/>Panel coils optional"]
-
-        EPSHW["EPS hardware<br/>INA219 rail monitors<br/>Current FlatSat"]
-
-        DRIVER -->|Coil current| COILS
+    subgraph SENSORS["External sensors: selection TBD"]
+        MAG["Magnetometer"]
+        GYRO["Gyroscope"]
+        SUN["Sun sensors"]
     end
 
-    GROUND <-->|Ground interface| GS
-    SENS -->|Sensor data| PORTS
-    NAV -->|Time / navigation data| PORTS
-    PORTS -->|Actuator commands| DRIVER
-    EPSHW <-->|I2C| PORTS
+    subgraph ACTUATORS["External actuators"]
+        DRIVER["Magnetorquer drivers"]
+        COILS["Magnetorquer coils"]
+
+        DRIVER -->|Current| COILS
+    end
+
+    NAV["Navigation source: TBD"]
+    EPSHW["EPS hardware"]
+
+    GROUND <--> GS
+
+    MAG --> PORTS
+    GYRO --> PORTS
+    SUN --> PORTS
+    NAV --> PORTS
+
+    PORTS -->|Commands| DRIVER
+    EPSHW <--> PORTS
 ```
