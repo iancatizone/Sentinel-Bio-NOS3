@@ -1,3 +1,4 @@
+```mermaid
 flowchart TB
     GROUND["Ground / operator interface"]
 
@@ -65,3 +66,4 @@ flowchart TB
     PORTS -->|"Actuator command interface<br/>Protocol / PWM / enable TBD"| DRIVER
     DRIVER -->|"Controlled coil current"| COILS
     EPSHW <-->|"I²C telemetry"| PORTS
+```
