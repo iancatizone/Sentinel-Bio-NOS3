@@ -1,70 +1,80 @@
 ```mermaid
-%%{init: {'flowchart': {'wrappingWidth': 200, 'nodeSpacing': 50, 'rankSpacing': 50}}}%%
 flowchart TB
-    GROUND["Ground / operator interface"]
+    GROUND["Ground / operator"]
 
-    subgraph OBC["ONBOARD COMPUTER — current FlatSat: Portenta X8"]
+    subgraph OBC["ONBOARD COMPUTER — Portenta X8"]
         direction TB
 
-        subgraph APPS["Containerized applications"]
-            direction LR
-            GS["Ground-interface service<br/>Current FlatSat: flatsat-groundstation"]
-            CDH["CDH / mission supervisor<br/>flatsat-cdh<br/>Mission sequencing and command authority"]
-            EPS["EPS service<br/>flatsat-eps<br/>Power monitoring"]
-            HEALTH["OBC health service<br/>flatsat-health"]
-            PAYLOAD["Payload service / simulator<br/>Current FlatSat: flatsat-payload-sim"]
+        subgraph SERVICES["OBC CONTAINERS"]
+            direction TB
 
-            subgraph ADCS["PROPOSED ADCS CONTAINER"]
-                direction TB
-                CMD["Command / telemetry interface<br/>Command validation and status reporting"]
-                MODE["ADCS mode manager<br/>Startup / detumble / Sun point<br/>Nadir request / safe response"]
-                EST["Sensor processing and estimation<br/>Calibration, validity checks<br/>Attitude and angular-rate estimates"]
-                REF["Reference generation<br/>Sun direction / nadir target<br/>Time and orbit inputs as required"]
-                CTRL["Control algorithms<br/>Detumble / pointing control"]
-                ACT["Actuator management<br/>Dipole limits, timing, inhibit"]
-                HAL["Hardware abstraction / device drivers<br/>Sensor reads and actuator writes"]
+            GS["Ground interface<br/>flatsat-groundstation"]
+            CDH["Mission supervisor<br/>flatsat-cdh"]
+            EPS["Power monitoring<br/>flatsat-eps"]
+            HEALTH["Computer health<br/>flatsat-health"]
+            PAYLOAD["Payload interface / simulator<br/>flatsat-payload-sim"]
 
-                CMD --> MODE
-                MODE --> REF
-                MODE --> CTRL
-                REF --> CTRL
-                EST --> CTRL
-                CTRL --> ACT
-                ACT --> HAL
-                HAL --> EST
-                EST --> CMD
-                ACT --> CMD
-            end
-
-            GS <-->|"Commands / telemetry"| CDH
-            EPS -->|"Power telemetry"| CDH
-            HEALTH -->|"Computer health"| CDH
-            PAYLOAD <-->|"Payload commands / data"| CDH
-            CDH -->|"ADCS commands: mode, target,<br/>limits, enable / inhibit"| CMD
-            CMD -->|"ADCS telemetry: state, mode,<br/>validity, pointing status, faults"| CDH
-            CDH -->|"Time / orbit / pass information<br/>source and ownership TBD"| REF
+            GS <-->|Commands / telemetry| CDH
+            EPS -->|Power status| CDH
+            HEALTH -->|OBC status| CDH
+            PAYLOAD <-->|Commands / data| CDH
         end
 
-        OS["Host OS / kernel device interfaces<br/>I²C / SPI / UART / GPIO / PWM access<br/>Actual device mapping and permissions TBD"]
+        subgraph ADCS["PROPOSED ADCS CONTAINER"]
+            direction TB
 
-        HAL <-->|"Device access through approved<br/>container-to-host mappings"| OS
-        EPS <-->|"EPS device access"| OS
+            CMD["Command and telemetry<br/>Validate requests<br/>Report status"]
+            MODE["ADCS mode manager<br/>Initialize / detumble<br/>Sun point / nadir / safe"]
+            REF["Reference generation<br/>Sun / nadir targets<br/>Time and orbit inputs"]
+            EST["Sensor processing<br/>Attitude estimation<br/>Angular-rate estimation"]
+            CTRL["Control algorithms<br/>Detumble controller<br/>Pointing controller"]
+            ACT["Actuator management<br/>Command limits<br/>Timing and inhibit"]
+            HAL["Hardware abstraction<br/>Sensor drivers<br/>Actuator drivers"]
 
-        PORTS["OBC physical interfaces<br/>Board headers / connectors / breakout wiring<br/>Voltage levels, pinout and bus allocation TBD"]
+            CMD --> MODE
+            MODE --> REF
+            MODE --> CTRL
+            REF --> CTRL
+            EST --> CTRL
+            CTRL --> ACT
+            ACT --> HAL
+            HAL --> EST
+            EST --> CMD
+            ACT --> CMD
+        end
+
+        OS["Host operating system<br/>Device access and permissions<br/>Bus-controller drivers"]
+
+        PORTS["OBC physical interfaces<br/>Headers and connectors<br/>Bus allocation TBD"]
+
+        CDH -->|Mode / target / limits| CMD
+        CMD -->|State / status / faults| CDH
+        CDH -->|Time / orbit inputs| REF
+
+        HAL <-->|Device access| OS
+        EPS <-->|EPS device access| OS
         OS <--> PORTS
     end
 
-    GROUND <-->|"Current dashboard / future communications path"| GS
+    subgraph HARDWARE["EXTERNAL HARDWARE"]
+        direction TB
 
-    SENS["External attitude sensors<br/>Magnetometer, gyroscope, Sun sensors<br/>Final selection and interfaces TBD"]
-    NAV["Time / navigation source, if used<br/>GNSS or supplied orbit/time information<br/>Final architecture TBD"]
-    DRIVER["Magnetorquer driver electronics<br/>Current regulation / switching / protection"]
-    COILS["Three-axis magnetorquers<br/>Panel-integrated coils are an option"]
-    EPSHW["EPS hardware / power sensing<br/>Current FlatSat: INA219 rail monitors"]
+        SENS["Attitude sensors<br/>Magnetometer / gyro<br/>Sun sensors<br/>Selection TBD"]
 
-    SENS -->|"Sensor data<br/>I²C / SPI / UART / analog interface as selected"| PORTS
-    NAV -->|"Navigation / timing data<br/>Interface TBD"| PORTS
-    PORTS -->|"Actuator command interface<br/>Protocol / PWM / enable TBD"| DRIVER
-    DRIVER -->|"Controlled coil current"| COILS
-    EPSHW <-->|"I²C telemetry"| PORTS
+        NAV["Time / navigation source<br/>GNSS or supplied data<br/>Architecture TBD"]
+
+        DRIVER["Magnetorquer drivers<br/>Current control<br/>Switching / protection"]
+
+        COILS["Three-axis magnetorquers<br/>Panel coils optional"]
+
+        EPSHW["EPS hardware<br/>INA219 rail monitors<br/>Current FlatSat"]
+
+        DRIVER -->|Coil current| COILS
+    end
+
+    GROUND <-->|Ground interface| GS
+    SENS -->|Sensor data| PORTS
+    NAV -->|Time / navigation data| PORTS
+    PORTS -->|Actuator commands| DRIVER
+    EPSHW <-->|I2C| PORTS
 ```
