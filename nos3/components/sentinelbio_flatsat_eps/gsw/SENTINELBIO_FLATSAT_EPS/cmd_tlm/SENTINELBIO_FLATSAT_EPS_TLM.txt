@@ -1,0 +1,36 @@
+TELEMETRY SENTINELBIO_FLATSAT_EPS SENTINELBIO_FLATSAT_EPS_HK_TLM LITTLE_ENDIAN "Sentinel Bio FlatSat EPS INA219 housekeeping"
+  APPEND_ID_ITEM CCSDS_STREAMID       16 UINT 0x09E0  "CCSDS Packet Identification" BIG_ENDIAN
+  APPEND_ITEM    CCSDS_SEQUENCE       16 UINT         "CCSDS Packet Sequence Control" BIG_ENDIAN
+  APPEND_ITEM    CCSDS_LENGTH         16 UINT         "CCSDS Packet Data Length" BIG_ENDIAN
+  APPEND_ITEM    CCSDS_SECONDS        32 UINT         "CCSDS Telemetry Secondary Header (seconds)" BIG_ENDIAN
+  APPEND_ITEM    CCSDS_SUBSECS        16 UINT         "CCSDS Telemetry Secondary Header (subseconds)" BIG_ENDIAN
+  APPEND_ITEM    CCSDS_SPARE          32 UINT         ""
+  APPEND_ITEM    CMD_ERR_COUNT         8 UINT         "Command error count"
+  APPEND_ITEM    CMD_COUNT             8 UINT         "Accepted command count"
+  APPEND_ITEM    DEVICE_ERR_COUNT      8 UINT         "Housekeeping cycles with one or more invalid rails"
+  APPEND_ITEM    DEVICE_COUNT          8 UINT         "Successful INA219 housekeeping count"
+
+  # Every INA219 value below is engineering data from one independent I2C bus.
+  # Bus voltage is mV, shunt voltage is uV, current is mA, and power is mW.
+  APPEND_ITEM    RAIL_12V_BUS_MV       16 UINT         "12 V rail bus voltage (mV)"
+  APPEND_ITEM    RAIL_12V_SHUNT_UV     32 INT          "12 V rail shunt voltage (uV)"
+  APPEND_ITEM    RAIL_12V_CURRENT_MA   16 INT          "12 V rail current (mA)"
+  APPEND_ITEM    RAIL_12V_POWER_MW     16 UINT         "12 V rail power (mW)"
+  APPEND_ITEM    RAIL_12V_CONFIGURATION 16 UINT        "12 V INA219 configuration register"
+  APPEND_ITEM    RAIL_12V_CALIBRATION  16 UINT         "12 V INA219 calibration register"
+
+  APPEND_ITEM    RAIL_5V_BUS_MV        16 UINT         "5 V rail bus voltage (mV)"
+  APPEND_ITEM    RAIL_5V_SHUNT_UV      32 INT          "5 V rail shunt voltage (uV)"
+  APPEND_ITEM    RAIL_5V_CURRENT_MA    16 INT          "5 V rail current (mA)"
+  APPEND_ITEM    RAIL_5V_POWER_MW      16 UINT         "5 V rail power (mW)"
+  APPEND_ITEM    RAIL_5V_CONFIGURATION 16 UINT         "5 V INA219 configuration register"
+  APPEND_ITEM    RAIL_5V_CALIBRATION   16 UINT         "5 V INA219 calibration register"
+
+  APPEND_ITEM    RAIL_3V3_BUS_MV       16 UINT         "3.3 V rail bus voltage (mV)"
+  APPEND_ITEM    RAIL_3V3_SHUNT_UV     32 INT          "3.3 V rail shunt voltage (uV)"
+  APPEND_ITEM    RAIL_3V3_CURRENT_MA   16 INT          "3.3 V rail current (mA)"
+  APPEND_ITEM    RAIL_3V3_POWER_MW     16 UINT         "3.3 V rail power (mW)"
+  APPEND_ITEM    RAIL_3V3_CONFIGURATION 16 UINT        "3.3 V INA219 configuration register"
+  APPEND_ITEM    RAIL_3V3_CALIBRATION  16 UINT         "3.3 V INA219 calibration register"
+  APPEND_ITEM    RAIL_VALID_MASK        8 UINT         "Fresh complete reads: bit0=12V bit1=5V bit2=3V3; 7=all valid"
+  APPEND_ITEM    I2C_READY_MASK         8 UINT         "Opened master handles; not sensor presence: bit0=12V bit1=5V bit2=3V3"

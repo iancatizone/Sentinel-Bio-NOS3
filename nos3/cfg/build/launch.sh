@@ -91,6 +91,56 @@ do
     $DNETWORK connect  $SC_NETNAME "${GSW:-cosmos-openc3-operator-1}" --alias cosmos --alias active-gs
     echo ""
 
+    echo "$SC_NUM - NOS Engine Server..."
+    gnome-terminal --tab --title="$SC_NUM - NOS Engine Server" -- $DFLAGS -v $SIM_DIR:$SIM_DIR --name "${SC_NUM}-nos-engine-server" -h nos-engine-server --network="$SC_NETNAME" -w $SIM_BIN $DBOX /usr/bin/nos_engine_server_standalone -f $SIM_BIN/nos_engine_server_config.json
+
+    echo "Waiting for NOS Engine Server on port 12001..."
+    engine_ready=false
+    for attempt in {1..30}; do
+        if docker exec "${SC_NUM}-nos-engine-server" bash -c 'exec 3<>/dev/tcp/nos-engine-server/12001' >/dev/null 2>&1; then
+            engine_ready=true
+            break
+        fi
+        sleep 1
+    done
+    if [ "$engine_ready" != true ]; then
+        echo "ERROR: NOS Engine Server did not open port 12001; stopping launch."
+        exit 1
+    fi
+
+    echo "NOS Time Driver..."
+    gnome-terminal --tab --title="NOS Time Driver" -- $DFLAGS -v $SIM_DIR:$SIM_DIR --name nos-time-driver --network=nos3-core -w $SIM_BIN $DBOX ./nos3-single-simulator $GND_CFG_FILE time
+
+    time_container_ready=false
+    for attempt in {1..30}; do
+        if [ "$(docker inspect -f '{{.State.Running}}' nos-time-driver 2>/dev/null)" = "true" ]; then
+            time_container_ready=true
+            break
+        fi
+        sleep 1
+    done
+    if [ "$time_container_ready" != true ]; then
+        echo "ERROR: NOS Time Driver did not start; stopping launch."
+        exit 1
+    fi
+
+    $DNETWORK connect --alias nos-time-driver "$SC_NETNAME" nos-time-driver
+
+    echo "Waiting for the time driver to reach the NOS Engine Server..."
+    time_bus_ready=false
+    for attempt in {1..30}; do
+        if docker exec nos-time-driver bash -c 'exec 3<>/dev/tcp/nos-engine-server/12001' >/dev/null 2>&1; then
+            time_bus_ready=true
+            break
+        fi
+        sleep 1
+    done
+    if [ "$time_bus_ready" != true ]; then
+        echo "ERROR: Time Driver cannot reach nos-engine-server:12001; stopping launch."
+        exit 1
+    fi
+    sleep 2
+
     echo $SC_NUM " - 42..."
     rm -rf $USER_NOS3_DIR/42/NOS3InOut
     cp -r $BASE_DIR/cfg/build/InOut $USER_NOS3_DIR/42/NOS3InOut
@@ -112,7 +162,6 @@ do
 
     echo $SC_NUM " - Simulators..."
     cd $SIM_BIN
-    gnome-terminal --tab --title=$SC_NUM" - NOS Engine Server" -- $DFLAGS -v $SIM_DIR:$SIM_DIR --name $SC_NUM"-nos-engine-server"  -h nos-engine-server --network=$SC_NETNAME -w $SIM_BIN $DBOX /usr/bin/nos_engine_server_standalone -f $SIM_BIN/nos_engine_server_config.json
     gnome-terminal --tab --title=$SC_NUM" - 42 Truth Sim"      -- $DFLAGS -v $SIM_DIR:$SIM_DIR --name $SC_NUM"-truth42sim"          -h truth42sim --network=$SC_NETNAME -w $SIM_BIN $DBOX ./nos3-single-simulator $SC_CFG_FILE  truth42sim
     
     $DNETWORK connect $SC_NETNAME nos-terminal
@@ -146,17 +195,6 @@ do
     echo ""
 done
 
-echo "NOS Time Driver..."
-sleep 8
-gnome-terminal --tab --title="NOS Time Driver"   -- $DFLAGS -v $SIM_DIR:$SIM_DIR --name nos-time-driver --network=nos3-core -w $SIM_BIN $DBOX ./nos3-single-simulator $GND_CFG_FILE time
-sleep 1
-for (( i=1; i<=$SATNUM; i++ ))
-do
-    export SC_NUM="sc0"$i
-    export SC_NETNAME="nos3-"$SC_NUM
-    export TIMENAME=$SC_NUM"-nos-time-driver"
-    $DNETWORK connect --alias nos-time-driver $SC_NETNAME nos-time-driver
-done
 echo ""
 
 echo "Docker launch script completed!"

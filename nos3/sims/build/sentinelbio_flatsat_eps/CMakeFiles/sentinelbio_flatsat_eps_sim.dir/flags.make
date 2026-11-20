@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPT
 
 CXX_INCLUDES = -I/home/jstar/Desktop/github-nos3/components/sentinelbio_flatsat_eps/sim/inc -I/home/jstar/Desktop/github-nos3/sims/sim_common/inc
 
-CXX_FLAGS = -Wl,--disable-new-dtags -Werror -Wall -Wextra -pedantic -Wno-vla -Wwrite-strings -Wpointer-arith -Wcast-align  -fdiagnostics-show-option  --std=c++11 -g -fPIC
+CXX_FLAGS = -Wl,--disable-new-dtags -Werror -Wall -Wextra -pedantic -Wno-vla -Wwrite-strings -Wpointer-arith -Wcast-align  -fdiagnostics-show-option  --std=c++11 -g -std=gnu++11 -fPIC
 

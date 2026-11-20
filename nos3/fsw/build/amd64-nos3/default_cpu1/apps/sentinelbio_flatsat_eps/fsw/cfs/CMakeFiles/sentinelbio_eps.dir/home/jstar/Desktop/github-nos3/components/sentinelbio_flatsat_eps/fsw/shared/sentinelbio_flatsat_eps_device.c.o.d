@@ -15,18 +15,20 @@ apps/sentinelbio_flatsat_eps/fsw/cfs/CMakeFiles/sentinelbio_eps.dir/home/jstar/D
  /usr/include/x86_64-linux-gnu/bits/time64.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/string.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h \
  /home/jstar/Desktop/github-nos3/components/sentinelbio_flatsat_eps/fsw/shared/sentinelbio_flatsat_eps_device.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
  /home/jstar/Desktop/github-nos3/fsw/apps/hwlib/fsw/public_inc/hwlib.h \
  /home/jstar/Desktop/github-nos3/fsw/apps/hwlib/fsw/public_inc/libcan.h \
  /home/jstar/Desktop/github-nos3/fsw/apps/hwlib/fsw/public_inc/hwlib.h \
- /usr/include/stdlib.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
@@ -57,9 +59,7 @@ apps/sentinelbio_flatsat_eps/fsw/cfs/CMakeFiles/sentinelbio_eps.dir/home/jstar/D
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h /usr/include/string.h \
- /usr/include/strings.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/libsocketcan.h /usr/include/linux/can/netlink.h \
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \

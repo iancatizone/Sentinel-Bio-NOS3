@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="http://www.omg.org/spec/XTCE/20180204"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  name="SENTINELBIO_FLATSAT_EPS"
+                  xsi:schemaLocation="http://www.omg.org/spec/XTCE/20180204 https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd">
+  <xtce:SpaceSystem name="SENTINELBIO_FLATSAT_EPS_HK_TLM">
+    <xtce:TelemetryMetaData>
+      <xtce:ParameterTypeSet>
+        <xtce:IntegerParameterType name="U8" signed="false"><xtce:IntegerDataEncoding sizeInBits="8" encoding="unsigned"/></xtce:IntegerParameterType>
+        <xtce:IntegerParameterType name="U16_LE" signed="false"><xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned" byteOrder="leastSignificantByteFirst"/></xtce:IntegerParameterType>
+        <xtce:IntegerParameterType name="I16_LE" signed="true"><xtce:IntegerDataEncoding sizeInBits="16" encoding="twosComplement" byteOrder="leastSignificantByteFirst"/></xtce:IntegerParameterType>
+        <xtce:IntegerParameterType name="I32_LE" signed="true"><xtce:IntegerDataEncoding sizeInBits="32" encoding="twosComplement" byteOrder="leastSignificantByteFirst"/></xtce:IntegerParameterType>
+      </xtce:ParameterTypeSet>
+      <xtce:ParameterSet>
+        <xtce:Parameter name="CMD_ERR_COUNT" parameterTypeRef="U8"/>
+        <xtce:Parameter name="CMD_COUNT" parameterTypeRef="U8"/>
+        <xtce:Parameter name="DEVICE_ERR_COUNT" parameterTypeRef="U8"/>
+        <xtce:Parameter name="DEVICE_COUNT" parameterTypeRef="U8"/>
+        <xtce:Parameter name="RAIL_12V_BUS_MV" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_12V_SHUNT_UV" parameterTypeRef="I32_LE"/>
+        <xtce:Parameter name="RAIL_12V_CURRENT_MA" parameterTypeRef="I16_LE"/>
+        <xtce:Parameter name="RAIL_12V_POWER_MW" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_12V_CONFIGURATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_12V_CALIBRATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_5V_BUS_MV" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_5V_SHUNT_UV" parameterTypeRef="I32_LE"/>
+        <xtce:Parameter name="RAIL_5V_CURRENT_MA" parameterTypeRef="I16_LE"/>
+        <xtce:Parameter name="RAIL_5V_POWER_MW" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_5V_CONFIGURATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_5V_CALIBRATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_3V3_BUS_MV" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_3V3_SHUNT_UV" parameterTypeRef="I32_LE"/>
+        <xtce:Parameter name="RAIL_3V3_CURRENT_MA" parameterTypeRef="I16_LE"/>
+        <xtce:Parameter name="RAIL_3V3_POWER_MW" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_3V3_CONFIGURATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_3V3_CALIBRATION" parameterTypeRef="U16_LE"/>
+        <xtce:Parameter name="RAIL_VALID_MASK" parameterTypeRef="U8" shortDescription="Fresh complete reads: bit0=12V bit1=5V bit2=3V3; 7=all valid"/>
+        <xtce:Parameter name="I2C_READY_MASK" parameterTypeRef="U8" shortDescription="Opened master handles, not sensor presence: bit0=12V bit1=5V bit2=3V3"/>
+      </xtce:ParameterSet>
+      <xtce:ContainerSet>
+        <xtce:SequenceContainer name="SENTINELBIO_FLATSAT_EPS_HK_TLM" shortDescription="Sentinel Bio FlatSat EPS housekeeping">
+          <xtce:EntryList>
+            <xtce:ParameterRefEntry parameterRef="CMD_ERR_COUNT"/>
+            <xtce:ParameterRefEntry parameterRef="CMD_COUNT"/>
+            <xtce:ParameterRefEntry parameterRef="DEVICE_ERR_COUNT"/>
+            <xtce:ParameterRefEntry parameterRef="DEVICE_COUNT"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_BUS_MV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_SHUNT_UV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_CURRENT_MA"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_POWER_MW"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_CONFIGURATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_12V_CALIBRATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_BUS_MV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_SHUNT_UV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_CURRENT_MA"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_POWER_MW"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_CONFIGURATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_5V_CALIBRATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_BUS_MV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_SHUNT_UV"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_CURRENT_MA"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_POWER_MW"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_CONFIGURATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_3V3_CALIBRATION"/>
+            <xtce:ParameterRefEntry parameterRef="RAIL_VALID_MASK"/>
+            <xtce:ParameterRefEntry parameterRef="I2C_READY_MASK"/>
+          </xtce:EntryList>
+          <xtce:BaseContainer containerRef="/CCSDS/CCSDS_TM">
+            <xtce:RestrictionCriteria>
+              <xtce:ComparisonList>
+                <xtce:Comparison parameterRef="/CCSDS/CCSDS_STREAMID" value="2528"/>
+              </xtce:ComparisonList>
+            </xtce:RestrictionCriteria>
+          </xtce:BaseContainer>
+        </xtce:SequenceContainer>
+      </xtce:ContainerSet>
+    </xtce:TelemetryMetaData>
+  </xtce:SpaceSystem>
+  <xtce:SpaceSystem name="CMD">
+    <xtce:CommandMetaData>
+      <xtce:ArgumentTypeSet>
+        <xtce:EnumeratedArgumentType name="SWITCH_NUMBER_Type" initialValue="SWITCH_0" shortDescription="Compatibility switch number">
+          <xtce:IntegerDataEncoding sizeInBits="8" encoding="unsigned"/>
+          <xtce:EnumerationList>
+            <xtce:Enumeration value="0" label="SWITCH_0"/>
+            <xtce:Enumeration value="1" label="SWITCH_1"/>
+            <xtce:Enumeration value="2" label="SWITCH_2"/>
+            <xtce:Enumeration value="3" label="SWITCH_3"/>
+            <xtce:Enumeration value="4" label="SWITCH_4"/>
+            <xtce:Enumeration value="5" label="SWITCH_5"/>
+            <xtce:Enumeration value="6" label="SWITCH_6"/>
+            <xtce:Enumeration value="7" label="SWITCH_7"/>
+          </xtce:EnumerationList>
+        </xtce:EnumeratedArgumentType>
+        <xtce:EnumeratedArgumentType name="STATE_Type" initialValue="OFF" shortDescription="Compatibility switch state">
+          <xtce:IntegerDataEncoding sizeInBits="8" encoding="unsigned"/>
+          <xtce:EnumerationList>
+            <xtce:Enumeration value="0" label="OFF"/>
+            <xtce:Enumeration value="170" label="ON"/>
+          </xtce:EnumerationList>
+        </xtce:EnumeratedArgumentType>
+      </xtce:ArgumentTypeSet>
+      <xtce:MetaCommandSet>
+        <xtce:MetaCommand name="SENTINELBIO_FLATSAT_EPS_REQ_HK">
+          <xtce:BaseMetaCommand metaCommandRef="/CCSDS/CCSDS_TC">
+            <xtce:ArgumentAssignmentList>
+              <xtce:ArgumentAssignment argumentName="CCSDS_STREAMID" argumentValue="6625"/>
+              <xtce:ArgumentAssignment argumentName="CCSDS_FC" argumentValue="0"/>
+            </xtce:ArgumentAssignmentList>
+          </xtce:BaseMetaCommand>
+          <xtce:CommandContainer name="SENTINELBIO_FLATSAT_EPS_REQ_HK_CommandContainer"><xtce:EntryList/></xtce:CommandContainer>
+        </xtce:MetaCommand>
+        <xtce:MetaCommand name="SENTINELBIO_FLATSAT_EPS_SWITCH_CC" shortDescription="Unsupported compatibility command; reports an error and changes no rail">
+          <xtce:BaseMetaCommand metaCommandRef="/CCSDS/CCSDS_TC">
+            <xtce:ArgumentAssignmentList>
+              <xtce:ArgumentAssignment argumentName="CCSDS_STREAMID" argumentValue="6624"/>
+              <xtce:ArgumentAssignment argumentName="CCSDS_FC" argumentValue="2"/>
+            </xtce:ArgumentAssignmentList>
+          </xtce:BaseMetaCommand>
+          <xtce:ArgumentList>
+            <xtce:Argument name="SWITCH_NUMBER" argumentTypeRef="SWITCH_NUMBER_Type"/>
+            <xtce:Argument name="STATE" argumentTypeRef="STATE_Type"/>
+          </xtce:ArgumentList>
+          <xtce:CommandContainer name="SENTINELBIO_FLATSAT_EPS_SWITCH_CC_CommandContainer">
+            <xtce:EntryList>
+              <xtce:ArgumentRefEntry argumentRef="SWITCH_NUMBER"/>
+              <xtce:ArgumentRefEntry argumentRef="STATE"/>
+            </xtce:EntryList>
+          </xtce:CommandContainer>
+        </xtce:MetaCommand>
+        <xtce:MetaCommand name="SENTINELBIO_FLATSAT_EPS_RESET_COUNTERS_CC">
+          <xtce:BaseMetaCommand metaCommandRef="/CCSDS/CCSDS_TC">
+            <xtce:ArgumentAssignmentList>
+              <xtce:ArgumentAssignment argumentName="CCSDS_STREAMID" argumentValue="6624"/>
+              <xtce:ArgumentAssignment argumentName="CCSDS_FC" argumentValue="1"/>
+            </xtce:ArgumentAssignmentList>
+          </xtce:BaseMetaCommand>
+          <xtce:CommandContainer name="SENTINELBIO_FLATSAT_EPS_RESET_COUNTERS_CC_CommandContainer"><xtce:EntryList/></xtce:CommandContainer>
+        </xtce:MetaCommand>
+        <xtce:MetaCommand name="SENTINELBIO_FLATSAT_EPS_NOOP_CC">
+          <xtce:BaseMetaCommand metaCommandRef="/CCSDS/CCSDS_TC">
+            <xtce:ArgumentAssignmentList>
+              <xtce:ArgumentAssignment argumentName="CCSDS_STREAMID" argumentValue="6624"/>
+              <xtce:ArgumentAssignment argumentName="CCSDS_FC" argumentValue="0"/>
+            </xtce:ArgumentAssignmentList>
+          </xtce:BaseMetaCommand>
+          <xtce:CommandContainer name="SENTINELBIO_FLATSAT_EPS_NOOP_CC_CommandContainer"><xtce:EntryList/></xtce:CommandContainer>
+        </xtce:MetaCommand>
+      </xtce:MetaCommandSet>
+    </xtce:CommandMetaData>
+  </xtce:SpaceSystem>
+</xtce:SpaceSystem>

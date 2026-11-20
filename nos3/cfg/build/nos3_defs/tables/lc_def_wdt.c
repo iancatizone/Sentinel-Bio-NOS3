@@ -435,29 +435,11 @@ LC_WDTEntry_t LC_DefaultWDT[LC_MAX_WATCHPOINTS] = {
         .ComparisonValue.Unsigned8  = MGR_SCIENCE_MODE,
     },
 
-    /* #27 (EPS BATTERY_VOLTAGE < 60) */
-    {
-        .DataType                   = LC_DATA_UWORD_LE,
-        .OperatorID                 = LC_OPER_LT,
-        .MessageID                  = SENTINELBIO_FLATSAT_EPS_TLM_MSG,
-        .WatchpointOffset           = 20,
-        .BitMask                    = LC_NO_BITMASK,
-        .CustomFuncArgument         = 0,
-        .ResultAgeWhenStale         = 0,
-        .ComparisonValue.Unsigned16 = 24240,
-    },
+    /* #27 (unused: FlatSat has no battery) */
+    { .DataType = LC_WATCH_NOT_USED },
 
-    /* #28 (EPS BATTERY_VOLTAGE > 90) */
-    {
-        .DataType                   = LC_DATA_UWORD_LE,
-        .OperatorID                 = LC_OPER_GT,
-        .MessageID                  = SENTINELBIO_FLATSAT_EPS_TLM_MSG,
-        .WatchpointOffset           = 20,
-        .BitMask                    = LC_NO_BITMASK,
-        .CustomFuncArgument         = 0,
-        .ResultAgeWhenStale         = 0,
-        .ComparisonValue.Unsigned16 = 24960,
-    },
+    /* #28 (unused: FlatSat has no battery) */
+    { .DataType = LC_WATCH_NOT_USED },
 
     /* #29 (MGR SPACECRAFT_MODE = Safe Mode) */
     {

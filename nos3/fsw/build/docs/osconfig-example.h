@@ -18,13 +18,13 @@
 /*
  * OSAL feature selection options from build config
  */
-/* #undef OSAL_CONFIG_INCLUDE_DYNAMIC_LOADER */
-/* #undef OSAL_CONFIG_INCLUDE_NETWORK */
-/* #undef OSAL_CONFIG_INCLUDE_STATIC_LOADER */
+#define OSAL_CONFIG_INCLUDE_DYNAMIC_LOADER
+#define OSAL_CONFIG_INCLUDE_NETWORK
+#define OSAL_CONFIG_INCLUDE_STATIC_LOADER
 /* #undef OSAL_CONFIG_INCLUDE_SHELL */
 /* #undef OSAL_CONFIG_DEBUG_PRINTF */
 /* #undef OSAL_CONFIG_DEBUG_PERMISSIVE_MODE */
-/* #undef OSAL_CONFIG_CONSOLE_ASYNC */
+#define OSAL_CONFIG_CONSOLE_ASYNC
 
 /* #undef OSAL_CONFIG_BUGCHECK_DISABLE */
 /* #undef OSAL_CONFIG_BUGCHECK_STRICT */
@@ -41,84 +41,84 @@
   *
   * Based on the OSAL_CONFIG_MAX_TASKS configuration option
   */
-#define OS_MAX_TASKS                    
+#define OS_MAX_TASKS                    64
 
  /**
   * \brief The maximum number of queues to support
   *
   * Based on the OSAL_CONFIG_MAX_QUEUES configuration option
   */
-#define OS_MAX_QUEUES                   
+#define OS_MAX_QUEUES                   64
 
  /**
   * \brief The maximum number of counting semaphores to support
   *
   * Based on the OSAL_CONFIG_MAX_COUNT_SEMAPHORES configuration option
   */
-#define OS_MAX_COUNT_SEMAPHORES         
+#define OS_MAX_COUNT_SEMAPHORES         20
 
  /**
   * \brief The maximum number of binary semaphores to support
   *
   * Based on the OSAL_CONFIG_MAX_BIN_SEMAPHORES configuration option
   */
-#define OS_MAX_BIN_SEMAPHORES           
+#define OS_MAX_BIN_SEMAPHORES           20
 
  /**
   * \brief The maximum number of mutexes to support
   *
   * Based on the OSAL_CONFIG_MAX_MUTEXES configuration option
   */
-#define OS_MAX_MUTEXES                  
+#define OS_MAX_MUTEXES                  20
 
 /**
   * \brief The maximum number of condition variables to support
   *
   * Based on the OSAL_CONFIG_MAX_CONDVARS configuration option
   */
-#define OS_MAX_CONDVARS                  
+#define OS_MAX_CONDVARS                  4
 
   /**
   * \brief The maximum number of modules to support
   *
   * Based on the OSAL_CONFIG_MAX_MODULES configuration option
   */
-#define OS_MAX_MODULES                  
+#define OS_MAX_MODULES                  20
 
  /**
   * \brief The maximum number of timebases to support
   *
   * Based on the OSAL_CONFIG_MAX_TIMEBASES configuration option
   */
-#define OS_MAX_TIMEBASES                
+#define OS_MAX_TIMEBASES                5
 
  /**
   * \brief The maximum number of timer callbacks to support
   *
   * Based on the OSAL_CONFIG_MAX_TIMERS configuration option
   */
-#define OS_MAX_TIMERS                   
+#define OS_MAX_TIMERS                   10
 
  /**
   * \brief The maximum number of concurrently open files to support
   *
   * Based on the OSAL_CONFIG_MAX_NUM_OPEN_FILES configuration option
   */
-#define OS_MAX_NUM_OPEN_FILES           
+#define OS_MAX_NUM_OPEN_FILES           50
 
  /**
   * \brief The maximum number of concurrently open directories to support
   *
   * Based on the OSAL_CONFIG_MAX_NUM_OPEN_DIRS configuration option
   */
-#define OS_MAX_NUM_OPEN_DIRS            
+#define OS_MAX_NUM_OPEN_DIRS            4
 
  /**
   * \brief The maximum number of file systems to support
   *
   * Based on the OSAL_CONFIG_MAX_FILE_SYSTEMS configuration option
   */
-#define OS_MAX_FILE_SYSTEMS             
+#define OS_MAX_FILE_SYSTEMS             14
 
  /**
   * \brief The maximum length of symbols
@@ -127,7 +127,7 @@
   *
   * \note This value must include a terminating NUL character
   */
-#define OS_MAX_SYM_LEN                  
+#define OS_MAX_SYM_LEN                  64
 
  /**
   * \brief The maximum length of OSAL file names
@@ -139,7 +139,7 @@
   *
   * \note This value must include a terminating NUL character
   */
-#define OS_MAX_FILE_NAME                
+#define OS_MAX_FILE_NAME                20
 
  /**
   * \brief The maximum length of OSAL path names
@@ -151,7 +151,7 @@
   *
   * \note This value must include a terminating NUL character
   */
-#define OS_MAX_PATH_LEN                 
+#define OS_MAX_PATH_LEN                 64
 
  /**
   * \brief The maximum length of OSAL resource names
@@ -160,7 +160,7 @@
   *
   * \note This value must include a terminating NUL character
   */
-#define OS_MAX_API_NAME                 
+#define OS_MAX_API_NAME                 20
 
  /**
   * \brief The maximum size of the socket address structure
@@ -170,21 +170,21 @@
   *
   * Based on the OSAL_CONFIG_SOCKADDR_MAX_LEN configuration option
   */
-#define OS_SOCKADDR_MAX_LEN             
+#define OS_SOCKADDR_MAX_LEN             28
 
  /**
   * \brief The maximum size of output produced by a single OS_printf()
   *
   * Based on the OSAL_CONFIG_PRINTF_BUFFER_SIZE configuration option
   */
-#define OS_BUFFER_SIZE                  
+#define OS_BUFFER_SIZE                  172
 
  /**
   * \brief The maximum number of OS_printf() output strings to buffer
   *
   * Based on the OSAL_CONFIG_PRINTF_BUFFER_DEPTH configuration option
   */
-#define OS_BUFFER_MSG_DEPTH             
+#define OS_BUFFER_MSG_DEPTH             100
 
  /**
   * \brief Priority level of the background utility task
@@ -194,7 +194,7 @@
   *
   * Based on the OSAL_CONFIG_UTILITYTASK_PRIORITY configuration option
   */
-#define OS_UTILITYTASK_PRIORITY         
+#define OS_UTILITYTASK_PRIORITY         245
 
  /**
   * \brief The stack size of the background utility task
@@ -204,7 +204,7 @@
   *
   * Based on the OSAL_CONFIG_UTILITYTASK_STACK_SIZE configuration option
   */
-#define OS_UTILITYTASK_STACK_SIZE       
+#define OS_UTILITYTASK_STACK_SIZE       2048
 
  /**
   * \brief The maximum size of a shell command
@@ -215,14 +215,14 @@
   *
   * \note This value must include a terminating NUL character
   */
-#define OS_MAX_CMD_LEN                  
+#define OS_MAX_CMD_LEN                  1000
 
  /**
   * \brief The maximum depth of OSAL queues
   *
   * Based on the OSAL_CONFIG_QUEUE_MAX_DEPTH configuration option
   */
-#define OS_QUEUE_MAX_DEPTH              
+#define OS_QUEUE_MAX_DEPTH              50
 
  /**
   * \brief The name of the temporary file used to store shell commands
@@ -251,7 +251,7 @@
   *
   * Supports adding floating point support for all tasks when the OS requires it
   */
-#define OS_ADD_TASK_FLAGS               
+#define OS_ADD_TASK_FLAGS               0
 
 /*
  * OSAL fixed resource limits

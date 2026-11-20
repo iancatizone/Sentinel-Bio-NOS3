@@ -256,7 +256,8 @@
                     </connection>
                 </connections>
                 <physical>
-                    <!-- The bench supply is configurable; it is not a battery model. -->
+                    <!-- The bench supply is configurable; it is not a battery model.
+                         Calibration starts at INA219 POR value 0; the flight app programs 4096. -->
                     <input-voltage>14.0</input-voltage>
                     <input-min-voltage>12.0</input-min-voltage>
                     <input-max-voltage>16.0</input-max-voltage>
@@ -266,7 +267,7 @@
                         <shunt-ohms>0.1</shunt-ohms>
                         <dropout-voltage>0.0</dropout-voltage>
                         <configuration>14751</configuration>
-                        <calibration>4096</calibration>
+                        <calibration>0</calibration>
                     </rail-12v>
                     <rail-5v>
                         <nominal-voltage>5.0</nominal-voltage>
@@ -274,7 +275,7 @@
                         <shunt-ohms>0.1</shunt-ohms>
                         <dropout-voltage>0.0</dropout-voltage>
                         <configuration>14751</configuration>
-                        <calibration>4096</calibration>
+                        <calibration>0</calibration>
                     </rail-5v>
                     <rail-3v3>
                         <nominal-voltage>3.3</nominal-voltage>
@@ -282,7 +283,7 @@
                         <shunt-ohms>0.1</shunt-ohms>
                         <dropout-voltage>0.0</dropout-voltage>
                         <configuration>14751</configuration>
-                        <calibration>4096</calibration>
+                        <calibration>0</calibration>
                     </rail-3v3>
                 </physical>
             </hardware-model>

@@ -1,8 +1,8 @@
-* text=auto
-*.md text eol=lf
-*.csv text eol=lf
-*.txt text eol=lf
-*.log text eol=lf
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text eol=lf
+
+# Declare files that will always have LF line endings on checkout.
+*.sh text eol=lf
+
+# Handle PNGs as binary
 *.png binary
-*.jpg binary
-*.jpeg binary
