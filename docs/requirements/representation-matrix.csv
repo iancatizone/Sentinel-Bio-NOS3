@@ -9,7 +9,7 @@ Star tracker,TBD,TBD,generic_star_tracker sim,usart_10,42 (port 4282),Generic,TB
 Magnetorquers,TBD,TBD,generic_torquer sim,command bus,Commands -> 42 (port 4279),Generic,TBD,TBD,Set max dipole/torque from hardware datasheet
 Reaction wheels,TBD,TBD,generic_reaction_wheel sims x3,usart_2..usart_4,42 (ports 4277/4377/4477),Generic,TBD,TBD,Confirm whether Sentinel-Bio+ uses wheels; disable if not
 GPS,TBD,TBD,novatel_oem615 sim,usart_1,42 (port 4245),Generic,TBD,TBD,Confirm GPS receiver selection
-EPS,EnduroSat EPS (TBD model),I2C,generic_eps sim,i2c_1 (0x2B),42 (port 4283),Generic,Possible,Yes,Model EnduroSat EPS register map
+EPS,EnduroSat EPS (TBD model); FlatSat development EPS with INA219 rail monitors,I2C,"sentinelbio_flatsat_eps 2.0.0 (custom; configured EPS, replaces generic_eps): 3x INA219 sims, fixed 12 V/5 V/3.3 V rails, stationary current with simulator load pulses; SB_EPS cFS app; HK every 1 s",i2c_1 (0x40) / i2c_2 (0x41) / i2c_3 (0x44),Simulator config (nos3-eps-simulator.xml) + simulator load pulses; no 42 data,Sentinel-specific,Possible (same INA219 register contract),Yes,Compare one controlled case with FlatSat INA219 readings; commit pulse source; replace assumed rail values with measured FlatSat and EnduroSat limits
 Thermal sensors,TBD,I2C,None,n/a,n/a,Not represented,Possible,Yes,New simulator candidate
 Payload,Sentinel-Bio+ payload,UART,None (sample sim is the pattern),n/a,n/a,Not represented,Possible,Yes,New UART payload simulator: minimal Sentinel-Bio+ extension candidate
 Iridium modem,TBD,UART,None,n/a,n/a,Not represented,Possible,Yes,New modem simulator or emulator

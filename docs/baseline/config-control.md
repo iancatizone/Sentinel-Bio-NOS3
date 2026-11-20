@@ -6,9 +6,12 @@ This document defines what "the baseline" means for this repository, how it is i
 
 | Baseline ID | Description | NOS3 commit | Mission config | Status |
 |---|---|---|---|---|
-| `SBP-NOS3-BL-01` | Stock NOS3 reference mission, unmodified | `5a3bdee6be9a2c67fdf994ae6db56d5c60395302` | `cfg/nos3-mission.xml` default (cFS, COSMOS, `STF1`, `sc-mission-config.xml`) | Active |
+| `SBP-NOS3-BL-01` | Stock NOS3 reference mission, unmodified | `5a3bdee6be9a2c67fdf994ae6db56d5c60395302` | `cfg/nos3-mission.xml` default (cFS, COSMOS, `STF1`, `sc-mission-config.xml`) | Superseded by BL-02 for Sentinel-Bio+ work; kept as the stock reference |
+| `SBP-NOS3-BL-02` | BL-01 plus the custom `sentinelbio_flatsat_eps` 2.0.0 component as the configured EPS (replaces the generic EPS simulator; LC battery watchpoints 27/28 disabled) | `5a3bdee6be9a2c67fdf994ae6db56d5c60395302` + EPS integration (installed 2026-11-18) | Same as BL-01, with `components/eps/enable = true` and `sentinelbio_flatsat_eps_sim` in `cfg/sims/nos3-simulator.xml` | Candidate. Needs updated `baseline-versions.txt`, a BL-02 build/run guide, and signed-off evidence |
 
 The full record of submodule revisions, tool versions, and container images is in [evidence/baseline-versions.txt](../../evidence/baseline-versions.txt). A baseline is defined by all of these together, not only the top-level NOS3 commit.
+
+The working NOS3 tree for `BL-02` is stored in this repository under `nos3/`. Treat `nos3/` as controlled code: documentation changes go in `docs/` and `evidence/`, and changes to `nos3/` go through the change process below.
 
 ## 2. What is under control
 
@@ -16,7 +19,7 @@ The full record of submodule revisions, tool versions, and container images is i
 |---|---|---|
 | NOS3 top-level commit | `baseline-versions.txt` §2 | `git rev-parse HEAD` |
 | Submodule revisions | `baseline-versions.txt` §3 | `git submodule status --recursive` |
-| Local changes | `baseline-versions.txt` §6 | `git status --short` (must be empty for `BL-01`) |
+| Local changes | `baseline-versions.txt` §6 | `git status --short` (must be empty for `BL-01`; for `BL-02`, only the EPS integration files listed in [docs/sprint4/eps-component.md](../sprint4/eps-component.md) §3) |
 | Mission/spacecraft config | `baseline-versions.txt` §2 | `cfg/nos3-mission.xml`, `cfg/spacecraft/*.xml` |
 | Host tools (VirtualBox, Vagrant, Git) | `baseline-versions.txt` §4 | `VBoxManage --version`, `vagrant --version`, `git --version` |
 | Container images | `baseline-versions.txt` §5 | `docker images --digests` |
