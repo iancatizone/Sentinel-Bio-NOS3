@@ -1,4 +1,5 @@
 ```mermaid
+%%{init: {'flowchart': {'wrappingWidth': 200, 'nodeSpacing': 50, 'rankSpacing': 50}}}%%
 flowchart TB
     GROUND["Ground / operator interface"]
 
