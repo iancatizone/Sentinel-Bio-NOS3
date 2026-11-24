@@ -1,0 +1,109 @@
+<simulator>
+    <name>sentinelbio_flatsat_eps_sim</name>
+    <active>true</active>
+    <library>libsentinelbio_flatsat_eps_sim.so</library>
+    <hardware-model>
+        <type>SENTINELBIO_FLATSAT_EPS</type>
+        <connections>
+            <connection>
+                <type>command</type>
+                <bus-name>command</bus-name>
+                <node-name>sentinelbio-flatsat-eps-command</node-name>
+            </connection>
+            <connection>
+                <type>i2c</type>
+                <bus-name>i2c_1</bus-name>
+                <bus-address>0x40</bus-address>
+                <node-port>10</node-port>
+                <rail>12v</rail>
+            </connection>
+            <connection>
+                <type>i2c</type>
+                <bus-name>i2c_2</bus-name>
+                <bus-address>0x41</bus-address>
+                <node-port>11</node-port>
+                <rail>5v</rail>
+            </connection>
+            <connection>
+                <type>i2c</type>
+                <bus-name>i2c_3</bus-name>
+                <bus-address>0x44</bus-address>
+                <node-port>12</node-port>
+                <rail>3v3</rail>
+            </connection>
+        </connections>
+        <physical>
+            <!-- The bench supply is configurable; it is not a battery model.
+                 Calibration starts at INA219 POR value 0; the flight app programs 4096. -->
+            <input-voltage>14.0</input-voltage>
+            <input-min-voltage>12.0</input-min-voltage>
+            <input-max-voltage>16.0</input-max-voltage>
+            <input-current-limit-amps>2.0</input-current-limit-amps>
+            <!-- Replace with measured efficiency. 0.90 is only a starting model assumption;
+                 the converter's advertised efficiency is a maximum, not a guaranteed value. -->
+            <converter-efficiency>0.90</converter-efficiency>
+            <rail-12v>
+                <nominal-voltage>12.0</nominal-voltage>
+                <!-- Placeholder load; replace with measured idle current. -->
+                <current-amps>0.25</current-amps>
+                <!-- Rated maximum from the module listing; derate to the tested continuous limit. -->
+                <max-current-amps>5.0</max-current-amps>
+                <shunt-ohms>0.1</shunt-ohms>
+                <dropout-voltage>2.0</dropout-voltage>
+                <configuration>14751</configuration>
+                <calibration>0</calibration>
+            </rail-12v>
+            <rail-5v>
+                <nominal-voltage>5.0</nominal-voltage>
+                <!-- Placeholder load; replace with measured idle current. -->
+                <current-amps>0.50</current-amps>
+                <max-current-amps>5.0</max-current-amps>
+                <shunt-ohms>0.1</shunt-ohms>
+                <dropout-voltage>2.0</dropout-voltage>
+                <configuration>14751</configuration>
+                <calibration>0</calibration>
+            </rail-5v>
+            <rail-3v3>
+                <nominal-voltage>3.3</nominal-voltage>
+                <!-- Placeholder load; replace with measured idle current. -->
+                <current-amps>0.75</current-amps>
+                <max-current-amps>5.0</max-current-amps>
+                <shunt-ohms>0.1</shunt-ohms>
+                <dropout-voltage>2.0</dropout-voltage>
+                <configuration>14751</configuration>
+                <calibration>0</calibration>
+            </rail-3v3>
+            <!--
+              Each entry adds a measured current step to the rail's baseline load.
+              period-seconds = 0 means one pulse; otherwise the pulse repeats.
+              Replace zero current values with measured state-to-state deltas.
+            -->
+            <loads>
+                <load>
+                    <name>obc_activity_step</name>
+                    <rail>5v</rail>
+                    <current-amps>0.1</current-amps>
+                    <start-seconds>10.0</start-seconds>
+                    <duration-seconds>5.0</duration-seconds>
+                    <period-seconds>30.0</period-seconds>
+                </load>
+                <load>
+                    <name>3v3_accessory_step</name>
+                    <rail>3v3</rail>
+                    <current-amps>0.0</current-amps>
+                    <start-seconds>10.0</start-seconds>
+                    <duration-seconds>5.0</duration-seconds>
+                    <period-seconds>30.0</period-seconds>
+                </load>
+                <load>
+                    <name>12v_communications_step</name>
+                    <rail>12v</rail>
+                    <current-amps>0.0</current-amps>
+                    <start-seconds>10.0</start-seconds>
+                    <duration-seconds>5.0</duration-seconds>
+                    <period-seconds>30.0</period-seconds>
+                </load>
+            </loads>
+        </physical>
+    </hardware-model>
+</simulator>

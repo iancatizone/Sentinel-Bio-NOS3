@@ -6,6 +6,7 @@
 #include <stdexcept>
 #include <set>
 #include <utility>
+#include <vector>
 
 #include <boost/foreach.hpp>
 
@@ -67,16 +68,28 @@ namespace Nos3
           _slaves(),
           _input_voltage(config.get("simulator.hardware-model.physical.input-voltage", 14.0)),
           _input_min_voltage(config.get("simulator.hardware-model.physical.input-min-voltage", 12.0)),
-          _input_max_voltage(config.get("simulator.hardware-model.physical.input-max-voltage", 16.0))
+          _input_max_voltage(config.get("simulator.hardware-model.physical.input-max-voltage", 16.0)),
+          _input_current_limit_amps(config.get(
+              "simulator.hardware-model.physical.input-current-limit-amps", 2.0)),
+          _converter_efficiency(config.get(
+              "simulator.hardware-model.physical.converter-efficiency", 0.90)),
+          _loads(),
+          _start_time(std::chrono::steady_clock::now())
     {
         const std::string connection = config.get("common.nos-connection-string",
                                                   "tcp://127.0.0.1:12001");
 
         if (!std::isfinite(_input_voltage) || !std::isfinite(_input_min_voltage) ||
-            !std::isfinite(_input_max_voltage) || _input_voltage < 0.0 ||
+            !std::isfinite(_input_max_voltage) || !std::isfinite(_input_current_limit_amps) ||
+            !std::isfinite(_converter_efficiency) || _input_voltage < 0.0 ||
             _input_min_voltage < 0.0 || _input_min_voltage > _input_max_voltage)
         {
             throw std::invalid_argument("Sentinel Bio EPS: invalid bench input voltage/range");
+        }
+        if (_input_current_limit_amps <= 0.0 || _converter_efficiency <= 0.0 ||
+            _converter_efficiency > 1.0)
+        {
+            throw std::invalid_argument("Sentinel Bio EPS: input current limit must be positive and efficiency must be in (0, 1]");
         }
         if (connection.empty())
         {
@@ -97,6 +110,7 @@ namespace Nos3
             const std::string prefix = std::string("simulator.hardware-model.physical.rail-") + RAIL_NAMES[i];
             _rails[i].nominal_voltage = config.get(prefix + ".nominal-voltage", DEFAULT_VOLTAGES[i]);
             _rails[i].current_amps = config.get(prefix + ".current-amps", 0.0);
+            _rails[i].max_current_amps = config.get(prefix + ".max-current-amps", 5.0);
             _rails[i].shunt_ohms = config.get(prefix + ".shunt-ohms", 0.1);
             _rails[i].dropout_voltage = config.get(prefix + ".dropout-voltage", 0.0);
             _rails[i].configuration = config.get(prefix + ".configuration", INA219_DEFAULT_CONFIGURATION);
@@ -104,10 +118,12 @@ namespace Nos3
                 config.get(prefix + ".calibration", INA219_DEFAULT_CALIBRATION) & 0xFFFEU);
             const Rail& rail = _rails[i];
             if (!std::isfinite(rail.nominal_voltage) || !std::isfinite(rail.current_amps) ||
+                !std::isfinite(rail.max_current_amps) ||
                 !std::isfinite(rail.shunt_ohms) || !std::isfinite(rail.dropout_voltage) ||
                 rail.nominal_voltage < 0.0 || rail.nominal_voltage > 26.0 ||
+                rail.current_amps < 0.0 || rail.max_current_amps <= 0.0 ||
                 rail.shunt_ohms <= 0.0 || rail.dropout_voltage < 0.0 ||
-                std::abs(rail.current_amps * rail.shunt_ohms) > 0.320)
+                rail.nominal_voltage + rail.dropout_voltage > 35.0)
             {
                 throw std::invalid_argument("Sentinel Bio EPS: invalid physical settings for rail " +
                                             std::string(RAIL_NAMES[i]));
@@ -148,6 +164,50 @@ namespace Nos3
             addresses[i] = address;
         }
 
+        const std::string loads_path = "simulator.hardware-model.physical.loads";
+        if (config.get_child_optional(loads_path))
+        {
+            BOOST_FOREACH(const boost::property_tree::ptree::value_type& item,
+                          config.get_child(loads_path))
+            {
+                if (item.first != "load")
+                {
+                    continue;
+                }
+
+                LoadPulse load;
+                load.name = item.second.get<std::string>("name", "unnamed-load");
+                const std::string rail_name = item.second.get<std::string>("rail", "");
+                load.rail = RAIL_COUNT;
+                for (std::size_t i = 0; i < RAIL_COUNT; ++i)
+                {
+                    if (rail_name == RAIL_NAMES[i])
+                    {
+                        load.rail = i;
+                        break;
+                    }
+                }
+                load.current_amps = item.second.get<double>("current-amps", 0.0);
+                load.start_seconds = item.second.get<double>("start-seconds", 0.0);
+                load.duration_seconds = item.second.get<double>("duration-seconds", 0.0);
+                load.period_seconds = item.second.get<double>("period-seconds", 0.0);
+
+                if (load.rail >= RAIL_COUNT || !std::isfinite(load.current_amps) ||
+                    !std::isfinite(load.start_seconds) || !std::isfinite(load.duration_seconds) ||
+                    !std::isfinite(load.period_seconds) || load.current_amps < 0.0 ||
+                    load.start_seconds < 0.0 || load.duration_seconds <= 0.0 ||
+                    load.period_seconds < 0.0 ||
+                    (load.period_seconds > 0.0 && load.duration_seconds > load.period_seconds))
+                {
+                    throw std::invalid_argument("Sentinel Bio EPS: invalid timed load profile " + load.name);
+                }
+                _loads.push_back(load);
+                sim_logger->info("Sentinel Bio FlatSat EPS: load %s adds %.3f A to %s",
+                                 load.name.c_str(), load.current_amps,
+                                 RAIL_NAMES[load.rail]);
+            }
+        }
+
         /* Validate every rail before starting callbacks; unique_ptr cleans up
          * earlier slaves if the transport throws while connecting a later one. */
         for (std::size_t i = 0; i < RAIL_COUNT; ++i)
@@ -167,13 +227,79 @@ namespace Nos3
         }
     }
 
-    double Sentinelbio_flatsat_epsHardwareModel::effective_voltage(const Rail& rail) const
+    double Sentinelbio_flatsat_epsHardwareModel::requested_current(
+        std::size_t rail_index, double elapsed_seconds) const
     {
-        if (_input_voltage + 1.0e-9 >= rail.nominal_voltage + rail.dropout_voltage)
+        double current = _rails[rail_index].current_amps;
+        for (const LoadPulse& load : _loads)
         {
-            return rail.nominal_voltage;
+            if (load.rail != rail_index || elapsed_seconds < load.start_seconds)
+            {
+                continue;
+            }
+
+            const double load_elapsed = elapsed_seconds - load.start_seconds;
+            bool active = false;
+            if (load.period_seconds == 0.0)
+            {
+                active = load_elapsed < load.duration_seconds;
+            }
+            else
+            {
+                active = std::fmod(load_elapsed, load.period_seconds) < load.duration_seconds;
+            }
+            if (active)
+            {
+                current += load.current_amps;
+            }
         }
-        return std::max(0.0, _input_voltage - rail.dropout_voltage);
+        return current;
+    }
+
+    void Sentinelbio_flatsat_epsHardwareModel::calculate_operating_point(
+        double elapsed_seconds, std::array<double, 3>& voltages,
+        std::array<double, 3>& currents) const
+    {
+        double total_output_power = 0.0;
+        for (std::size_t i = 0; i < RAIL_COUNT; ++i)
+        {
+            const Rail& rail = _rails[i];
+            const double requested = requested_current(i, elapsed_seconds);
+            currents[i] = std::min(requested, rail.max_current_amps);
+
+            if (_input_voltage + 1.0e-9 >= rail.nominal_voltage + rail.dropout_voltage)
+            {
+                voltages[i] = rail.nominal_voltage;
+            }
+            else
+            {
+                voltages[i] = std::max(0.0, _input_voltage - rail.dropout_voltage);
+            }
+
+            /* Approximate converter current limiting: once a rail's demanded
+             * current exceeds its configured limit, its voltage droops in
+             * proportion to the delivered-current fraction. */
+            if (requested > rail.max_current_amps && requested > 0.0)
+            {
+                voltages[i] *= rail.max_current_amps / requested;
+            }
+            total_output_power += voltages[i] * currents[i];
+        }
+
+        /* The three buck converters share the PSU's input power budget. This
+         * first-order model treats the programmed loads as constant-current
+         * sinks and lowers all output voltages proportionally if that budget
+         * is exceeded. */
+        const double available_output_power =
+            _input_voltage * _input_current_limit_amps * _converter_efficiency;
+        if (total_output_power > available_output_power && total_output_power > 0.0)
+        {
+            const double voltage_scale = available_output_power / total_output_power;
+            for (std::size_t i = 0; i < RAIL_COUNT; ++i)
+            {
+                voltages[i] *= voltage_scale;
+            }
+        }
     }
 
     std::uint16_t Sentinelbio_flatsat_epsHardwareModel::clamp_unsigned(long value)
@@ -213,6 +339,29 @@ namespace Nos3
 
         std::lock_guard<std::mutex> lock(_mutex);
         const Rail& rail = _rails[rail_index];
+        const double elapsed_seconds = std::chrono::duration<double>(
+            std::chrono::steady_clock::now() - _start_time).count();
+        std::array<double, RAIL_COUNT> bus_voltages;
+        std::array<double, RAIL_COUNT> rail_currents;
+        calculate_operating_point(elapsed_seconds, bus_voltages, rail_currents);
+
+        const double bus_voltage = bus_voltages[rail_index];
+        const double current_amps = rail_currents[rail_index];
+        const long raw_shunt_code = std::lround(
+            (current_amps * rail.shunt_ohms) / 0.00001);
+        const long pga = static_cast<long>((rail.configuration >> 11) & 0x0003U);
+        const long shunt_limit = 4000L << pga; // 40, 80, 160, or 320 mV at 10 uV/LSB
+        const long shunt_code = std::max(-shunt_limit,
+                                         std::min(shunt_limit, raw_shunt_code));
+        const long bus_code = std::lround(bus_voltage / 0.004);
+        const long current_code = (rail.calibration == 0)
+                                      ? 0
+                                      : (shunt_code * rail.calibration) / 4096L;
+        const long power_code = (current_code * bus_code) / 5000L;
+        const bool overflow = raw_shunt_code > shunt_limit ||
+                              raw_shunt_code < -shunt_limit ||
+                              current_code < -32768L || current_code > 32767L ||
+                              power_code < 0 || power_code > 65535L;
         std::uint16_t value = 0;
 
         switch (reg)
@@ -222,24 +371,13 @@ namespace Nos3
                 break;
 
             case 0x01:
-            {
-                const long shunt_code = std::lround(
-                    (rail.current_amps * rail.shunt_ohms) / 0.00001);
                 value = static_cast<std::uint16_t>(clamp_signed(shunt_code));
                 break;
-            }
 
             case 0x02:
             {
-                const long bus_code = std::lround(effective_voltage(rail) / 0.004);
                 const std::uint16_t clamped = static_cast<std::uint16_t>(
                     std::max(0L, std::min(8191L, bus_code)));
-                const long shunt_code = std::lround(
-                    (rail.current_amps * rail.shunt_ohms) / 0.00001);
-                const long current_code = (shunt_code * rail.calibration) / 4096L;
-                const long power_code = (current_code * bus_code) / 5000L;
-                const bool overflow = current_code < -32768L || current_code > 32767L ||
-                                      power_code > 65535L;
                 /* Steady-state approximation: conversions complete immediately.
                  * No ADC timing or CNVR clearing on Power reads is modeled. */
                 value = static_cast<std::uint16_t>((clamped << 3) | 0x0002 |
@@ -248,27 +386,12 @@ namespace Nos3
             }
 
             case 0x03:
-            {
-                const long shunt_code = std::lround(
-                    (rail.current_amps * rail.shunt_ohms) / 0.00001);
-                const long current_code = (rail.calibration == 0)
-                                              ? 0
-                                              : (shunt_code * rail.calibration) / 4096L;
-                const long bus_code = std::lround(effective_voltage(rail) / 0.004);
-                value = clamp_unsigned((current_code * bus_code) / 5000L);
+                value = clamp_unsigned(power_code);
                 break;
-            }
 
             case 0x04:
-            {
-                const long shunt_code = std::lround(
-                    (rail.current_amps * rail.shunt_ohms) / 0.00001);
-                const long current_code = (rail.calibration == 0)
-                                              ? 0
-                                              : (shunt_code * rail.calibration) / 4096L;
                 value = static_cast<std::uint16_t>(clamp_signed(current_code));
                 break;
-            }
 
             case 0x05:
                 value = rail.calibration;

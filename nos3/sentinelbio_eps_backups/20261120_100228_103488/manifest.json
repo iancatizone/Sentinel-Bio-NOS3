@@ -1,0 +1,62 @@
+[
+  {
+    "path": "cfg/build/sims/nos3-simulator-multipleGDS.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/nos3-simulator.shmem.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/nos3-simulator.sockets.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/sc-1-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/sc-2-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/build/sims/sc-3-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/nos3-simulator-multipleGDS.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/nos3-simulator.shmem.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/nos3-simulator.sockets.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/sc-1-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/sc-2-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "cfg/sims/sc-3-nos3-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "components/sentinelbio_flatsat_eps/sim/cfg/nos3-eps-simulator.xml",
+    "existed": true
+  }
+]

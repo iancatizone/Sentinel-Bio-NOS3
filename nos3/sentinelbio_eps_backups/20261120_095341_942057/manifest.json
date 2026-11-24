@@ -1,0 +1,14 @@
+[
+  {
+    "path": "components/sentinelbio_flatsat_eps/sim/cfg/nos3-eps-simulator.xml",
+    "existed": true
+  },
+  {
+    "path": "components/sentinelbio_flatsat_eps/sim/src/sentinelbio_flatsat_eps_hardware_model.cpp",
+    "existed": true
+  },
+  {
+    "path": "components/sentinelbio_flatsat_eps/sim/inc/sentinelbio_flatsat_eps_hardware_model.hpp",
+    "existed": true
+  }
+]

@@ -3,11 +3,13 @@
 
 #include <array>
 #include <atomic>
+#include <chrono>
 #include <memory>
 #include <cstddef>
 #include <cstdint>
 #include <mutex>
 #include <string>
+#include <vector>
 
 #include <boost/property_tree/ptree.hpp>
 #include <I2C/Client/I2CSlave.hpp>
@@ -49,13 +51,27 @@ namespace Nos3
         {
             double nominal_voltage;
             double current_amps;
+            double max_current_amps;
             double shunt_ohms;
             double dropout_voltage;
             std::uint16_t configuration;
             std::uint16_t calibration;
         };
 
-        double effective_voltage(const Rail& rail) const;
+        struct LoadPulse
+        {
+            std::string name;
+            std::size_t rail;
+            double current_amps;
+            double start_seconds;
+            double duration_seconds;
+            double period_seconds;
+        };
+
+        double requested_current(std::size_t rail, double elapsed_seconds) const;
+        void calculate_operating_point(double elapsed_seconds,
+                                       std::array<double, 3>& voltages,
+                                       std::array<double, 3>& currents) const;
         static std::uint16_t clamp_unsigned(long value);
         static std::int16_t clamp_signed(long value);
 
@@ -64,6 +80,10 @@ namespace Nos3
         double _input_voltage;
         double _input_min_voltage;
         double _input_max_voltage;
+        double _input_current_limit_amps;
+        double _converter_efficiency;
+        std::vector<LoadPulse> _loads;
+        std::chrono::steady_clock::time_point _start_time;
         mutable std::mutex _mutex;
     };
 }
